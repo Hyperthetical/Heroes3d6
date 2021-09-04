@@ -14,7 +14,7 @@
 
 \documentclass[a4paper,10pt,oneside]{book}
 
-\usepackage{fullpage}
+\usepackage{fullpage,appendix}
 \usepackage{amsmath}
 \usepackage{import,url}
 \usepackage{tocbibind}
@@ -100,6 +100,17 @@ An \textlf{edge} penalty cancels out a bonus if character is subject to both. If
 
 \subsection{Heroic Statistics}
 Any heroic/villainous character will also posses an attribute called \textlfirst{heroism/villainy}, which can be spent to perform feats of exceptional skill and daring. The central premise of this statistic system is to set heroic characters apart, as the feats performed through the use of heroism points must be formulated by the players themselves (with the Game Master moderating their effects). Players are encouraged, then, to be creative, outrageous, and down-right crazy in their use of these abilities, the laws of physics are, here, less important than stylish, action-packed adventure.
+
+
+\section{Useful notes for the GM}
+Here we will discuss some important topics, mostly importantly how we assign difficulty scores to feats characters wish to perform. This is non-trivial if you are used to systems that use a single die for rolls, i.e. 1d20 being rolled for skill checks etc. 
+
+\subsection{Assigning difficulties}
+The trickiness of difficulty assignment arises from the fact that 3d6 have a non-linear probability distribution, meaning that some scores are far more likely than others. Whereas, on 1d20 every score has an equal chance of occurring. Thus, the GM should be careful, as an increase of 1 difficulty can make a task far more difficult than you would anticipate. To help with this task, I will outline some useful principles in choosing difficulties. The very nerdy reader can look to the appendices for fun things like probability distributions. 
+
+I will divide tasks into 3 groups: easy, moderate, and hard. In order to view these in a vaguely concrete framework I will sort difficulty scores into these groups assuming there are no bonuses or penalties on the roll. In this situation, a difficulty of lower than 9 is easy, and greater than 13 is rather hard. 
+
+Note that requiring $11+$ on 3d6 is a 50\% probability of success, so this would correspond to something an unskilled character is equally likely to fail or succeed at. A difficulty of $13$ would only imply success 25\% of the time (assuming no bonuses). In contrast, a difficulty of $9$ results in a chance of 75\% of succeeding. These examples should give you sufficient idea of how to assign difficulty. Things that an average man would struggle to achieve should be difficulty $13$ or higher whereas simple tasks can assigned $9$ or lower. In this $9$ to $13$ range each increase or decrease in difficulty by $1$ results in the same probability shift, for lower or higher difficulties the distribution becomes more extreme.
 
 
 
@@ -1798,8 +1809,20 @@ A character cannot carry more than a heavy load (40 kg + $2 \times$ \textlf{migh
 %\end{minipage}
 %\end{table}
 
-\listoftables
 
+\begin{appendices}
+
+\chapter{Probability distributions}
+
+
+\begin{figure}[ht!]
+	\centering
+	\resizebox{0.49\hsize}{!}{\includegraphics{prob_distribution_3d6.pdf}}
+	\resizebox{0.49\hsize}{!}{\includegraphics{success_distribution_3d6.pdf}}
+	\caption{Left: the probability distribution for scores on 3d6. Right: chances of success and failure for different difficulties on 3d6. } 
+\end{figure}
+
+\end{appendices}
 
 
 \end{document}
