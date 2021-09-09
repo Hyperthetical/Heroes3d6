@@ -29,7 +29,9 @@
 \usepackage{lmodern}
 
 
-\subimport{../}{dice}
+\newcommand{\dicediffbase}{11}
+\newcommand{\dicenoprof}{-1}
+\newcommand{\dicecritlvl}{4}
 
 \newcommand{\textlf}[1]{\textbf{\titlecap{#1}}}
 \newcommand{\textlfirst}[1]{\textbf{\textit{\titlecap{#1}}}}
@@ -94,7 +96,7 @@ If you succeed/fail on a check by $\dicecritlvl$ or more you have achieved a \te
 When the division of an integer score results in a non-integer number (i.e. it is not a whole number) then the convention is to round up, unless otherwise specified.
 
 \subsubsection{Edge}
-Some circumstances confer great advantage or disadvantage on a character. This is referred to as \textlfirst{edge}. While experiencing an \textlf{edge} bonus while rolling $n$d6, a character rolls $n+1$d6 and chooses the highest $n$. In contrast, an \textlf{edge} penalty makes the character roll $n+1$d6 dice and choose the lowest $n$. Example: I roll 3d6 to make a check to see if I jump over a crevasse, luckily I have an \textlf{edge} bonus and thus roll 4d6 scoring 3,4,2, and 3. I keep the highest 3 and total 10. If this was an \textlf{edge} penalty I would have totalled 8. 
+Some circumstances confer great advantage or disadvantage on a character. This is referred to as \textlfirst{edge}. While experiencing an \textlf{edge} bonus while rolling $n$d6, a character rolls $n+1$d6 and chooses the highest $n$. In contrast, an \textlf{edge} penalty makes the character roll $(n+1)$d6 dice and choose the lowest $n$. Example: I roll 3d6 to make a check to see if I jump over a crevasse, luckily I have an \textlf{edge} bonus and thus roll 4d6 scoring 3,4,2, and 3. I keep the highest 3 and total 10. If this was an \textlf{edge} penalty I would have totalled 8. 
 
 An \textlf{edge} penalty cancels out a bonus if character is subject to both. If a character has 2 or more \textlf{edge} bonuses/penalties simply add extra dice to the number being rolled. 
 
@@ -108,7 +110,7 @@ Here we will discuss some important topics, mostly importantly how we assign dif
 \subsection{Assigning difficulties}
 The trickiness of difficulty assignment arises from the fact that 3d6 have a non-linear probability distribution, meaning that some scores are far more likely than others. Whereas, on 1d20 every score has an equal chance of occurring. Thus, the GM should be careful, as an increase of 1 difficulty can make a task far more difficult than you would anticipate. To help with this task, I will outline some useful principles in choosing difficulties. The very nerdy reader can look to the appendices for fun things like probability distributions. 
 
-I will divide tasks into 3 groups: easy, moderate, and hard. In order to view these in a vaguely concrete framework I will sort difficulty scores into these groups assuming there are no bonuses or penalties on the roll. In this situation, a difficulty of lower than 9 is easy, and greater than 13 is rather hard. 
+I will divide tasks into 3 groups: easy, moderate, and hard. In order to view these in a vaguely concrete framework, I will sort difficulty scores into these groups assuming there are no bonuses or penalties on the roll. In this situation, a difficulty of lower than 9 is easy, and greater than 13 is rather hard. 
 
 Note that requiring $11+$ on 3d6 is a 50\% probability of success, so this would correspond to something an unskilled character is equally likely to fail or succeed at. A difficulty of $13$ would only imply success 25\% of the time (assuming no bonuses). In contrast, a difficulty of $9$ results in a chance of 75\% of succeeding. These examples should give you sufficient idea of how to assign difficulty. Things that an average man would struggle to achieve should be difficulty $13$ or higher whereas simple tasks can assigned $9$ or lower. In this $9$ to $13$ range each increase or decrease in difficulty by $1$ results in the same probability shift, for lower or higher difficulties the distribution becomes more extreme.
 
@@ -130,12 +132,12 @@ These reflect the inherent predispositions of the character, based on their pers
 Each attribute contributes to many different skills or activities, its influence on dice rolls is direct, just add it to the result of a relevant roll.
 
 \subsection{Might}
-\textlf{Might} is the physical/spiritual power and aggressiveness of the character. A character can make might-checks to break objects through sheer force or determination, to bash in doors or to move large objects. The \textlf{difficulty} of breaking objects can be found under the rules for \textlf{Cover}, Section~\ref{sec:cover}, in the Combat rules.\textlf{Difficulty} for lifting or moving heavy objects can be found in Section~\ref{sec:carry} in Baggage and Encumbrance. \textlf{Might} also dictates a character's ability to inflict damage in combat.
+\textlf{Might} is the physical/spiritual aggression and/or assertiveness of the character. A character can make might-checks to break objects through sheer power, to bash in doors or to move large objects. The \textlf{difficulty} of breaking objects can be found under the rules for \textlf{Cover}, Section~\ref{sec:cover}, in the Combat rules.\textlf{Difficulty} for lifting or moving heavy objects can be found in Section~\ref{sec:carry} in Baggage and Encumbrance. \textlf{Might} also dictates a character's ability to inflict damage in combat.
 
 %Characters with \textlf{might} scores of 0 tend to be more peaceful, while less than -2 means that the character struggles to bring himself to inflict harm. \textlf{Might} 0 or greater represents a forceful and aggressive character, with scores between 3 and 5 verging on superhuman ferocity.
 
 \subsection{Cunning}
-\textlf{Cunning} is the craftiness of the character. \textlf{Cunning} checks can be used to bluff convincingly, make feints in combat, or get out of the way of harm. \textlf{Cunning} contributes to the \textlf{stealth}, \textlf{disguise}, \textlf{deceive}, \textlf{slight of hand}, \textlf{survival}, and \textlf{mechanical} skills. \textlf{Cunning} also influences the power of a character's underhanded manoeuvres in combat, such as \textlf{sneak attacks} or back-stabbing.
+\textlf{Cunning} is the craftiness of the character. \textlf{Cunning} checks can be used to bluff convincingly, make feints in combat, or get out of the way of harm. \textlf{Cunning} contributes to the \textlf{stealth}, \textlf{disguise}, \textlf{deceive}, \textlf{slight of hand}, \textlf{survival}, and \textlf{mechanical} skills. \textlf{Cunning} also influences the power of a character's underhanded manoeuvres in combat, such as \textlf{sneak attacks}.
 
 %Characters with low \textlf{cunning} (less than -1) are not very devious and tend to be honest and ingenuous. Very low scores might mean that the character is just too trusting, verging on idiocy in his lack of caution. \textlf{Cunning} of 0 or greater means the character can be sly and crafty, with scores of 3 or more indicating that the character has the makings of a master plotter..
 
@@ -145,7 +147,7 @@ Each attribute contributes to many different skills or activities, its influence
 %Characters with scores below -1 are quite oblivious and carefree. Those with \textlf{Wit} below -2 are almost entirely unaware of their surroundings. Scores of 0 or greater imply that the character is attentive and shrewd, with \textlf{Wit} scores of 3 or above meaning they are unlikely to miss even the smallest detail.
 
 \subsection{Resolve}
-Is a measure of the character's determination and force of character. \textlf{Resolve} checks can be used to flatter, distract, or to taunt/enrage a target into attacking the character. The \textlf{difficulty} of such checks is given by the target's \textlf{Wit} score. Such a check might also be made to subtly get someone talking to you, the \textlf{difficulty} is dictated by how reticent or secretive they are (this is indirect unlike a \textlf{persuade} attempt). \textlf{Resolve} is also involved in the \textlf{persuade}, \textlf{leadership}, and \textlf{perform} skills. %Additionally, it regulates a character's ability to resist debilitating effects (magic,drugs,poisons) by pure will. 
+Is a measure of the character's determination and force of character. \textlf{Resolve} checks can be used to flatter, distract, or to taunt/enrage a target into attacking the character. The \textlf{difficulty} of such checks is given by \dicediffbase $+$ the target's \textlf{Wit} score. Such a check might also be made to subtly get someone talking to you, the \textlf{difficulty} is dictated by how reticent or secretive they are (this is indirect unlike a \textlf{persuade} attempt). \textlf{Resolve} is also involved in the \textlf{persuade}, \textlf{leadership}, and \textlf{perform} skills. %Additionally, it regulates a character's ability to resist debilitating effects (magic,drugs,poisons) by pure will. 
 
 %Characters with low \textlf{resolve} (less than -1) are either spineless or just socially awkward. Very low scores (less than -2) imply that the character can hardly communicate for shyness, is just impossible to tolerate, or hopelessly easy to bully. \textlf{Resolve} of 0 or greater makes for a compelling or attractive character, with scores of 3 or greater indicating a force of personality, or charm, that sweeps others along with it. 
 
@@ -904,7 +906,7 @@ This reflects reaction time and ability to mitigate incoming blows, allowing a c
 This reflects the ability to successfully penetrate a foe's defences. If the character is \textlf{proficient} with their current weapon/ability, the \textlf{Aim} is their \textlf{Wit} score. Otherwise this score is $\dicenoprof$.
 
 \subsection{Toughness}
-Reflects the character's resistance to physical harm. This comes exclusively from a character's armour unless otherwise specified. Unarmoured characters have a base \textlf{Toughness} of 8, this score is increased by the  armour they wear. 
+Reflects the character's resistance to physical harm. Characters have a base \textlf{Toughness} of 8, this score is increased by the  armour they wear. 
 
 \subsection{Endurance}
 This represents the character's ability to take a beating and keep fighting. A character has 3 + \textlf{resolve} points of \textlf{endurance}, these are used to absorb damage without suffering serious injury. Think about \textlf{endurance} loss as representing taking bruising or minor cuts. Once this is depleted the character is tired and can no longer avoid suffering more direct hits from attacks.
@@ -1152,7 +1154,7 @@ Attempt to entangle your foe's legs with your weapon's haft, or pointy bit built
 
 \subsection{Disarm}
 Even the mightiest warrior can be flummoxed by the loss of his precious sword.
-Declare a \textlf{disarm} attack before the \textlf{deflect} check is made. Should the attack land, it causes no damage roll but renders the victim \textlf{vulnerable} (see Section~\ref{sec:special}) to the next damage roll if it fails an opposed \textlf{Wit} check. Weapons with the \textlf{disarm} rule can replace \textlf{moment of weakness} damage rolls with a \textlf{disarm} action instead.
+Declare a \textlf{disarm} attack before the \textlf{deflect} check is made. Should the attack land, it causes no damage roll but, if the victim fails an opposed \textlf{wit} check, their current weapon cannot be used without spending 1 action point to retrieve it.  Weapons with the \textlf{disarm} rule can replace \textlf{moment of weakness} damage rolls with a \textlf{disarm} action instead.
 
 \subsection{Grapple}
 You can attempt to wrestle your foe into an immobile state at the cost of 1 action point. Provided you have at least one free hand you make an opposed \textlf{Might} check with your target. If you win, the target is now \textlf{grappled}. However, if you lose you suffer a \textlf{moment of weakness} that can be exploited by the target. It costs 1 action point each round after the first to maintain a grapple.
@@ -1163,7 +1165,7 @@ You can attempt to wrestle your foe into an immobile state at the cost of 1 acti
 This costs 1 action point and involves an opposed \textlf{Might} check with the target, if the shover is successful the target is either knocked down or moved into an adjacent combat area (at the shover's discretion). Failure results in shoving character experiencing a \textlf{Moment of weakness}.
 
 \subsection{Defensive stance}
-This costs 1 action point and lasts 1 round. During this time the character gains an \textlf{edge} bonus to \textlf{deflect}.
+This costs 1 action point. The character gains an \textlf{edge} bonus to \textlf{deflect} the next attack.
 
 \subsection{Prepared Actions}
 \label{sec:prep}
@@ -1180,7 +1182,7 @@ A character becomes \textlfirst{enraged} if under extreme emotional strain while
 \subsubsection{When Enraged}
 An enraged character seeks to enter close combat with the nearest enemy at all times and cannot take prisoners, he goes only for the kill. If wielding a firearm type weapon, he may fire it at range (while moving as required). Enraged characters have an \textlf{edge} penalty on \textlf{deflect} checks and a lethality upgrade for their attacks.
 
-Rage drains one point of \textlf{endurance} each round and ends when the character has no points left. A character cannot \textlf{enrage} unless they have at least one point of \textlf{endurance}. Damage rolls against an \textlf{enraged} target are made with an \textlf{edge} penalty.
+Rage drains one point of \textlf{endurance} each round and ends when the character has no points left. A character cannot \textlf{enrage} unless they have at least one point of \textlf{endurance}. The first time the character causes damage during a round they regain 1 \textlf{endurance}.
 
 
 
@@ -1427,9 +1429,6 @@ These perks do \textbf{not} occupy equipment slots for passive or active \textlf
 \subsection{Great weapons (3)}
 The character is no longer subject to an \textlf{edge} penalty on \textlf{aim} checks when he is wielding great-weapons.
 
-\subsection{Heavy armour (4)}
-The character has trained to use heavy armour effectively. This negates the \textlf{deflect} penalty when wearing such armour.
-
 \subsection{Hero/Villain (0)}
 (Requires \textlf{Reputation} level 5) The character has become famous, his praise is much sung, or his vile deeds whispered of, in local taverns. The character may increase one \textlf{natural attribute} by 1 point.
 
@@ -1469,12 +1468,12 @@ The character has harnessed his inner rage. This allows them to voluntarily \tex
 (Requires \textlf{berserker}) The character's rage is a terrifying sight as they plunge heedless into the foe. This grants the character an \textlf{edge} bonus to \textlf{aim}, but a similar penalty to \textlf{deflect}, while \textlf{enraged}.
 
 \subsubsection{Upgrade: Berserkergang (4)}
-(Requires \textlf{berserker}) The character has mastered their inner fury allowing them to Enrage twice per day.
+(Requires \textlf{berserker}) The character has mastered their inner fury allowing them to \textlf{Enrage} twice per day.
 
 \subsubsection{Upgrade: Endless rage (4)}
 (Requires \textlf{berserker}) Becoming \textlf{enraged} restores the character's \textlf{endurance} to its maximum value. Additionally, the character can still become \textlf{enraged} when they have no \textlf{endurance} left.
 
-\subsection{Blind Side (3)}
+\subsection{Blind Side (4)}
 A deft feint allows the character enough room to fire his ranged weapons against close-combat assailants. When using a ranged weapon against a target within range 0 you may feint as though you were using a close-combat weapon. Success on the \textlf{feint} means you additionally ignore the normal \textlf{edge} penalty on shooting weapon hit rolls for targets within range 0.
 
 \subsection{Butcher's blow (3)}
@@ -1499,14 +1498,11 @@ The character has great skill in pacifying angry or confrontational speakers, al
 At a cost of 1 action point, the character's \textlf{sneak attacks} damage rolls gain a bonus level of \textlf{critical success} this turn.
 
 \subsection{Flurry of Blows (3)}
-A risky manoeuvre, the fighter replaces a considered attack with a hail of furious strikes. The character may declare they are making a flurry attack, in which case they may make an extra damage roll with a successful hit. However, the character suffers a - 2 penalty to their \textlf{aim} and \textlf{deflect} scores this round. This cannot be used if the weapon has the requirement of \textlf{reload} actions.
-
-
-\subsubsection{Upgrade: Relentless (4)}
-(Requires \textlf{Flurry of Blows}) The penalty associated with \textlf{Flurry of Blows} is reduced by 1.
-
+A risky manoeuvre, the fighter replaces a considered attack with a hail of furious strikes. The character may declare they are making a flurry attack, in which case they may make an extra damage roll with a successful hit. However, the character suffers an \textlf{edge} penalty to \textlf{aim}. This cannot be used if the weapon has the requirement of \textlf{reload} actions.
+%\subsubsection{Upgrade: Relentless (4)}
+%(Requires \textlf{Flurry of Blows}) The penalty associated with \textlf{Flurry of Blows} is reduced by 1.
 \subsubsection{Upgrade: Barrage (3)}
-(Requires \textlf{Flurry of Blows}) The character may use the \textlf{Flurry of Blows} effect as many times as he wants to each round, incurring the same bonuses each time but the penalty increases by a further -1 for each application of \textlf{Flurry of Blows}. Thus, making one bonus attack incurs a - 2 penalty to \textlf{aim} but a second bonus damage roll incurs an additional -3 penalty (-5 in total to attacks this round).
+(Requires \textlf{Flurry of Blows}) The character may use the \textlf{Flurry of Blows} effect twice, the second use incurs an \textlf{edge} penalty to \textlf{deflect} instead. 
 
 \subsection{Frothing fury (4)}
 (Requires \textlf{berserker}) While \textlf{enraged} the character may spend 2 action points to make an \textlf{all-out attack} against all adjacent enemies. Additionally, this costs 1 \textlf{endurance} point.
@@ -1526,7 +1522,7 @@ The character's blows are capable of tossing his enemies aside like a child's to
 \subsection{Kick `em while they're down (5)}
 At a cost of 1 action point, damaging \textlf{sneak attacks}, made in this turn, cause the victim to be afflicted with the \textlf{vulnerable} status.
 
-\subsection{Lightning Fast (3)}
+\subsection{Lightning Fast (4)}
 The character reacts so quickly that, during action declaration in combat, he may seize the initiative for his side at a cost of 1 action point. A character may not use \textlf{Lightning Fast} more than once per encounter (additionally, each side in combat can only benefit from this once per encounter).
 
 \subsubsection{Upgrade: Swift as Death (3)}
@@ -1545,13 +1541,13 @@ The character may attempt to Hide while in combat for 1 action point, fading sea
 When using a ranged weapon that can be wielded in one hand the character may make a ``Pistol Whip" in place of a \textlf{sneak attack}. This is a close-combat attack that knocks the target down if it succeeds in causing a wound, if the victim fails \textlf{resolve} versus the \textlf{power} of the attack he is also rendered unconscious. This effect applies only to creatures a maximum of 1 size category larger than the character.
 
 \subsection{Plan B (3)}
-(Requires \textlf{Duelist}) Whenever one of the character's attacks is \textlf{deflected}, while in \textlf{Duelist} mode, he may make a free action where he draws and throws/fires a \textlf{small} throwing/ballistic weapon (this doesn't provoke a \textlf{moment of weakness}).
+(Requires \textlf{Duelist}) Whenever one of the character's attacks is \textlf{deflected}, while in \textlf{Duelist} mode, he may make a free action where he draws and throws/fires a \textlf{small} throwing/ballistic weapon (this doesn't provoke a \textlf{moment of weakness} or suffer penalties for close range).
 
 \subsection{Power attack (3)}
 The character can declare a close-combat attack as a Power Attack. This makes it cost 1 extra action point but grants + 1 \textlf{power} on damage rolls. 
 
 \subsubsection{Upgrade: Thews and sinews (2)}
-(Requires \textlf{Power attack}) Power Attack also upgrades the \textlf{lethality} of associated damage rolls.
+(Requires \textlf{Power attack}) Power Attack also upgrades the \textlf{lethality} of associated damage rolls. However, the character suffers an \textlf{edge} penalty on \textlf{aim} for such attacks.
 
 \subsection{Reckless strike (3)}
 The character can declare a close-combat attack to be a Reckless Strike. Such an attack has an \textlf{edge} bonus to \textlf{aim} but the character incurs and \textlf{edge} penalty on \textlf{deflect} for one round.
@@ -1559,14 +1555,11 @@ The character can declare a close-combat attack to be a Reckless Strike. Such an
 \subsection{Splatter (3)}
 The violence of your blows causes the blood of your foes to stain the soil. This can declared when declaring an attack, the cost is increased by 1 action point. Should the attack cause damage, the target is subject to the \textlf{bleeding} effect.
 
-\subsection{Suppressing fire! (5)}
-The character fires an indiscriminate volley of projectiles, forcing enemies and allies alike to get their heads down. This costs two action points, the character makes a ranged attack action against every creature (including allies) within a given combat area. All the targets gain an \textlf{edge} bonus to \textlf{Deflect}. This attack cannot be made with a weapon that requires action points be spent to reload it between shots.
+\subsection{Suppressing fire! (4)}
+The character fires an indiscriminate volley of projectiles, forcing enemies and allies alike to get their heads down. This costs one action point, the character targets an area of radius 0, moving into, through, or out of the target area costs 1 extra action point for 1 round. This attack cannot be made with a weapon that requires action points be spent to reload it between shots.
 
 \subsection{True Grit (3)}
-Gritting their teeth the character keep fighting by sheer force of will. For 1 action point, the character can make a \textlf{resolve} check against 10 + the number of missing \textlf{endurance} points. On a success they regain 1 point of missing \textlf{endurance}.
-
-\subsection{Upgrade: Savage Reprisal (2)}
-(Requires \textlf{Adrenaline Rush}) Whenever the character triggers \textlf{Adrenaline Rush} he may make a single, free, close-combat damage roll against his assailant (provided he is within reach). This attack may also claim the benefit of the bonus granted by \textlf{Adrenaline Rush}.
+Gritting their teeth the character keep fighting by sheer force of will. For 1 action point, the character can make a \textlf{resolve} check against 10 + the number of missing \textlf{endurance} points. On a success they regain 1 point of \textlf{endurance} (up to their normal maximum).
 
 \subsection{Whirlwind of steel (5)}
 The character lashes out around him, striking all too slow to escape. This costs 2 action points and allows the character to make an attack action with their close-combat weapons against all adjacent enemies. 
@@ -1577,13 +1570,15 @@ The character lashes out around him, striking all too slow to escape. This costs
 These passively enhance the character and must occupy an equipment slot for passive \textlf{perks} to make their benefit usable.
 
 \subsection{Acrobatic movement (3)}
-The character can move out of, or through, a combat area containing enemies without suffering a \textlf{moment of weakness}. To do so they must win an opposed check with their \textlf{athletics} vs the highest \textlf{close-combat} skill enemy within the area in question. Failure on the check results in a \textlf{moment of weakness}.  
+Sometimes walking is just too boring. The character can move out of, or through, a combat area containing enemies without suffering a \textlf{moment of weakness}. To do so they must win an opposed check with their \textlf{athletics} vs the highest \textlf{close-combat} skill enemy within the area in question. Failure on the check results in a \textlf{moment of weakness}.  
 
 \subsection{Adrenaline Rush (3)}
 A surge of adrenaline can grant a fighter great power in times of danger. If the character loses \textlf{endurance} to a damage roll, they gain an \textlf{edge} bonus to their next damage roll.
+\subsubsection{Upgrade: Savage Reprisal (2)}
+(Requires \textlf{Adrenaline Rush}) Whenever the character triggers \textlf{Adrenaline Rush} he may make a single, free, close-combat damage roll against his assailant (provided he is within reach). This attack may also claim the benefit of the bonus granted by \textlf{Adrenaline Rush}.
 
 \subsection{Always Carry a Spare (2)}
-The character can produce a single extra dagger (or other \textlf{small} throwing weapon) in an emergency. This can be used at most once per day.
+It pays to be prepared. The character can produce a single extra dagger (or other \textlf{small} throwing weapon) in an emergency. This can be used at most once per day.
 
 \subsection{Ballads of Battle (3)}
 The character may use perform skill in place of leadership skill when making leadership actions, this requires that targets can hear the performance.
@@ -1594,22 +1589,22 @@ When the character scores \textlf{critical success} on a \textlf{deflect} check 
 \textlf{Best defence} can be triggered once per round against each unique attacker.
 
 \subsection{Braced for Impact (4)}
-The first time a character loses \textlf{endurance} each round, the amount lost is reduced by 1. 
+Pain is just information. The first time a character loses \textlf{endurance} each round, the amount lost is reduced by 1. 
 
 \subsection{Bull-Headed (3)}
-The character cannot suffer \textlf{moments of weakness} as a result of making a \textlf{bull-rush} manoeuvre (See Section~\ref{sec:bull}). 
+Now the bulls run from you. The character cannot suffer \textlf{moments of weakness} as a result of making a \textlf{bull-rush} manoeuvre (See Section~\ref{sec:bull}). 
 
 \subsubsection{Upgrade: Stampede (3)}
 (Requires Bull-Headed) The character may make a damage roll against one of the victims of their successful \textlf{bull-rush} actions. 
 
 \subsubsection{Upgrade: Pain Train (4)}
-(Requires Bull-Headed) The character may choose for his \textlf{bull-rush} to knock the target flying a distance of range 1, instead of just knocking it down. If the victim hits an obstacle (he enters \textlf{rough terrain} or cover) he suffers a damage roll, with \textlf{power} equal to the character's \textlf{might} and \textlf{normal lethality}.
+(Requires Bull-Headed) Choo! Choo! The character may choose for his \textlf{bull-rush} to knock the target flying a distance of range 1, instead of just knocking it down. If the victim hits an obstacle (he enters \textlf{rough terrain} or cover) he suffers a damage roll, with \textlf{power} equal to the character's \textlf{might} and \textlf{normal lethality}.
 
 \subsection{Call in a Favour (2)}
 (Requires Silver Spoon). The character can leverage his social connections to obtain a favour from a local noble, banker, crime-lord, warlord, or oligarch. This \textlf{perk} can only be chosen at character creation.
 
 \subsection{Close quarters (3)}
-The character is an expert at engaging at very close range with \textlf{small} weapons. This negates penalties associated with such weapons.
+Up-close and personal. The character is an expert at engaging at very close range with \textlf{small} weapons. This negates penalties associated with such weapons.
 
 \subsection{Commanding Presence (6)}
 Whenever the character succeeds on a leadership check an ally within range 0 of the character gains 1 point of missing \textlf{endurance}.
@@ -1618,10 +1613,10 @@ Whenever the character succeeds on a leadership check an ally within range 0 of 
 When your ammunition is righteousness you seldom run out. Each time the character defeats an enemy he can regain a point of missing \textlf{endurance}. A defeated enemy is either: killed, knocked out, surrendering, or fleeing.
 
 \subsection{Cunning Plan (3)}\label{sec:sneak-expd}
-When making \textlf{sneak attacks}, the character may use his \textlf{cunning} as the base statistic of his \textlf{power} (rather than his \textlf{might}, see Section~\ref{sec:comstat}).
+Better than other plans. When making \textlf{sneak attacks}, the character may use his \textlf{cunning} as the base statistic of his \textlf{power} (rather than his \textlf{might}, see Section~\ref{sec:comstat}).
 
 \subsection{Duelist (3)}
-Fighting with a single weapon only, that does not require two-hands for effective use, allows for much more precise weapon control. Fighting in such a manner grants 1 bonus to \textlf{deflect}. Example: fighting with only a single rapier, or a longsword in only one hand (common theme is there is a free hand).
+Elegance and advantage, what's not to love? Fighting with a single weapon only, that does not require two-hands for effective use, allows for much more precise weapon control. Fighting in such a manner grants 1 bonus to \textlf{deflect}. Example: fighting with only a single rapier, or a longsword in only one hand (common theme is there is a free hand).
 
 \subsubsection{Upgrade: Buckle Your Swash (2)}
 (Requires \textlf{Duelist}) While fighting with a single weapon (as detailed in \textlf{Duelist}), the character may counter-attack once per round after succeeding on a \textlf{deflect} check.
@@ -1641,40 +1636,40 @@ The character gains a + 1 bonus to \textlf{deflect} provided he doesn't wear hea
 \subsection{Executioner (3)}
 The character has learned to deal death swiftly when the chance arises. As such, when striking an opponet with zero \textlf{endurance}, the character benefits from a \textlf{lethality} upgrade. This effect applies only to creatures a maximum of 1 size category larger than the character.
 
-\subsection{Extension of Self (2)}
-(Requires \textlf{Unarmed Training}) This extends the effects of \textlf{Snake Fist}, \textlf{Meteor Strike}, and \textlf{Dragon Kick} to quarter staves (or similar blunt martial arts weapons).
+\subsection{Extension of Self (3)}
+(Requires \textlf{Unarmed Training}) The best weapon is you. This extends the effects of \textlf{Snake Fist}, \textlf{Meteor Strike}, and \textlf{Dragon Kick} to a single chosen close-combat weapon type.
 
 \subsection{Favoured Enemy: X (4)}
-The character is skilled in the killing of a chosen creature type (X). Against targets of type X  the character has an \textlf{edge} bonus on \textlf{aim}. X must be specific, ``humanoids" is too broad for instance, but ``humans" is fine in a cosmopolitan fantasy setting. If the setting is mostly human then ``human" is still too broad and it must be further narrowed down to a group, ``pirates" or ``ninjas" for instance.
+Everyone hates something. The character is skilled in the killing of a chosen creature type (X). Against targets of type X  the character has an \textlf{edge} bonus on \textlf{aim}. X must be specific, ``humanoids" is too broad for instance, but ``humans" is fine in a cosmopolitan fantasy setting. If the setting is mostly human then ``human" is still too broad and it must be further narrowed down to a group, ``pirates" or ``ninjas" for instance.
 
 \subsection{Favoured Environment: X (4)}
 The character is skilled at moving and fighting in the chosen environment (X). This grants him an \textlf{edge} bonus to stealth, as well as survival checks while in this setting. The character is also not affected by \textlf{rough} or \textlf{dangerous terrain} associated with this environment.
 
 \subsection{Fighting retreat (3)}
-The retreat action now costs only a single action point.
+You are categorically \textbf{not} running away. The retreat action now costs only a single action point.
 \subsubsection{Upgrade: Rear-guard action (3)}
-(Requires \textlf{Fighting retreat}). The benefits of \textlf{Fighting retreat} also apply to all allies adjacent to your character.
+(Requires \textlf{Fighting retreat}) And neither are your friends. The benefits of \textlf{Fighting retreat} also apply to all allies adjacent to your character.
 
 \subsection{Hardy (3)}
 \textlf{Hardy} characters are mighty and indefatigable, they have an extra point of \textlf{endurance}.
 
-\subsubsection{Upgrade: Stoic (4)}
+\subsubsection{Upgrade: Stoic (5)}
 (Requires \textlf{Hardy}) The character is so tough they can just ignore pain. This grants and additional point of \textlf{endurance}.
 
 \subsection{Indomitable (3)}
-This allows the character an \textlf{edge} bonus on \textlf{resolve}-based checks against effects that would inflict \textlf{stagger}, \textlf{cripple}, \textlf{immobilise}, or \textlf{knock-down}.
+Don't tell me what to do. This allows the character an \textlf{edge} bonus on checks against effects that would inflict \textlf{stagger}, \textlf{cripple}, \textlf{immobilise}, or \textlf{knock-down}.
 
 \subsubsection{Upgrade: Stability (4)}
 (Requires \textlf{Indomitable}) Inner strength is outer strength. Grants immunity to the \textlf{knock-down} and knock-back effects. If targeted by such an effect the character may still trigger \textlf{Juggernaut}.
 
 \subsubsection{Upgrade: Juggernaut (3)}
-(Requires \textlf{Indomitable}) This grants a free action point action after successfully passing a \textlf{Resolve}-based check against an effect that would inflict \textlf{stagger}, \textlf{cripple}, \textlf{immobilise}, or \textlf{knock-down}.
+(Requires \textlf{Indomitable}) Now they are just making you angry. This grants a free action point action after successfully passing a check against an effect that would inflict \textlf{stagger}, \textlf{cripple}, \textlf{immobilise}, or \textlf{knock-down}.
 
 \subsection{Leverage (4)}
 \textlf{Trip} and \textlf{disarm} actions also \textlf{stagger} their victims.
 
 \subsection{Low Blow (4)}
-The character may also make \textlf{sneak attacks} against enemies who have zero \textlf{endurance}, even if they don't meet any other pre-requisites for \textlf{sneak attacks} (see Section~\ref{sec:sneak-attk}).
+Uncool, man. The character may also make \textlf{sneak attacks} against enemies who have zero \textlf{endurance}, even if they don't meet any other pre-requisites for \textlf{sneak attacks} (see Section~\ref{sec:sneak-attk}).
 
 \subsection{Made You Look (4)}
 If the character succeeds on a \textlf{feint} action his subsequent attacks are \textlf{sneak attacks}.
@@ -1685,7 +1680,7 @@ The character has great knowledge of poisons and toxins. As such, he cannot acci
 \subsection{Merciless (3)}
 The character shows no mercy, dispatching the weak with even greater abandon. Attacks and powers against \textlf{bleeding} or \textlf{crippled} targets gain a \textlf{lethality} bonus on their damage rolls.
 
-\subsection{Might of heroes (6)}
+\subsection{Might of heroes (5)}
 Some warriors display such shear poise that they wield even the most awkward weapons with grace and skill. Your character can ignore the \textlf{cumbersome} rule.
 
 \subsection{Moving Target (3)}
