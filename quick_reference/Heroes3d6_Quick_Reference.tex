@@ -1,16 +1,26 @@
+%Copyright (C) 2021  Geoff Beck
+%
+%This document is falls under the category of free software: you can redistribute it and/or modify
+%it under the terms of the GNU General Public License as published by
+%the Free Software Foundation, either version 3 of the License, or
+%(at your option) any later version.
+%
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%
+%See https://www.gnu.org/licenses/ for more details
+
 \documentclass[a4paper,oneside,11pt]{article}
 \title{\textbf{Heroes 3d6\\Quick-Play Reference}}
 \author{Geoff Beck}
 \date{}
-\usepackage{fullpage,import,caption,titlecaps}
-%\usepackage{helvet}
-%\usepackage{sansmath}
-%\usepackage{sfmath}
+\usepackage{fullpage,caption,titlecaps}
 
-%\renewcommand{\familydefault}{\sfdefault}
 \usepackage[T1]{fontenc}
-%\usepackage{palatino,mathpazo}
 \usepackage{lmodern}
+
 \newcommand{\dicediffbase}{11}
 \newcommand{\dicenoprof}{-1}
 \newcommand{\dicecritlvl}{4}
@@ -31,7 +41,7 @@ These vary between 0 and 3, with higher being better.
 
 \section{Heroic Attributes}
 \subsection{Heroism}
-This is the characters capacity for heroic actions. It can spent on heroic efforts (which cause a chosen action to gain a level of \textlf{critical success}). If you had no \textlf{Heroism} remaining then you regain one point when resting. Otherwise, the Game Master is free to award clever or heroic behaviour (or good role-playing) with a point of \textlf{Heroism}.
+This is the characters capacity for heroic actions and is tracked in terms of available points. These can be spent on heroic efforts, which either guarantee success on a chosen action or add a level of \textlf{critical success}. Additionally, a character can use a point to benefit from a single \textlf{perk} of their choice for 1 round (no need to know or have it equipped to do this). If you had no \textlf{Heroism} remaining, then you regain one point when resting. Otherwise, the Game Master is free to reward clever moves, heroic behaviour, or good role-playing with a point of \textlf{Heroism}.
 
 \section{Perks}
 These represent talents gained while adventuring and can be purchased at the cost of experience.
@@ -71,55 +81,41 @@ A round of combat can be summarised simply as
 
 \subsection{Combat actions}
 A list of possible actions in combat is given below, the action point cost is given in brackets.
-\begin{itemize}
-	\item Move (1)
-	\item Run (2)
-	\item Retreat (2)
-	\item Attack (1)
-	\item All-out attack (2)
-	\item Shove (1)
-	\item Feint (1)
-	\item Grapple (1)
-	\item Bull-rush (2)
-	\item Trip (1)
-	\item Disarm (1)
-	\item Defensive stance (1)
-\end{itemize}
 
-\subsubsection{Move}
+\subsubsection{Move (1)}
 The character can transfer between adjacent combat areas (6 m of movement). Leaving a combat area that contains enemies provokes a \textlf{moment of weakness}. 
 
-\subsubsection{Run}
+\subsubsection{Run (2)}
 The character can make two move actions and gains \textlf{edge} on \textlf{deflect}.  
 
-\subsubsection{Retreat}
+\subsubsection{Retreat (2)}
 The character can leave a combat area that contains an enemy without suffering a \textlf{moment of weakness}. 
 
-\subsubsection{Attack}
-Make an opposed roll with \textlf{aim} versus the target's \textlf{deflect}. If you win, make a damage roll for each of your weapons by rolling with your \textlf{power} versus target's \textlf{toughness}. 
+\subsubsection{Attack (1)}
+Make an opposed roll with \textlf{aim} versus the target's \textlf{deflect}. If you win, make a damage roll for each of your weapons by rolling with your \textlf{power} versus target's \textlf{toughness}. Many \textlf{perks} can enhance or alter attacks.
 
-\subsubsection{All-out attack}  
+\subsubsection{All-out attack (2)}  
 Same procedure as an attack but make 1 extra damage roll.
 
-\subsubsection{Shove}
+\subsubsection{Shove (1)}
 Opposed \textlf{might} check with target. If you win, they are \textlf{knocked down}, otherwise you suffer a \textlf{moment of weakness}.
 
-\subsubsection{Feint}
+\subsubsection{Feint (1)}
 Opposed \textlf{cunning} check with target. If you win, gain \textlf{edge} on \textlf{aim}, otherwise you suffer a \textlf{moment of weakness}.
 
-\subsubsection{Grapple}
+\subsubsection{Grapple (1)}
 Opposed \textlf{might} check with target. If you win, they cannot move, otherwise you suffer a \textlf{moment of weakness}. The victim must make an opposed \textlf{Might} check (and spend 1 action point) to escape.
 
-\subsubsection{Bull-rush}
+\subsubsection{Bull-rush (2)}
 Make a move action. Make an opposed \textlf{Might} roll versus all enemies in destination area. Any who you beat are \textlf{knocked down}, other can exploit a \textlf{moment of weakness}. 
 
-\subsubsection{Trip}
-An attack action where there is no damage roll, instead make opposed \textlf{cunning} check. If you win, the victim is \textlf{knocked down}.
+\subsubsection{Trip (-)}
+Sacrifice a damage roll for an attack that hits, instead make an opposed \textlf{cunning} check. If you win, the victim is \textlf{knocked down}.
 
-\subsubsection{Disarm}
-An attack action where there is no damage roll, instead make opposed \textlf{wit} check. If you win, the victim cannot use their equipped weapon without spending 1 action point to retrieve it. 
+\subsubsection{Disarm (-)}
+Sacrifice a damage roll for an attack that hits, instead make an opposed \textlf{wit} check. If you win, the victim cannot use their equipped weapon without spending 1 action point to retrieve it and suffering a \textlf{moment of weakness}. 
 
-\subsubsection{Defensive stance}
+\subsubsection{Defensive stance (1)}
 The character gains \textlf{edge} on \textlf{deflect} for the next attack they suffer.
 
 \subsubsection{Combat Attributes}
@@ -147,14 +143,13 @@ For every $\dicecritlvl$ the damage roll exceeds the difficulty by the attack ga
  
 \begin{itemize}
 \item
-\textlf{Wounded} inflicts an instance of the \textlf{staggered} effect on the victim. Healing checks targeting the victim have $+1$ \textlf{difficulty} for 3 days or until cured. 
+\textlf{Wounded} inflicts an instance of the \textlf{staggered} effect on the victim. 
 A character with two active \textlf{wounded} effects replaces them with a \textlf{badly-wounded} effect.
 \item
 A \textlf{Badly Wounded} effect causes you to suffer an \textlf{edge} penalty on all actions.
-\item
-Two \textlf{Badly Wounded} effects cause the character to be disabled.
+A character with two active \textlf{badly wounded} effects replaces them with a \textlf{mortally Wounded} effect.
 \item 
-A \textlf{Mortally Wounded} effect means the character will die within 3 days without treatment.
+A \textlf{Mortally Wounded} effect means the character cannot make actions and will die within 3 days without treatment.
 \end{itemize}
 
 \begin{table}[htbp]
@@ -165,10 +160,10 @@ A \textlf{Mortally Wounded} effect means the character will die within 3 days wi
 		\hline
 		Lethality & Endurance loss & Wound \\
 		\hline
-		Normal & 1 & Wounded \\
-		Crushing & 2 & Badly wounded \\
-		Devastating & 3 & 2$\times$ Badly Wounded \\
-		Vorpal & 5 & Mortally Wounded\\
+		Normal & 1 & \textlf{Wounded} \\
+		Crushing & 2 & \textlf{Badly wounded} \\
+		Devastating & 3 & \textlf{Mortally Wounded} \\
+		Vorpal & 5 & Instant death\\
 		\hline
 	\end{tabular}
 \end{table} 
@@ -201,7 +196,7 @@ When hiding behind cover the character receives a bonus to their \textlf{Deflect
 		\hline
 		Soft & - & \textlf{edge}\\
 		Medium & \textlf{edge} & \textlf{edge}\\
-		Heavy & \textlf{edge} & \textlf{edge}\\
+		Heavy & 2$\times$\textlf{edge} & \textlf{edge}\\
 		\hline
 	\end{tabular}
 \end{table}
@@ -230,19 +225,19 @@ Condition & Effect \\
 \begin{table}[ht!]
 	\centering
 	\caption{Skills (synergy attributes in brackets)}
-	\begin{tabular}{|l|l|l|l|}
+	\begin{tabular}{|l|l|l|}
 		\hline
-		General & Social & Combat & Knowledge\\ [0.5ex]
+		General & Social & Knowledge\\ [0.5ex]
 		\hline
-		Athletics (M) & Perform (R) & Close-combat (W) & Animals (W)\\
-		Slight of Hand (C) & Leadership (R) & Shooting (W) & Plants (W)\\
-		Awareness (W) & Deceive (C) & Throwing (W) & History (W)\\
-		Stealth (C) & Disguise (C) &  & Religion (W) \\
-		Healing (R)  & Persuade (R) &  & Arcana (W)\\
-		Mechanical (W)  & Insight (R) & & \\
-		Ride/Drive (C) & & & \\
-		Survival (C) & & & \\
-		Alchemy (C) & & & \\
+		Athletics (M) & Perform (R) & Animals (W)\\
+		Slight of Hand (C) & Leadership (R) & Plants (W)\\
+		Awareness (W) & Deceive (C) & History (W)\\
+		Stealth (C) & Disguise (C) & Religion (W) \\
+		Healing (R)  & Persuade (R) & Arcana (W)\\
+		Mechanical (W)  & Insight (R) & \\
+		Ride/Drive (C) & & \\
+		Survival (C) & & \\
+		Alchemy (C) & & \\
 		\hline
 	\end{tabular}
 \end{table}
