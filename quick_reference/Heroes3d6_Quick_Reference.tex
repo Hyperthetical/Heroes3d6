@@ -1,0 +1,245 @@
+%Copyright (C) 2021  Geoff Beck
+%
+%This document is falls under the category of free software: you can redistribute it and/or modify
+%it under the terms of the GNU General Public License as published by
+%the Free Software Foundation, either version 3 of the License, or
+%(at your option) any later version.
+%
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%
+%See https://www.gnu.org/licenses/ for more details
+
+\documentclass[a4paper,oneside,11pt]{article}
+\title{\textbf{Heroes 3d6\\Quick-Play Reference}}
+\author{Geoff Beck}
+\date{}
+\usepackage{fullpage,caption,titlecaps}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\newcommand{\dicediffbase}{11}
+\newcommand{\dicenoprof}{-1}
+\newcommand{\dicecritlvl}{4}
+
+\newcommand{\textlf}[1]{\textbf{\titlecap{#1}}}
+\newcommand{\textlfirst}[1]{\textbf{\textit{\titlecap{#1}}}}
+
+\begin{document}
+\maketitle
+
+\section{Natural Attributes}
+These reflect the inherent capabilities of the character and consist of: \textlf{Might}, \textlf{Cunning}, \textlf{Wit}, and \textlf{Resolve}.
+
+\textlf{Might} is the character's aggression, \textlf{Cunning} is a measure of their craftiness, \textlf{Wit} is their alertness and attention to detail,  and \textlf{Resolve} their force of will and personal magnetism.
+
+\subsection{Attribute Scores}
+These vary between 0 and 3, with higher being better.
+
+\section{Heroic Attributes}
+\subsection{Heroism}
+This is the characters capacity for heroic actions and is tracked in terms of available points. These can be spent on heroic efforts, which either guarantee success on a chosen action or add a level of \textlf{critical success}. Additionally, a character can use a point to benefit from a single \textlf{perk} of their choice for 1 round (no need to know or have it equipped to do this). If you had no \textlf{Heroism} remaining, then you regain one point when resting. Otherwise, the Game Master is free to reward clever moves, heroic behaviour, or good role-playing with a point of \textlf{Heroism}.
+
+\section{Perks}
+These represent talents gained while adventuring and can be purchased at the cost of experience.
+
+\textlf{Perks} are divided into two categories: active and passive. Active \textlf{perks} alter the kind of actions your character can take. Passive \textlf{perks} provide their bonuses all the time. A single character can only have 3 active and 3 passive \textlf{perks} equipped at a time. They can still have \textlf{perks} purchased but these effects do not apply unless equipped. Changing equipped \textlf{perks} requires 1 hour of rest and concentration. There are slots on the character sheet for you to note your currently equipped \textlf{perks} in.
+
+
+\section{Difficulty Checks}
+A \textlf{difficulty check} is made using a given \textlf{Attribute} or \textlf{Skill}. In order to succeed you must roll equal to or higher than the \textlf{Difficulty} on 3d6, adding your \textlf{Attribute/Skill} score.
+
+\section{Opposed Rolls}
+Each of the creatures contesting the roll add the given score to the result of 3d6. The winner is the one with the higher score. Re-roll if it is a tie.
+
+
+\section{Skills and Professions}
+
+How to use a skill:
+\begin{itemize}
+\item
+Roll 3d6, adding total -1 or the synergy attribute (if proficient)
+\item
+If the roll equals or exceeds the \textlf{Difficulty}, the \textlf{skill} use is successful, and if it exceeds the \textlf{Difficulty} by $\dicecritlvl$ or more it is a \textlf{critical success}. Failing by $\dicecritlvl$ or more produces a \textlf{critical failure}. 
+\item
+These results have direct effect upon the quality of the item produced by crafting or how well the desired task is achieved for the other skills (see the skill rules for detailed consequences).
+\end{itemize}
+
+
+\section{Combat}
+
+\subsection{A round of combat}
+A round of combat can be summarised simply as
+\begin{enumerate}
+	\item All combat participants declare intended actions (2 action points each)
+	\item Each side in combat rolls 1d6
+	\item Resolve actions for each side in order of the 1d6 roll
+\end{enumerate}
+
+\subsection{Combat actions}
+A list of possible actions in combat is given below, the action point cost is given in brackets.
+
+\subsubsection{Move (1)}
+The character can transfer between adjacent combat areas (6 m of movement). Leaving a combat area that contains enemies provokes a \textlf{moment of weakness}. 
+
+\subsubsection{Run (2)}
+The character can make two move actions and gains \textlf{edge} on \textlf{deflect}.  
+
+\subsubsection{Retreat (2)}
+The character can leave a combat area that contains an enemy without suffering a \textlf{moment of weakness}. 
+
+\subsubsection{Attack (1)}
+Make an opposed roll with \textlf{aim} versus the target's \textlf{deflect}. If you win, make a damage roll for each of your weapons by rolling with your \textlf{power} versus target's \textlf{toughness}. Many \textlf{perks} can enhance or alter attacks.
+
+\subsubsection{All-out attack (2)}  
+Same procedure as an attack but make 1 extra damage roll.
+
+\subsubsection{Shove (1)}
+Opposed \textlf{might} check with target. If you win, they are \textlf{knocked down}, otherwise you suffer a \textlf{moment of weakness}.
+
+\subsubsection{Feint (1)}
+Opposed \textlf{cunning} check with target. If you win, gain \textlf{edge} on \textlf{aim}, otherwise you suffer a \textlf{moment of weakness}.
+
+\subsubsection{Grapple (1)}
+Opposed \textlf{might} check with target. If you win, they cannot move, otherwise you suffer a \textlf{moment of weakness}. The victim must make an opposed \textlf{Might} check (and spend 1 action point) to escape.
+
+\subsubsection{Bull-rush (2)}
+Make a move action. Make an opposed \textlf{Might} roll versus all enemies in destination area. Any who you beat are \textlf{knocked down}, other can exploit a \textlf{moment of weakness}. 
+
+\subsubsection{Trip (-)}
+Sacrifice a damage roll for an attack that hits, instead make an opposed \textlf{cunning} check. If you win, the victim is \textlf{knocked down}.
+
+\subsubsection{Disarm (-)}
+Sacrifice a damage roll for an attack that hits, instead make an opposed \textlf{wit} check. If you win, the victim cannot use their equipped weapon without spending 1 action point to retrieve it and suffering a \textlf{moment of weakness}. 
+
+\subsubsection{Defensive stance (1)}
+The character gains \textlf{edge} on \textlf{deflect} for the next attack they suffer.
+
+\subsubsection{Combat Attributes}
+\begin{tabular}{lll}
+\textlf{Aim} & = & -1 or \textlf{wit} (if proficient with weapon)\\ 
+\textlf{Deflect} & = & \textlf{Cunning}\\
+\textlf{Power} & = & Weapon Bonus -1/+\textlf{might}(if proficient)\\
+\textlf{Toughness} & = & 8 + armour value\\
+\textlf{endurance} & = & 3 + \textlf{resolve} \\
+\end{tabular}
+
+\subsection{Attacks}
+Attempting to hit an opponent with an attack costs 1 action point and requires an opposed check with your \textlf{Aim} and the target's \textlf{Deflect}. If the attacker wins, a damage roll may be made against the victim. Attacks can only be made once per turn. An \textlf{all-out attack} costs 2 action points and adds an extra damage roll if it hits. 
+
+\subsubsection{Penetrating Hits}
+These are scored if a fighter fails a \textlf{Deflect} attempt by $\dicecritlvl$ or more. A \textlf{Penetrating Hit} grants an \textlf{edge} bonus on the subsequent damage rolls.
+
+\subsection{Damage Rolls}
+Are a difficulty check using the \textlf{Power} of the attack against a \textlf{difficulty} given by the target's \textlf{Toughness}. A successful damage roll results in the target losing \textlf{endurance} based on the attack's \textlf{lethality} (see table~\ref{tab:lethal}). If they run out of \textlf{endurance} they suffer wound effects instead.
+
+\subsubsection{Critical Hits}
+For every $\dicecritlvl$ the damage roll exceeds the difficulty by the attack gains a \textlf{Lethality} upgrade.
+
+\section{The Effects of Injury}
+ 
+\begin{itemize}
+\item
+\textlf{Wounded} inflicts an instance of the \textlf{staggered} effect on the victim. 
+A character with two active \textlf{wounded} effects replaces them with a \textlf{badly-wounded} effect.
+\item
+A \textlf{Badly Wounded} effect causes you to suffer an \textlf{edge} penalty on all actions.
+A character with two active \textlf{badly wounded} effects replaces them with a \textlf{mortally Wounded} effect.
+\item 
+A \textlf{Mortally Wounded} effect means the character cannot make actions and will die within 3 days without treatment.
+\end{itemize}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Lethality Table}
+	\label{tab:lethal}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		Lethality & Endurance loss & Wound \\
+		\hline
+		Normal & 1 & \textlf{Wounded} \\
+		Crushing & 2 & \textlf{Badly wounded} \\
+		Devastating & 3 & \textlf{Mortally Wounded} \\
+		Vorpal & 5 & Instant death\\
+		\hline
+	\end{tabular}
+\end{table} 
+
+
+\subsection{Recovery and Healing}
+\begin{itemize}
+\item
+Wounds can be healed via use of the Healing skill or by a non-player Healer.
+\item
+Barring consequences of these rolls, a character heals one \textlf{Wounded} effect every 3 days and one \textlf{Badly Wounded} every 10 days.
+\end{itemize}
+
+\section{Terrain and Cover}
+Moving through \textlf{Rough} or \textlf{Dangerous} terrain has the following consequences:
+\begin{itemize}
+\item
+\textlf{Rough} terrain: Moving in or out costs 1 action point more than normal.
+\item 
+\textlf{Dangerous} terrain: Causes hit with \textlf{crushing lethality} on a 3d6 roll $\dicediffbase+$ regardless of \textlf{toughness}. Moving in or out costs 1 action point more than normal.
+\end{itemize}
+When hiding behind cover the character receives a bonus to their \textlf{Deflect} checks.
+\begin{table}[ht]
+	\centering
+	\caption{Cover Table}
+	\label{tab:cover}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		Cover Type & Deflect Bonus & Hide Bonus\\ [0.5ex]
+		\hline
+		Soft & - & \textlf{edge}\\
+		Medium & \textlf{edge} & \textlf{edge}\\
+		Heavy & 2$\times$\textlf{edge} & \textlf{edge}\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\section{Useful Tables}
+
+\begin{table}
+\centering
+\caption{Condition Table}
+\begin{tabular}{|l|l|}
+\hline
+Condition & Effect \\
+\hline
+\textlf{Vulnerable} & Attackers get \textlf{edge} bonus on damage rolls\\
+\textlf{Stagger} X & \textlf{edge} penalty on next X rolls\\
+\textlf{Blind} & \textlf{Deflect} and \textlf{Aim} set to -3 \\
+\textlf{Bleeding} & Lose 1 \textlf{endurance} each round for 2 rounds \\
+\textlf{Knocked Down} & \textlf{vulnerable} until it can stand up \\
+\textlf{Immobilised} & No move actions\\
+\textlf{Cripple} & Action costs increased by 1 \\
+\textlf{Cursed} & \textlf{Critical Success} becomes \textlf{Critical Failure} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht!]
+	\centering
+	\caption{Skills (synergy attributes in brackets)}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		General & Social & Knowledge\\ [0.5ex]
+		\hline
+		Athletics (M) & Perform (R) & Animals (W)\\
+		Slight of Hand (C) & Leadership (R) & Plants (W)\\
+		Awareness (W) & Deceive (C) & History (W)\\
+		Stealth (C) & Disguise (C) & Religion (W) \\
+		Healing (R)  & Persuade (R) & Arcana (W)\\
+		Mechanical (W)  & Insight (R) & \\
+		Ride/Drive (C) & & \\
+		Survival (C) & & \\
+		Alchemy (C) & & \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\end{document}
