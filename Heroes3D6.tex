@@ -963,9 +963,14 @@ If the target of an attack loses the opposed \textlf{aim}/\textlf{deflect} check
 
 \subsubsection{Ranged Weapons}
 As with close-combat targets, the attacker and defender make a single opposed \textlf{aim}/\textlf{deflect} check. If the attack has multiple projectiles you simply make the appropriate number of damage rolls on a successful hit. These weapons are divided into two types.
-First is shooting weapons: this subset encompasses bows, crossbows, and fire-arms. These weapons are operated to mechanically fire an arrow or similar projectile, requiring less exertion to use than it would to throw the projectile yourself. Shooting weapons suffer an \textlf{edge} penalty on \textlf{Aim} when used on targets within range 0.
-Secondly, there are throwing weapons: this subset includes all types that are thrown by the force of a character's own arms/legs/limbs. 
-All thrown weapons can be used effectively at point blank range (range 0). 
+First is shooting weapons: this subset encompasses bows, crossbows, and fire-arms. These weapons are operated to mechanically fire an arrow or similar projectile, requiring less exertion to use than it would to throw the projectile yourself. Secondly, there are throwing weapons: this subset includes all types that are thrown by the force of a character's own arms/legs/limbs. 
+\begin{itemize}
+	\item Shooting weapons suffer an \textlf{edge} penalty on \textlf{Aim} when used on targets within range 0.
+	\item All thrown weapons can be used effectively at point blank range (range 0). 
+\end{itemize}
+
+
+
 
 
 
@@ -1136,9 +1141,8 @@ The mechanics below detail how this berserker fury affects characters and how th
 A character becomes \textlfirst{enraged} if under extreme emotional strain while fighting, although particularly volatile personalities may become \textlf{enraged} more easily. Otherwise a character with the Berserker \textlf{power} can trigger an \textlf{enraged} state once per day.
 
 \subsubsection{When Enraged}
-An enraged character seeks to enter close combat with the nearest enemy at all times and cannot take prisoners, they go only for the kill. If wielding a firearm-type weapon, they may fire it at range (while moving as required). Enraged characters have an \textlf{edge} penalty on \textlf{deflect} checks and but an \textlf{edge} bonus on damage rolls.
+An enraged character seeks to enter close combat with the nearest enemy at all times and cannot take prisoners, they go only for the kill. If wielding a firearm-type weapon, they may fire it at range (while moving as required). Enraged characters have an \textlf{edge} penalty on \textlf{deflect} checks and but an \textlf{edge} bonus on damage rolls. This state ends when there are no enemies left to defeat in the vicinity.
 
-Rage drains one point of \textlf{endurance} each round and ends when the character has no points left. A character cannot \textlf{enrage} unless they have at least one point of \textlf{endurance}. The first time the character causes damage during a round they regain 1 \textlf{endurance}.
 
 
 
@@ -1365,17 +1369,14 @@ These open up new actions that a character can make and they must occupy an equi
 This costs two action points and allows the character to make a single ranged attack with an \textlf{edge} bonus on \textlf{Aim} and associated damage rolls.
 
 
-\subsection{Berserker (4)}
-You mad, bro? The character has harnessed their inner rage. This allows them to voluntarily \textlf{enrage} once per day.
+\subsection{Berserker (3)}
+You mad, bro? The character can quickly be overtaken by the pulse of battle, they are forced to \textlf{enrage} if they defeat an enemy or inflict a \textlf{wound} effect.
 
 \subsubsection{Upgrade: Berserkergang (2)}
-(Requires \textlf{berserker}) The character has mastered their inner fury allowing them to \textlf{Enrage} twice per day.
-
-\subsubsection{Upgrade: Endless rage (3)}
-(Requires \textlf{berserker}) Becoming \textlf{enraged} restores the character's \textlf{endurance} to its maximum value. Additionally, the character can still become \textlf{enraged} when they have no \textlf{endurance} left.
+(Requires \textlf{berserker}) The character has harnessed their inner rage. This allows them to voluntarily \textlf{enrage} once per day and they are not forced to \textlf{enrage} by \textlf{berserker}.
 
 \subsubsection{Upgrade: Seething rage (2)}
-(Requires \textlf{berserker}) The character's rage is turns them into a  highly focussed killer. This grants the \textlf{enraged} character an \textlf{edge} bonus to \textlf{aim}, but a similar penalty to \textlf{deflect}.
+(Requires \textlf{berserker}) The character's rage is turns them into a highly focussed killer. This grants the \textlf{enraged} character a \textlf{lethality} bonus against an enemy chosen when they enrage, while this enemy survives they suffer an \textlf{edge} penalty to \textlf{aim} versus any other target.
 
 
 \subsection{Blind Side (4)}
@@ -1383,7 +1384,7 @@ A deft feint allows the character enough room to fire their ranged weapons again
 
 
 \subsection{Butcher's blow (3)}
-The force of the character's strikes cause them to inflict horrendous damage. This can declared when declaring an attack, the cost is increased by 1 action point. Should the attack cause damage, the target is subject to the \textlf{cripple} effect. This effect applies only to creatures a maximum of 1 size category larger than the character.
+The character aims their strikes to maim the target. This can declared when declaring an attack, the cost is increased by 1 action point. Should the attack cause damage, the target is subject to the \textlf{cripple} effect. This effect applies only to creatures a maximum of 1 size category larger than the character.
 
 
 \subsection{Deeds Not Words (4)}
@@ -1411,10 +1412,6 @@ A risky manoeuvre, the fighter replaces a considered attack with a hail of furio
 
 \subsubsection{Upgrade: Barrage (3)}
 (Requires \textlf{Flurry of Blows}) The character may use the \textlf{Flurry of Blows} effect twice, the second use incurs an \textlf{edge} penalty to \textlf{deflect} instead. 
-
-
-\subsection{Frothing fury (4)}
-(Requires \textlf{berserker}) While \textlf{enraged} the character may spend 2 action points to make an \textlf{all-out attack} against all adjacent enemies. Additionally, this costs 1 \textlf{endurance} point.
 
 
 \subsection{Guard breaker (3)}
@@ -1471,7 +1468,7 @@ Enemy not dying? Just hit it harder! The character can declare a close-combat at
 
 
 \subsection{Reckless strike (3)}
-The character can declare a close-combat attack to be a ``reckless strike''. Such an attack has an \textlf{edge} bonus to \textlf{aim} but the character incurs and \textlf{edge} penalty on \textlf{deflect} for one round.
+The character can declare a close-combat attack to be a ``reckless strike''. This has an \textlf{edge} bonus to \textlf{aim} but the character incurs and \textlf{edge} penalty on \textlf{deflect} for one round.
 
 
 \subsection{Splatter (3)}
@@ -1479,7 +1476,7 @@ The violence of your blows causes the blood of your foes to stain the soil. This
 
 
 \subsection{Suppressing fire! (4)}
-The character fires an indiscriminate volley of projectiles, forcing enemies and allies alike to get their heads down. This costs one action point, the character targets an area of radius 0, moving into, through, or out of the target area costs 1 extra action point for 1 round. This attack cannot be made with a weapon that requires action points be spent to reload it between shots.
+The character fires an indiscriminate volley of projectiles, forcing enemies and allies alike to get their heads down. This costs two action points, the character chooses a target enemy and makes a normal attack action against them. In addition, moving into, through, or out of the target's combat area costs 1 extra action point for 1 round. This cannot be used with a weapon that requires action points be spent to reload it between shots. 
 
 
 \subsection{The ol' one-two (3)}
@@ -1495,6 +1492,8 @@ Danger, sharp objects. The character lashes out around them, striking all too sl
  
 \subsubsection{Upgrade: Steel avalanche (2)}
 This adds an additional \textlf{cleave} + 1.
+
+
 
 
 \section{Passive perks}
@@ -1537,7 +1536,7 @@ Now the bulls run from you. The character cannot suffer \textlf{moments of weakn
 (Requires Bull-Headed) The character's \textlf{bull-rush} actions may hit as many targets within the chosen area as they wish.
 
 \subsubsection{Upgrade: Trample (3)}  
-(Requires Bull-Headed) The character may make a damage roll against one of the victims of their successful \textlf{bull-rush} actions. 
+(Requires Bull-Headed) The character may make a damage roll against one victim of their successful \textlf{bull-rush} actions. 
 
 \subsubsection{Upgrade: Pain Train (3)}
 (Requires Bull-Headed) Choo! Choo! The character may choose for their \textlf{bull-rush} to knock the target(s) flying a distance of range 1, instead of just knocking them down. If a victim hits an obstacle (entering \textlf{rough terrain} or cover) they suffer a damage roll, with \textlf{power} equal to the character's \textlf{might} and \textlf{normal lethality}.
