@@ -29,7 +29,7 @@
 \usepackage{lmodern}
 
 
-\newcommand{\dicediffbase}{10}
+\newcommand{\dicediffbase}{9}
 \newcommand{\dicenoprof}{-1}
 \newcommand{\dicecritlvl}{4}
 
@@ -213,7 +213,7 @@ What \textlfirst{relationships} link the character to other group members, organ
 \item
 Now we come to the most important part of character creation, deciding what kind of person your character is. Use the \textlf{Convictions}, \textlf{flaws} and \textlf{goals} you chose as a skeleton. You need to define a character you are comfortable to play as, but also one who is believable as a real person because, lets face it, its not much of a role playing game if everyone is just a faceless killing machine.
 \item
-Choose one \textlf{attribute} to have the value 2 and another to be 1, set all other \textlf{attributes} to 0.  Set \textlf{heroism/villainy} to 1. 
+Choose two \textlf{attributes} to have the value 1, set all other \textlf{attributes} to 0.  Set \textlf{heroism/villainy} to 1. 
 \item 
 Spend up to 3 experience points choosing \textlf{perks} or \textlf{proficiencies} (Chapter~\ref{chap:perks}) for your character. You may select one weapon proficiency for free.
 \item
@@ -429,46 +429,6 @@ Here are some sample skills, each setting/world may add or remove from this list
 %
 %\textlf{Critical success} adds one extra output item produced per critical level. \textlf{Critical failure} ruins 1 extra set of materials per critical level.
 
-\subsection{Healing (Resolve)}
-A healer is one who is skilled is speeding the recovery of their allies through strictly medical/surgical means (potions are the province of the chemist), a healer can employ their healing skill to remove injuries inflicted to an ally. You may only ever make 1 re-attempt on a failed healing roll, should this also fail, you may not re-attempt to heal that particular patient in the same day. The kind of healing actions are:
-
-\begin{itemize}
-	\item Cure a single \textlf{wounded} effect
-	\begin{itemize}
-		\item \textlf{difficulty}: $\dicediffbase$ (add 1 extra for each other wound effect present)
-		\item Failure means nothing changes
-		\item \textlf{Critical failure} increases healing difficulty for that target by 1 for 3 days
-		\item \textlf{critical success} removes an extra wounded effect per critical threshold, or badly-wounded per two thresholds instead
-	\end{itemize}
-	\item Cure a single \textlf{badly wounded} effect
-	\begin{itemize}
-		\item \textlf{difficulty}: 12 (add 1 extra \textlf{difficulty} for each additional wound effect present)
-		\item Failure means nothing changes
-		\item \textlf{Critical failure} increases healing difficulty for that target by 1 for 3 days
-		\item \textlf{critical success} removes an extra wounded effect per critical threshold, or badly-wounded per two thresholds instead
-	\end{itemize}
-	\item Cure a single \textlf{Mortally wounded} effect
-	\begin{itemize}
-		\item \textlf{difficulty}: 15 (add 1 extra \textlf{difficulty} for each additional wound effect present)
-		\item Failure means nothing changes
-		\item \textlf{Critical failure} increases healing difficulty for that target by 1 for 3 days
-		\item \textlf{critical success} removes an extra wounded effect per critical threshold, or badly-wounded per two thresholds instead
-	\end{itemize}
-	\item Identify poison or disease
-	\begin{itemize}
-		\item The difficulty should scale with the rarity of the condition or the healers familiarity with it
-		\item Failure means the healer doesn't know
-		\item \textlf{Critical failure} means they get it wrong
-	\end{itemize}
-	\item Analyse wounds (what caused them etc)
-	\begin{itemize}
-		\item The difficulty should scale with the rarity of the type of creature/weapon or the healers familiarity with it
-		\item Failure means the healer doesn't know
-		\item \textlf{Critical failure} means they get it wrong
-	\end{itemize}
-\end{itemize}
-
-
 \subsection{Athletics (Might)}
 This skill determines your ability perform acrobatic feats, swim, climb, jump long distances or keep your balance. Any task of this nature is given a difficulty score by the Game Master, the degree of success or failure should be noted by the Game Master for purposes of describing your heroic leap or clumsy stumble into a precipice.  This skill can be used to:
 
@@ -500,29 +460,6 @@ This skill determines your ability perform acrobatic feats, swim, climb, jump lo
 	\end{itemize}
 \end{itemize}
 
-\subsection{Stealth (Cunning)}
-Stealth has two functions: to move about unnoticed or to conceal yourself while stationary. Thus, this skill can be used to:
-
-\begin{itemize}
-	\item Move silently without being noticed
-	\begin{itemize}
-		\item Opposed roll vs any observers \textlf{awareness} skill
-		\item Bonuses may be gained by being in cover (see Table~\ref{tab:cover}) and an \textlf{edge} bonus is granted by being in shadows
-		\item Success means you are undetected
-		\item \textlf{critical success} grants you \textlf{edge} on your next \textlf{stealth} check
-		\item Failure results in potential observers searching for you (you can try hide from them)
-		\item \textlf{Critical failure} additionally incurs an \textlf{edge} penalty on subsequent hide checks
-	\end{itemize}
-	\item Hide and avoid being noticed
-	\begin{itemize}
-		\item Opposed roll vs the highest \textlf{awareness} skill of anyone trying to find you
-		\item Bonuses may be gained by being in cover (see Table~\ref{tab:cover}) and an \textlf{edge} bonus is granted by being in shadows
-		\item Success means you are undetected
-		\item \textlf{critical success} grants you \textlf{edge} on your next \textlf{stealth} check
-		\item Failure means searchers notice your presence
-		\item \textlf{critical Failure} results in being noticed (but you don't realise this)
-	\end{itemize}
-\end{itemize}
 
 \subsection{Awareness (Wit)}
 Is how observant and alert a character is, this skill allows you to spot secret doors and notice hidden enemies or traps. This skill can be used to:
@@ -535,6 +472,46 @@ Is how observant and alert a character is, this skill allows you to spot secret 
 	\item The amount of detail revealed should scale with the number of critical thresholds the \textlf{difficulty} is exceeded/failed by
 	\item \textlf{Critical success} also means a searched for creature doesn't detect that they have been spotted
 	\item \textlf{Critical failure} grants an \textlf{edge} penalty on subsequent checks
+	\end{itemize}
+\end{itemize}
+
+
+\subsection{Healing (Resolve)}
+A healer is one who is skilled is speeding the recovery of their allies through strictly medical/surgical means (potions are the province of the chemist), a healer can employ their healing skill to remove injuries inflicted to an ally. You may only ever make 1 re-attempt on a failed healing roll, should this also fail, you may not re-attempt to heal that particular patient in the same day. The kind of healing actions are:
+
+\begin{itemize}
+	\item Cure a single \textlf{wounded} effect
+	\begin{itemize}
+		\item \textlf{difficulty}: $\dicediffbase$ (add 1 extra for each other wound effect present)
+		\item Failure means nothing changes
+		\item \textlf{Critical failure} increases healing difficulty for that target by 1 for 3 days
+		\item \textlf{critical success} removes an extra wounded effect per critical threshold, or badly-wounded per two thresholds instead
+	\end{itemize}
+	\item Cure a single \textlf{badly wounded} effect
+	\begin{itemize}
+		\item \textlf{difficulty}: 11 (add 1 extra \textlf{difficulty} for each additional wound effect present)
+		\item Failure means nothing changes
+		\item \textlf{Critical failure} increases healing difficulty for that target by 1 for 3 days
+		\item \textlf{critical success} removes an extra wounded effect per critical threshold, or badly-wounded per two thresholds instead
+	\end{itemize}
+	\item Cure a single \textlf{Mortally wounded} effect
+	\begin{itemize}
+		\item \textlf{difficulty}: 13 (add 1 extra \textlf{difficulty} for each additional wound effect present)
+		\item Failure means nothing changes
+		\item \textlf{Critical failure} increases healing difficulty for that target by 1 for 3 days
+		\item \textlf{critical success} removes an extra wounded effect per critical threshold, or badly-wounded per two thresholds instead
+	\end{itemize}
+	\item Identify poison or disease
+	\begin{itemize}
+		\item The difficulty should scale with the rarity of the condition or the healers familiarity with it
+		\item Failure means the healer doesn't know
+		\item \textlf{Critical failure} means they get it wrong
+	\end{itemize}
+	\item Analyse wounds (what caused them etc)
+	\begin{itemize}
+		\item The difficulty should scale with the rarity of the type of creature/weapon or the healers familiarity with it
+		\item Failure means the healer doesn't know
+		\item \textlf{Critical failure} means they get it wrong
 	\end{itemize}
 \end{itemize}
 
@@ -569,6 +546,7 @@ Mechanical skill represents how mechanically minded a character is, allowing the
 	\end{itemize}
 \end{itemize}
 
+
 \subsection{Ride/Drive (Cunning)} 
 This skill governs how well the character deals with mounts and/or vehicles. The skill can be used to:
 \begin{itemize}
@@ -595,6 +573,65 @@ This skill governs how well the character deals with mounts and/or vehicles. The
 	\end{itemize}
 \end{itemize}
 For additional mounted combat rules see Section~\ref{sec:mountandblade}.
+
+
+\subsection{Slight of Hand (Cunning)}
+This skill is related to the character dexterity, it covers the ability to perform simple actions quickly without attracting notice. This skill can be used to:
+
+\begin{itemize}
+	\item Perform conjuring tricks
+	\begin{itemize}
+		\item Opposed roll against the audience's collective \textlf{wit}
+		\item Success completes the trick impressively
+		\item \textlf{Critical success} could allow a additional skill action like picking an audience member's pockets
+		\item Failure results in the trick being unimpressive
+		\item \textlf{Critical failure} results in the audience seeing how the trick is being done
+	\end{itemize}
+	
+	\item Pick pockets
+	\begin{itemize}
+		\item Opposed roll against the victim's \textlf{wit}
+		\item Success acquires one item from pocket
+		\item \textlf{Critical success} allows an extra item to filched
+		\item Failure results in the character acquiring nothing
+		\item \textlf{Critical failure} results in being detected by the victim
+	\end{itemize}
+	
+	\item Take or exchange items unnoticed
+	\begin{itemize}
+		\item Opposed roll against highest potential observer's \textlf{wit}
+		\item An \textlf{edge} penalty is applied if the item is being actively guarded
+		\item Success completes the task unnoticed
+		\item \textlf{Critical success} means the theft/replacement won't be noticed for some time
+		\item Failure results in the character acquiring nothing
+		\item \textlf{Critical failure} results in being detected
+	\end{itemize}
+\end{itemize}
+
+
+\subsection{Stealth (Cunning)}
+Stealth has two functions: to move about unnoticed or to conceal yourself while stationary. Thus, this skill can be used to:
+
+\begin{itemize}
+	\item Move silently without being noticed
+	\begin{itemize}
+		\item Opposed roll vs any observers \textlf{awareness} skill
+		\item Bonuses may be gained by being in cover (see Table~\ref{tab:cover}) and an \textlf{edge} bonus is granted by being in shadows
+		\item Success means you are undetected
+		\item \textlf{critical success} grants you \textlf{edge} on your next \textlf{stealth} check
+		\item Failure results in potential observers searching for you (you can try hide from them)
+		\item \textlf{Critical failure} additionally incurs an \textlf{edge} penalty on subsequent hide checks
+	\end{itemize}
+	\item Hide and avoid being noticed
+	\begin{itemize}
+		\item Opposed roll vs the highest \textlf{awareness} skill of anyone trying to find you
+		\item Bonuses may be gained by being in cover (see Table~\ref{tab:cover}) and an \textlf{edge} bonus is granted by being in shadows
+		\item Success means you are undetected
+		\item \textlf{critical success} grants you \textlf{edge} on your next \textlf{stealth} check
+		\item Failure means searchers notice your presence
+		\item \textlf{critical Failure} results in being noticed (but you don't realise this)
+	\end{itemize}
+\end{itemize}
 
 
 \subsection{Survival (Cunning)}
@@ -639,48 +676,10 @@ Survival covers wilderness survival skills, knowing the signs to follow to find 
 
 
 
-\subsection{Slight of Hand (Cunning)}
-This skill is related to the character dexterity, it covers the ability to perform simple actions quickly without attracting notice. This skill can be used to:
-
-\begin{itemize}
-	\item Perform conjuring tricks
-	\begin{itemize}
-		\item Opposed roll against the audience's collective \textlf{wit}
-		\item Success completes the trick impressively
-		\item \textlf{Critical success} could allow a additional skill action like picking an audience member's pockets
-		\item Failure results in the trick being unimpressive
-		\item \textlf{Critical failure} results in the audience seeing how the trick is being done
-	\end{itemize}
-	
-	\item Pick pockets
-	\begin{itemize}
-		\item Opposed roll against the victim's \textlf{wit}
-		\item Success acquires one item from pocket
-		\item \textlf{Critical success} allows an extra item to filched
-		\item Failure results in the character acquiring nothing
-		\item \textlf{Critical failure} results in being detected by the victim
-	\end{itemize}
-	
-	\item Take or exchange items unnoticed
-	\begin{itemize}
-		\item Opposed roll against highest potential observer's \textlf{wit}
-		\item An \textlf{edge} penalty is applied if the item is being actively guarded
-		\item Success completes the task unnoticed
-		\item \textlf{Critical success} means the theft/replacement won't be noticed for some time
-		\item Failure results in the character acquiring nothing
-		\item \textlf{Critical failure} results in being detected
-	\end{itemize}
-\end{itemize}
-
-
 \section{Social skills}
 
-\subsection{Perform (Resolve)}
-This skill represents practice and talent in some form of performance, be it poetry, acting, song, or playing music. A character with this skill can perform their art by rolling this score opposed to the \textlf{difficulty} of the performance they are attempting, this \textlf{difficulty} is related directly to the beauty or skill of the performance. If a character seeks to perform with an instrument they have no experience with, they suffer an \textlf{edge} penalty on perform checks with the unknown instrument.
-
-A general guideline would be that an ``average-joe'' performance has difficulty 8, but no one would pay to watch this.
-
-The amount of audience appreciation/fruit-throwing also scales with the number of critical thresholds the \textlf{difficulty} is exceeded/failed by. 
+\subsection{Deceive (Cunning)}
+This is a skill that can used to lie convincingly, it works in the same way as \textlf{Persuade} but relies on the fact that you are persuading the target of something you do not believe is true, or making a bargain that is not what the target believes it to be (selling them a fake or stolen artwork for instance).
 
 
 \subsection{Disguise (Cunning)}
@@ -693,7 +692,75 @@ This skill represents your character's ability to obfuscate their appearance, us
 	\item If they fail they are fooled by the disguise
 	\item If they succeed they are suspicious
 	\item Their \textlf{critical success} means they see through you immediately
-\end{itemize}  
+\end{itemize}
+
+
+\subsection{Insight (Resolve)}
+Is how well a character can read the motives and feelings of others. This skill can be used to:
+
+\begin{itemize}
+	\item Determine someone's motives 
+	\begin{itemize}
+		\item Opposed roll versus target's \textlf{deceive} skill (if they are deceptive)
+		\item Otherwise \textlf{difficulty} is decided by how obvious their motives are
+		\item The amount of detail revealed should scale with the number of critical thresholds the \textlf{difficulty} is exceeded/failed by
+	\end{itemize}
+	\item Detect deception 
+	\begin{itemize}
+		\item Opposed roll versus target's \textlf{deceive} skill
+		\item Success means you identify if the person is hiding something
+		\item The amount of detail revealed should scale with the number of critical thresholds the \textlf{difficulty} is exceeded/failed by
+	\end{itemize}
+\end{itemize}
+
+
+\subsection{Leadership (Resolve)}
+Leadership gauges the character's ability to inspire others to follow them, or to bring out the best in each of their companions. This skill can only be used on creatures who can understand you. This skill can be used to:
+
+\begin{itemize}
+	\item Make a creature ``snap out of it''
+	\begin{itemize}
+		\item This negates a condition affecting a target
+		\item The allowed conditions: \textlf{Stagger}, \textlf{Crippled}, \textlf{Immobilized}, \textlf{Knock-down}.
+		\item The \textlf{difficulty} is given by $\dicediffbase +$ the \textlf{power} of the condition 
+		\item \textlf{Critical success} allows you to use this action again for no action points
+	\end{itemize}
+	
+	\item Direct an action 
+	\begin{itemize}
+		\item Give an order to an ally
+		\item Make an opposed check with your \textlf{Leadership} vs \textlf{difficulty}
+		\item \textlf{difficulty} determined by the directed action
+		\item If you succeed, and the ally obeys, the action has an \textlf{edge} bonus
+		\item \textlf{Critical success} grants an extra \textlf{edge} bonus per threshold
+	\end{itemize}
+	
+	\item Command and be obeyed
+	\begin{itemize}
+		\item Issue a single sentence command to a target
+		\item If you win an opposed check with your \textlf{Leadership} vs a chosen target's \textlf{Resolve} they obey the command
+		\item Target's cannot be overtly hostile for this to work and must be able to understand the command
+		\item \textlf{Critical success} grants an \textlf{edge} bonus to the next command to the same target
+		\item \textlf{critical failure} means they have \textlf{edge} versus further orders
+	\end{itemize}
+	
+	\item Restore \textlf{endurance} to others
+	\begin{itemize}
+		\item Choose a single ally to inspire
+		\item Make \textlf{Leadership} check against $\dicediffbase$ + target's missing \textlf{endurance}
+		\item Success restores 1 missing \textlf{endurance}
+		\item \textlf{Critical success} restores extra \textlf{endurance}.
+	\end{itemize}
+\end{itemize}
+
+
+\subsection{Perform (Resolve)}
+This skill represents practice and talent in some form of performance, be it poetry, acting, song, or playing music. A character with this skill can perform their art by rolling this score opposed to the \textlf{difficulty} of the performance they are attempting, this \textlf{difficulty} is related directly to the beauty or skill of the performance. If a character seeks to perform with an instrument they have no experience with, they suffer an \textlf{edge} penalty on perform checks with the unknown instrument.
+
+A general guideline would be that an ``average-joe'' performance has difficulty 8, but no one would pay to watch this.
+
+The amount of audience appreciation/fruit-throwing also scales with the number of critical thresholds the \textlf{difficulty} is exceeded/failed by. 
+  
 
 \subsection{Persuade (Resolve)}
 This is a skill that can be used to weedle favours out of people, convince them of your trustworthiness (or some other fact), and for bargaining and bartering. This skill cannot be used to convince a person of something that is untrue (you can't lie while using it).
@@ -715,68 +782,6 @@ This is a skill that can be used to weedle favours out of people, convince them 
 		\item Success means target suffers \textlf{edge} penalty to rolls linked to next action
 	\end{itemize}
 \end{itemize}
-
-
-\subsection{Deceive (Cunning)}
-This is a skill that can used to lie convincingly, it works in the same way as \textlf{Persuade} but relies on the fact that you are persuading the target of something you do not believe is true, or making a bargain that is not what the target believes it to be (selling them a fake or stolen artwork for instance).
-
-\subsection{Leadership (Resolve)}
-Leadership gauges the character's ability to inspire others to follow them, or to bring out the best in each of their companions. This skill can only be used on creatures who can understand you. This skill can be used to:
-
-\begin{itemize}
-	\item Make a creature ``snap out of it''
-	\begin{itemize}
-		\item This negates a condition affecting a target
-		\item The allowed conditions: \textlf{Stagger}, \textlf{Crippled}, \textlf{Immobilized}, \textlf{Knock-down}.
-		\item The \textlf{difficulty} is given by $\dicediffbase +$ the \textlf{power} of the condition 
-		\item \textlf{Critical success} allows you to use this action again for no action points
-	\end{itemize}
-
-	\item Direct an action 
-	\begin{itemize}
-		\item Give an order to an ally
-		\item Make an opposed check with your \textlf{Leadership} vs \textlf{difficulty}
-		\item \textlf{difficulty} determined by the directed action
-		\item If you succeed, and the ally obeys, the action has an \textlf{edge} bonus
-		\item \textlf{Critical success} grants an extra \textlf{edge} bonus per threshold
-	\end{itemize}
-
-	\item Command and be obeyed
-	\begin{itemize}
-		\item Issue a single sentence command to a target
-		\item If you win an opposed check with your \textlf{Leadership} vs a chosen target's \textlf{Resolve} they obey the command
-		\item Target's cannot be overtly hostile for this to work and must be able to understand the command
-		\item \textlf{Critical success} grants an \textlf{edge} bonus to the next command to the same target
-		\item \textlf{critical failure} means they have \textlf{edge} versus further orders
-	\end{itemize}
-
-	\item Restore \textlf{endurance} to others
-	\begin{itemize}
-		\item Choose a single ally to inspire
-		\item Make \textlf{Leadership} check against $\dicediffbase$ + target's missing \textlf{endurance}
-		\item Success restores 1 missing \textlf{endurance}
-		\item \textlf{Critical success} restores extra \textlf{endurance}.
-	\end{itemize}
-\end{itemize}
-
-\subsection{Insight (Resolve)}
-Is how well a character can read the motives and feelings of others. This skill can be used to:
-
-\begin{itemize}
-	\item Determine someone's motives 
-	\begin{itemize}
-		\item Opposed roll versus target's \textlf{deceive} skill (if they are deceptive)
-		\item Otherwise \textlf{difficulty} is decided by how obvious their motives are
-		\item The amount of detail revealed should scale with the number of critical thresholds the \textlf{difficulty} is exceeded/failed by
-	\end{itemize}
-	\item Detect deception 
-	\begin{itemize}
-		\item Opposed roll versus target's \textlf{deceive} skill
-		\item Success means you identify if the person is hiding something
-		\item The amount of detail revealed should scale with the number of critical thresholds the \textlf{difficulty} is exceeded/failed by
-	\end{itemize}
-\end{itemize}
-
 
 
 \section{Knowledge skills}
@@ -901,7 +906,7 @@ A character can make close-combat attacks against any creature within the same c
 A character armed with a ranged weapon can often attack enemies that are in different combat areas to itself. How far it is allowed to do so is defined by the weapon's range score. A range of 1 would allow shots to be fired at a target in any adjacent area to that of the firer. Draw a straight line between the shooter and target and count the number of area boundaries it passes over. 
 
 \subsection{All-out attack}
-The character channels all their energy into aggression. This attack action can be made with any weapon that has no \textlf{reload} rule, it costs 2 action points but grants \textlf{edge} on the damage roll (for one of the character's weapons if wielding two).
+The character channels all their energy into aggression. This attack action can be made with any weapon that has no \textlf{reload} rule, it costs 2 action points but grants \textlf{burst} + 1 on the damage roll (for one of the character's weapons if wielding two).
 
 
 \section{Combat - More Details}
@@ -915,7 +920,7 @@ Each creature or player can make only one of this type of attack per round.
 Some attacks/powers have special effects. These should always be potentially mitigated via a \textlfirst{resist} check. This involves an opposed roll between the \textlf{power} of the effect ($\dicenoprof$ or the user's \textlf{Might} if proficient) and the most appropriate choice from the victim's attributes. For instance, resisting poison might use \textlf{Resolve}, whereas avoiding being hypnotised would require \textlf{wit}.    
 
 \subsection{Changing weapons}
-To swap their current held the weapon a character must spend 1 action point.
+To swap their current held weapon a character must spend 1 action point.
 
 \subsection{Other Types of Movement}
 \subsubsection{Running}
@@ -970,6 +975,7 @@ First is shooting weapons: this subset encompasses bows, crossbows, and fire-arm
 	\item Shooting weapons suffer an \textlf{edge} penalty on \textlf{Aim} when used on targets within range 0.
 	\item All thrown weapons can be used effectively at point blank range (range 0). 
 \end{itemize}
+
 
 
 
@@ -1097,7 +1103,7 @@ The lighting of an environment greatly influences the difficulty of fighting wit
 A target that does not know of your presence, aggressive intent, or is otherwise fully engaged in combat with someone else (the target must have been unaware of your combat participation, if not your presence) is vulnerable to \textlfirst{sneak attacks}.
 
 The victim of a \textlf{sneak attack} gets no opportunity to \textlf{deflect}, unless otherwise modified.
-Such attacks always gain an \textlf{edge} bonus to damage rolls. Additionally, they have \textlf{burst} + 1 when made with \textlf{small} weapons, such as daggers, or with specialist tools, such as garrotte wire. Multiple \textlf{perks} can improve \textlf{sneak attacks}. \textlf{Small} weapon bonuses are lost on \textlf{Huge}, or larger, targets.
+Such attacks gain an \textlf{edge} bonus to damage rolls when made with \textlf{small} weapons, such as daggers, or with specialist tools, such as garrotte wire. Multiple \textlf{perks} can improve \textlf{sneak attacks}. \textlf{Small} weapon bonuses are lost on \textlf{Huge}, or larger, targets.
 
 \subsection{Feints}
 \label{sec:feint}
@@ -1122,7 +1128,7 @@ This modifies an attack action: replace a damage roll with an opposed \textlf{wi
 \subsection{Grapple}
 You can attempt to wrestle your foe into an immobile state at the cost of 1 action point. Provided you have at least one free hand, you make an opposed \textlf{Might} check with your target. If you win, the target is now \textlf{grappled}. However, if you score a \textlf{critical failure}, you suffer a \textlf{moment of weakness} that can be exploited by the target. A \textlf{critical success} makes your target lose 1 action point. It costs 1 action point each round after the first to maintain a grapple.
 
-\textlf{Grappled} foes cannot make any movement actions until they break free of the \textlf{grapple}, this costs 1 action point and requires that they win an opposed \textlf{Might} check with the grappler. If they are forced to move by some external effect then the grapple breaks automatically.
+\textlf{Grappled} foes cannot make any movement actions until they break free of the \textlf{grapple}, this costs 1 action point and requires that they win an opposed \textlf{Might} check with the grappler. If they are forced to move by some external effect then the grapple breaks automatically. Grapplers have an \textlf{edge} penalty on \textlf{aim}, unless using \textlf{small} or natural weapons.
 
 \subsection{Shove}
 This costs 1 action point and involves an opposed \textlf{Might} check with the target. If the shover is successful the target is either knocked down or moved into an adjacent combat area (at the shover's discretion). \textlf{critical failure} results in shoving character experiencing a \textlf{Moment of weakness}. \textlf{critical success} results in the victim suffering a damage roll.
@@ -1143,7 +1149,7 @@ The mechanics below detail how this berserker fury affects characters and how th
 A character becomes \textlfirst{enraged} if under extreme emotional strain while fighting, although particularly volatile personalities may become \textlf{enraged} more easily. Otherwise a character with the Berserker \textlf{power} can trigger an \textlf{enraged} state once per day.
 
 \subsubsection{When Enraged}
-An enraged character seeks to enter close combat with the nearest enemy at all times and cannot take prisoners, they go only for the kill. If wielding a firearm-type weapon, they may fire it at range (while moving as required). Enraged characters have an \textlf{edge} penalty on \textlf{deflect} checks and but an \textlf{edge} bonus on damage rolls. This state ends when there are no enemies left to defeat in the vicinity.
+An enraged character seeks to enter close combat with the nearest enemy at all times and cannot take prisoners, they go only for the kill. If wielding a firearm-type weapon, they may fire it at range (while moving as required). Enraged characters have an \textlf{edge} penalty on \textlf{deflect} checks and but an \textlf{edge} bonus on damage rolls. Additionally, reduce the \textlf{lethality} of any damage suffered by one level, to a minimum of normal. This state ends when there are no enemies left to defeat in the vicinity. 
 
 
 
@@ -1162,14 +1168,14 @@ These are generally creatures of humanoid or smaller size, this category is larg
 \subsubsection{Abilities and Attributes}
 Mundane enemies have no \textlf{heroism/villainy}, they can have \textlf{aim} bonuses ranging from 0-2, 0 being an inexperienced impromptu fighter and 2 being a well trained soldier. Such foes are likely to have zeros for most attributes, although the more experienced combatants may be suitably tougher and stronger (no attributes above 1 however). 
 \subsubsection{Tactics}
-These enemies are followers, they need to be lead. Without a leader to direct them, they are likely to be easily demoralised by powerful opponents or to simply attack the enemy they feel is the most threatening. Such behaviour is over-ridden in the presence of a leader. Mundane enemies suffer the \textlf{panic} effect (see section~\ref{sec:special}) if they run out of \textlf{endurance} or if they suffer a \textlf{badly-wounded} effect. Enemies who believe in their cause, or are mindless, are immune to this. When being lead, a mundane creature may use its leader's leadership score to make courage checks.
+These enemies are followers, they need to be lead. Without a leader to direct them, they are likely to be easily demoralised by powerful opponents or to simply attack the enemy they feel is the most threatening. Such behaviour is over-ridden in the presence of a leader. Mundane enemies suffer the \textlf{panic} effect (see section~\ref{sec:special}) if they run out of \textlf{endurance} or if they suffer a \textlf{badly-wounded} effect. Enemies who believe in their cause, or are mindless, are immune to this. When being lead, a mundane creature may use its leader's leadership score to make \textlf{panic} checks.
 
 \subsection{Elite Enemies}
 These are generally creatures who are extremely proficient combatants or are enhanced by some magical or technological power.
 \subsubsection{Abilities and Attributes}
 Such fighters are likely to have above average attributes, e.g. between one and three at levels 1 or 2. Elite enemies do not have any heroic attributes but may have multiple combat proficiencies.
 \subsubsection{Tactics}
-Such enemies are independent, they do not need to be lead, but are more effective with a leader to direct them. These foes are unlikely to be easily demoralised or intimidated by powerful opposition and will coordinate and work together to defeat stronger opponents. suffer the \textlf{panic} effect (see section~\ref{sec:special}) if they run out of \textlf{endurance} or if they suffer a \textlf{badly-wounded} effect. Enemies who believe in their cause, or are \textlf{mindless}, are immune to this. When being lead, an elite creature may use its leader's leadership score to make courage checks.
+Such enemies are independent, they do not need to be lead, but are more effective with a leader to direct them. These foes are unlikely to be easily demoralised or intimidated by powerful opposition and will coordinate and work together to defeat stronger opponents. suffer the \textlf{panic} effect (see section~\ref{sec:special}) if they run out of \textlf{endurance} or if they suffer a \textlf{badly-wounded} effect. Enemies who believe in their cause, or are \textlf{mindless}, are immune to this. When being lead, an elite creature may use its leader's leadership score to make \textlf{panic} checks.
 
 \subsection{Enemy Leaders}
 These are generally creatures who are proficient combatants but are also skilled at directing the actions of underlings.
@@ -1263,7 +1269,7 @@ Weapons with this rule are either massively heavy or just awkward to manoeuvre. 
 \textlfirst{Reach} represents the ability of close-combat weapons, like spears, to attack from a longer distance. A character with a \textlf{reach} weapon can make a free attack action each turn against a single enemy that enters their combat area, provided they are in \textlf{defensive stance}.
 
 \subsubsection{Rending}
-A well-placed blow from a \textlfirst{rending} weapon rips deep into the target. \textlf{Penetrating} hits from \textlf{rending} weapons benefit from a \textlf{lethality} upgrade.
+A well-placed blow from a \textlfirst{rending} weapon rips deep into the target. \textlf{Penetrating} hits from \textlf{rending} weapons benefit from +1 \textlf{Power}. This bonus can stack.
 
 \subsubsection{Massive Damage}
 A weapon with \textlfirst{massive damage} does exactly as their name suggests. Thus, they have an \textlf{edge} bonus on their damage rolls, making mayhem all the more likely. 
@@ -1280,26 +1286,18 @@ A weapon with \textlfirst{massive damage} does exactly as their name suggests. T
 \subsubsection{Cleave X}
 (X is an integer) An attack with \textlfirst{cleave} is one that can sweep in great arcs, cutting through many hapless foes with each swing. Such an attack may target up to X enemies at once. The attacker rolls once with their \textlf{aim} and each defender rolls with their \textlf{deflect}.
 
-\subsection{Additional armour effects}
-
-\subsubsection{Bulwark}
-Heavy plates of steel turn all but the most determined blows. Armour with this rule negates the bonuses conferred by the \textlf{Penetration} rule on incoming attacks.
-
-\subsubsection{Adamant}
-Some armour is so thick and heavy that it is almost impervious, even to weapons that shear through other protective gear. This grants immunity to \textlf{Rending} effects.
-
 
 
 \subsection{Creature-Type Rules}
 
 \subsubsection{Large Creature}
-A creature is declared \textlf{large} if it exceeds 3 m in the main dimension (height, length,width depending on creature geometry). Thus, such creatures can only hide in medium or better cover but gain \textlf{cleave} 2 on all close-combat attacks. A \textlf{large} creature has an innate bonus of +1 \textlf{power}. Such a creature has 2 extra \textlf{endurance} points.
+A creature is declared \textlf{large} if it exceeds 3 m in the main dimension (height, length,width depending on creature geometry). Thus, such creatures can only hide in medium or better cover but gain \textlf{cleave} 2 on all close-combat attacks. A \textlf{large} creature has an innate bonus of +1 \textlf{power}. Such a creature has at least 4 \textlf{endurance} points.
 
 \subsubsection{Huge Creature}
-Such vast beasts barely notice the damage inflicted by even the largest weapons a man can wield. In consequence they have 4 extra \textlf{endurance} points. Their colossal might means that these creatures also have \textlf{cleave} 3 on all close-combat attacks. \textlf{Huge} creatures have an innate bonus of +2 \textlf{power} and the size threshold to be declared \textlf{huge} is a requirement of least 6 m in the main dimension (height, length, or width depending on monster geometry). 
+Such vast beasts barely notice the damage inflicted by even the largest weapons a man can wield. In consequence they have at least 6 \textlf{endurance} points. Their colossal might means that these creatures also have \textlf{cleave} 3 on all close-combat attacks. \textlf{Huge} creatures have an innate bonus of +2 \textlf{power} and the size threshold to be declared \textlf{huge} is a requirement of least 6 m in the main dimension (height, length, or width depending on monster geometry). 
 
 \subsubsection{Titanic Creature}
-These behemoths are all but inured to the attacks of normal weaponry. In consequence they have 6 extra \textlf{endurance} points. \textlf{Titanic} creatures have \textlf{cleave} 4 on all close-combat attacks and \textlf{massive damage} against smaller targets. \textlf{Titanic} creatures have an innate bonus of +3 \textlf{power} and the size threshold to be declared \textlf{titanic} is a requirement of least 12 m in the main dimension (height, length, or width depending on monster geometry). Such beasts have range 1 on their close-combat attacks. 
+These behemoths are all but inured to the attacks of normal weaponry. In consequence they have at least 8 \textlf{endurance} points. \textlf{Titanic} creatures have \textlf{cleave} 4 on all close-combat attacks and \textlf{massive damage} against smaller targets. \textlf{Titanic} creatures have an innate bonus of +3 \textlf{power} and the size threshold to be declared \textlf{titanic} is a requirement of least 12 m in the main dimension (height, length, or width depending on monster geometry). Such beasts have range 1 on their close-combat attacks. 
 
 \subsubsection{Small Creature}
 Diminutive creatures are easily missed, even by the most vigilant of larger things. Consequently they get + 1 \textlf{deflect}.
@@ -1329,33 +1327,33 @@ All characters dual-wielding have an \textlf{edge} penalty to \textlf{aim} witho
 
 \chapter{Perks}
 \label{chap:perks}
-These are skills and talents learned or gained by a hero through the course of their adventures. They can be purchased through the expenditure of experience points with their cost given in brackets. Note that upgrades change their parent \textlf{perk}, they do not occupy a new \textlf{perk} slot.
+These are skills and talents learned or gained by a hero through the course of their adventures. They can be purchased through the expenditure of experience points with their cost given in square brackets. Note that upgrades change their parent \textlf{perk}, they do not occupy a new \textlf{perk} slot.
 
 \section{General proficiencies}
 These do \textbf{not} occupy equipment slots for passive or active \textlf{perks}, their effect is always active.
 
-\subsection{Close quarters (2)}
+\subsection{Close quarters [2]}
 Up-close and personal. The character is an expert at very close range engagements with \textlf{small} weapons. This negates close-combat penalties associated with such weapons.
 
-\subsection{Hero/Villain (0)}
+\subsection{Hero/Villain [0]}
 (Requires \textlf{Reputation} level 5) The character has become famous, their praise is much sung, or vile deeds whispered of, in local taverns. The character may increase one \textlf{natural attribute} by 1 point.
 
-\subsection{Instrument Proficiency: X (2)}
+\subsection{Instrument Proficiency: X [2]}
 (Where X is a musical instrument type) The character has learned to play a chosen type of musical instrument (X) and no longer suffers the unknown-instrument penalties when playing this type of instrument.  
 
-\subsection{Language: X (2)}
+\subsection{Language: X [2]}
 (X is a language) The character has complete fluency in the chosen language. 
 
-\subsection{Skill proficiency: X (3)}
+\subsection{Skill proficiency: X [3]}
 (Where X is a skill) The character is proficient with skill X, see Section~\ref{sec:skill-prof} for details.
 
-\subsection{Master: X (5)}
+\subsection{Master: X [5]}
 (Requires \textlf{Skill proficiency: X}) The character has achieved mastery of their art. Any check for the mastered skill X an \textlf{edge} bonus.
 
-\subsection{Two-Weapon Fighting (3)}
+\subsection{Two-Weapon Fighting [3]}
 This allows the character to fight with two weapons simultaneously without an \textlf{edge} penalty on \textlf{aim} checks.
 
-\subsection{Weapon proficiency: X (2)}
+\subsection{Weapon proficiency: X [2]}
 The character is proficient in the class of weapons X. Classes should be chosen on similarity of use, e.g. for a medieval setting: swords, bows, daggers, blunt, axes, crossbows, firearms, and pole-arms. One type that is always available is unarmed.
 
 
@@ -1363,132 +1361,136 @@ The character is proficient in the class of weapons X. Classes should be chosen 
 These open up new actions that a character can make and they must occupy an equipment slot for active \textlf{perks} to be usable.
 \label{sec:active}
 
-\subsection{Acrobatic Attack (4)}
+\subsection{Acrobatic Attack [4]}
 (Requires \textlf{Acrobatic movement}). This costs 1 action point and allows the character to make both an \textlf{acrobatic movement} and attack action (against a target within range during the movement).
 
 
-\subsection{Aimed shot (4)}
+\subsection{Aimed shot [4]}
 This costs two action points and allows the character to make a single ranged attack with an \textlf{edge} bonus on \textlf{Aim} and associated damage rolls.
 
 
-\subsection{Berserker (3)}
+\subsection{Berserker [3]}
 You mad, bro? The character can quickly be overtaken by the pulse of battle, they are forced to \textlf{enrage} if they defeat an enemy or inflict a \textlf{wound} effect.
 
-\subsubsection{Upgrade: Berserkergang (2)}
+\subsubsection{Upgrade: Berserkergang [2]}
 (Requires \textlf{berserker}) The character has harnessed their inner rage. This allows them to voluntarily \textlf{enrage} once per day and they are not forced to \textlf{enrage} by \textlf{berserker}.
 
-\subsubsection{Upgrade: Seething rage (2)}
+\subsubsection{Upgrade: Seething rage [2]}
 (Requires \textlf{berserker}) The character's rage is turns them into a highly focussed killer. This grants the \textlf{enraged} character a \textlf{lethality} bonus against an enemy chosen when they enrage, while this enemy survives they suffer an \textlf{edge} penalty to \textlf{aim} versus any other target.
 
+\subsubsection{Upgrade: Endless rage [4]}
+(Requires \textlf{berserker}) The character's rage makes them indefatigable. They gain 1 \textlf{endurance} (up to their usual maximum) if they inflicted any damage in a given turn.
 
-\subsection{Blind Side (4)}
+
+\subsection{Blind Side [4]}
 A deft feint allows the character enough room to fire their ranged weapons against close-combat assailants. When using a ranged weapon against a target within range 0 you may feint as though you were using a close-combat weapon. Success on the \textlf{feint} means you additionally ignore the normal \textlf{edge} penalty on shooting weapon hit rolls for targets within range 0.
 
 
-\subsection{Butcher's blow (3)}
+\subsection{Butcher's blow [3]}
 The character aims their strikes to maim the target. This is an attack action that costs 2 action points. Should the attack cause damage, the target is subject to the \textlf{cripple} effect. This effect applies only to creatures a maximum of 1 size category larger than the character.
 
 
-\subsection{Deeds Not Words (4)}
+\subsection{Combat improvisation [4]}
+At a cost of 1 action point the character counts all close-combat weapons as having the \textlf{trip} and \textlf{disarm} rules for 1 round. 
+
+
+\subsection{Deeds Not Words [4]}
 (Requires \textlf{Skill proficiency: leadership}) Any time the character defeats a foe in combat they may make a leadership action, that would otherwise cost 1 action point, for free. Defeat is defined by the enemy fleeing, surrendering, being incapacitated, or dying. This only triggers if the character's own action resulted in the target's defeat.
 
 
-\subsection{Desperate Mechanisms (3)}
+\subsection{Desperate Mechanisms [3]}
 The character may reduce the \textlf{reload} action point costs of ranged weapons by 1. If they do so, they experience an \textlf{edge} penalty on \textlf{aim} for attacks that benefit from this.
 
 
-\subsection{Diplomat (3)}
+\subsection{Diplomat [3]}
 The character has great skill in pacifying angry or confrontational speakers, allowing them to do so with an opposed \textlf{resolve} check.
 
 
-\subsection{Dragon Kick (2)}
+\subsection{Dragon Kick [2]}
 (Requires \textlf{Weapon proficiency: unarmed}) The character may make an unarmed attack, after moving, in the form of a flying kick. This allows them to bypass intervening obstacles, and any such attacks that succeed on their damage roll also knock the target down. The knock down effect applies only to creatures a maximum of 1 size category larger than the character.
 
 
-\subsection{Extra Sneaky (5)}
+\subsection{Extra Sneaky [5]}
 At a cost of 1 action point, the character's \textlf{sneak attacks} damage rolls gain a bonus level of \textlf{critical success} this turn.
 
 
-\subsection{Furious assault (3)}
-A risky manoeuvre, the fighter replaces a considered attack with a hail of furious strikes. When declaring an attack, the character may elect it to be a \textlf{furious assault}. This grants an extra damage roll with a successful hit. However, the character suffers an \textlf{edge} penalty to \textlf{aim}. This cannot be used if the weapon requires \textlf{reload} actions.
+\subsection{Furious assault [3]}
+A risky manoeuvre, the fighter replaces a considered attack with a hail of furious strikes. When declaring an attack, the character may elect it to be a \textlf{furious assault}. This grants \textlf{burst} + 1 with a successful hit. However, the character suffers an \textlf{edge} penalty to \textlf{aim}. This cannot be used if the weapon requires \textlf{reload} actions.
 
-\subsubsection{Upgrade: Unrelenting (2)}
+\subsubsection{Upgrade: Unrelenting [2]}
 (Requires \textlf{Furious assault}) The character may use the \textlf{Furious assault} effect twice on a single attack action, the second use incurs an \textlf{edge} penalty to \textlf{deflect}. 
 
 
-\subsection{Guard breaker (3)}
-This attack knocks the foe off balance. The character may declare this special attack for 1 action point. This inflicts no damage roll, instead make an opposed roll with your \textlf{might} versus the target's \textlf{resolve}. If you win, the target suffers an \textlf{edge} penalty on \textlf{deflect} and becomes \textlf{vulnerable} to the next attack action directed against it. 
+\subsection{Guard breaker [3]}
+This attack knocks the foe off balance. The character may declare this special attack for 1 action point. If the attack causes damage then the target suffers an \textlf{edge} penalty to \textlf{deflect} for 1 round.
 
 
-\subsection{Iron Hand (3)}
+\subsection{Iron Hand [3]}
 The character's blows are capable of tossing enemies aside like a child's toys. This is a special attack action that costs of 2 action points. If the attack hits, it inflicts no damage. Instead, the target is knocked flying, up to a distance of range 1 in a chosen direction, while also being subject to a \textlf{knocked-down} state. The victim suffers no damage unless they collide with an obstacle (i.e. enters \textlf{rough terrain} or cover). This effect applies only to creatures a maximum of 1 size category larger than the character.
 
-\subsubsection{Upgrade: Fist of Steel (3)} 
+\subsubsection{Upgrade: Fist of Steel [3]} 
 (Requires \textlf{Iron-Hand}) As long as the character is unarmed, \textlf{Iron-Hand} attacks inflict damage in the same manner as normal unarmed attacks, in addition to their special effects.
 
 
-\subsection{Kick `em while they're down (5)}
+\subsection{Kick `em while they're down [5]}
 At a cost of 1 action point, damaging \textlf{sneak attacks} made in this turn cause the victim to be afflicted with the \textlf{vulnerable} status.
 
 
-\subsection{Lightning Fast (4)}
+\subsection{Lightning Fast [4]}
 The character reacts so quickly that, during action declaration in combat, they may seize the initiative for their side at a cost of 1 action point. A character may not use \textlf{Lightning Fast} more than once per encounter (additionally, each side in combat can only benefit from this once per encounter).
 
-\subsubsection{Upgrade: Swift as Death (2)}
+\subsubsection{Upgrade: Swift as Death [2]}
 (Requires \textlf{Lightning Fast}) The character has an \textlf{edge} bonus on \textlf{aim} and \textlf{power} checks during a turn when they have triggered \textlf{Lightning fast}.
 
 
-\subsection{Meteor Strike (2)}
-(Requires \textlf{Weapon proficiency: unarmed}) The character gathers all their strength and makes a single unarmed attack, with only a single damage roll, this round. If they do so, this attack makes its victim \textlf{vulnerable} to the next damage roll it suffers.
+\subsection{Meteor Strike [2]}
+(Requires \textlf{Weapon proficiency: unarmed}) The character gathers all their strength and makes a single unarmed attack, with only a single damage roll, at a cost of 2 action points. If this attack causes damage then its victim is \textlf{vulnerable} to the next damage roll it suffers.
 
 
-\subsection{Now you see me, now you don't (5)} 
+\subsection{Now you see me, now you don't [5]} 
 (Requires \textlf{Skill proficiency: stealth}) The character may attempt to use the \textlf{stealth} skill while in combat for 1 action point, fading seamlessly into the background. Additionally all attacks made after hiding are \textlf{sneak attacks} but reveal the presence of the character. While hidden, the character only incurs \textlf{moment of weakness} penalties if the potential attacker detects them.
 
 
-\subsection{On the Hunt (4)}
+\subsection{On the Hunt [4]}
 The character zeros-in on their prey. The character may select a target against which they gain \textlf{edge} on aim and \textlf{deflect}. However, they suffer a similar penalty against all other targets. A new target may only be nominated once the present target is dead, defeated, or hostilities cease.
 
 
-\subsection{Pistol Whip (4)}
+\subsection{Pistol Whip [3]}
 When using a ranged weapon that can be wielded in one hand the character may make a ``Pistol Whip'' in place of a \textlf{sneak attack}. This is a close-combat attack that knocks the target down if it succeeds in causing a wound, if the victim fails \textlf{resolve} versus the \textlf{power} of the attack they are also rendered unconscious. This effect applies only to creatures a maximum of 1 size category larger than the character.
 
 
-\subsection{Plan B (3)}
+\subsection{Plan B [3]}
 (Requires \textlf{Duelist}) Whenever one of the character's attacks is \textlf{deflected}, while in \textlf{Duelist} mode, they may make a free action drawing and throwing/firing a \textlf{small} weapon (this doesn't provoke a \textlf{moment of weakness} or suffer penalties for close range).
 
 
-\subsection{Power attack (3)}
-Enemy not dying? Just hit it harder! The character can declare a close-combat attack as a ``power attack''. This makes it cost 1 extra action point but grants + 1 \textlf{power} on damage rolls. 
-
-\subsubsection{Upgrade: Thews and sinews (3)}
-(Requires \textlf{Power attack}) \textlf{Power Attack} also upgrades the \textlf{lethality} of associated damage rolls. However, the character suffers an \textlf{edge} penalty on \textlf{aim} for such attacks.
+\subsection{Power attack [3]}
+Enemy not dying? Just hit it harder! The character can declare a close-combat attack as a ``power attack''. This incurs an \textlf{edge} penalty on \textlf{aim}, but grants \textlf{massive damage} to associated damage rolls.
 
 
-\subsection{Reckless strike (3)}
+\subsection{Reckless strike [3]}
 The character can declare a close-combat attack to be a ``reckless strike''. This has an \textlf{edge} bonus to \textlf{aim} but the character incurs and \textlf{edge} penalty on \textlf{deflect} for one round.
 
 
-\subsection{Splatter (3)}
+\subsection{Splatter [3]}
 The violence of your blows causes the blood of your foes to stain the soil. This can be used when declaring an attack, the cost is increased by 1 action point. Should the attack cause damage, the target is subject to the \textlf{bleeding} effect.
 
 
-\subsection{Suppressing fire! (4)}
+\subsection{Suppressing fire! [4]}
 The character fires an indiscriminate volley of projectiles, forcing enemies and allies alike to get their heads down. This costs two action points, the character chooses a target enemy and makes a normal attack action against them. In addition, moving into, through, or out of the target's combat area costs 1 extra action point for 1 round. This cannot be used with a weapon that requires action points be spent to reload it between shots. 
 
 
-\subsection{The ol' one-two (3)}
+\subsection{The ol' one-two [3]}
 A close quarters manoeuvre where a quick punch is used to make room for firing a ranged weapon. This special attack costs 2 action points. Make an unarmed attack, if it hits you may perform damage rolls for both the unarmed hit and for a shooting-type, ranged weapon you are wielding. Note that it must be fireable with one hand (so no bows, but cross-bows or firearms are fine). 
 
 
-\subsection{True Grit (3)}
-Gritting their teeth, the character keep fighting by sheer force of will. For 1 action point, the character can make a \textlf{resolve} check against 10 + the number of missing \textlf{endurance} points. On a success they regain 1 point of \textlf{endurance} (up to their normal maximum). \textlf{Critical success} restores additional \textlf{endurance}.
+%\subsection{True Grit [3]}
+%Gritting their teeth, the character keeps fighting by sheer force of will. For 1 action point, the character can make a \textlf{resolve} check against 10 + the number of missing \textlf{endurance} points. On a success they regain 1 point of \textlf{endurance} (up to their normal maximum). \textlf{Critical success} restores additional \textlf{endurance}.
 
 
-\subsection{Whirlwind of steel (3)}
+\subsection{Whirlwind of steel [3]}
 Danger, sharp objects. The character lashes out around them, striking all too slow to escape. This costs 2 action points and allows the character to make an attack action with their close-combat weapons that has \textlf{cleave} + 1.
  
-\subsubsection{Upgrade: Steel avalanche (2)}
+\subsubsection{Upgrade: Steel avalanche [2]}
 This adds an additional \textlf{cleave} + 1.
 
 
@@ -1498,162 +1500,159 @@ This adds an additional \textlf{cleave} + 1.
 \label{sec:perks}
 These passively enhance the character and must occupy an equipment slot for passive \textlf{perks} to make their benefit usable.
 
-\subsection{Acrobatic movement (3)}
+\subsection{Acrobatic movement [3]}
 Sometimes walking is just too boring. The character can move out of, or through, a combat area containing enemies without suffering a \textlf{moment of weakness}. To do so they must win an opposed check with their \textlf{athletics} vs the highest \textlf{aim} enemy within the area in question. Failure on the check results in a \textlf{moment of weakness}.  
 
 
-\subsection{Adrenaline Rush (3)}
+\subsection{Adrenaline Rush [3]}
 A surge of adrenaline can grant a fighter great power in times of danger. If the character loses \textlf{endurance} to a damage roll, they gain an \textlf{edge} bonus to their next damage roll.
-\subsubsection{Upgrade: Savage Reprisal (3)}
+\subsubsection{Upgrade: Savage Reprisal [3]}
 (Requires \textlf{Adrenaline Rush}) Whenever the character triggers \textlf{Adrenaline Rush} they may make a single, free, close-combat damage roll against their assailant (provided it is within reach). This attack may also claim the benefit of the bonus granted by \textlf{Adrenaline Rush}.
 
 
-\subsection{Always Carry a Spare (2)}
+\subsection{Always Carry a Spare [2]}
 (Requires \textlf{Skill proficiency: perform}) It pays to be prepared. The character can produce a single extra dagger (or other \textlf{small} throwing weapon) in an emergency. This can be used at most once per day.
 
 
-\subsection{Ballads of Battle (2)}
+\subsection{Ballads of Battle [2]}
 The character may use perform skill in place of leadership skill when making leadership actions, this requires that targets can hear the performance.
 
 
-\subsection{Best defence (4)}
+\subsection{Best defence [4]}
 Is a good offence. When the character scores \textlf{critical success} on a \textlf{deflect} check, their opponent suffers a \textlf{moment of weakness}. This can be used once per round.
 
-\subsubsection{Upgrade: Unassailable (2)}
+\subsubsection{Upgrade: Unassailable [2]}
 \textlf{Best defence} can be triggered once per round against each unique attacker (and you can exploit the effect every time).
 
 
-\subsection{Braced for Impact (4)}
-Pain is just information. The first time a character loses \textlf{endurance} each round, the amount lost is reduced by 1. 
-
-
-\subsection{Bull-Headed (2)}
+\subsection{Bull-Headed [2]}
 Now the bulls run from you. The character cannot suffer \textlf{moments of weakness} as a result of making a \textlf{bull-rush} manoeuvre (See Section~\ref{sec:bull}). 
 
-\subsubsection{Upgrade: Stampede (2)}
+\subsubsection{Upgrade: Stampede [2]}
 (Requires Bull-Headed) The character's \textlf{bull-rush} actions may hit as many targets within the chosen area as they wish.
 
-\subsubsection{Upgrade: Trample (3)}  
+\subsubsection{Upgrade: Trample [3]}  
 (Requires Bull-Headed) The character may make a damage roll against one victim of their successful \textlf{bull-rush} actions. 
 
-\subsubsection{Upgrade: Pain Train (3)}
-(Requires Bull-Headed) Choo! Choo! The character may choose for their \textlf{bull-rush} to knock the target(s) flying a distance of range 1, instead of just knocking them down. If a victim hits an obstacle (entering \textlf{rough terrain} or cover) they suffer a damage roll, with \textlf{power} equal to the character's \textlf{might} and \textlf{normal lethality}.
+\subsubsection{Upgrade: Pain Train [3]}
+(Requires Bull-Headed) Choo! Choo! The character may choose for their \textlf{bull-rush} to knock the target(s) flying a distance of range 1, instead of just knocking them down. If a victim hits an obstacle (entering \textlf{rough terrain} or cover) they suffer a damage roll, with \textlf{power} equal to the character's \textlf{might} and normal \textlf{lethality}.
 
 
-\subsection{Call in a Favour (2)}
+\subsection{Call in a Favour [2]}
 (Requires Silver Spoon). The character can leverage their social connections to obtain a favour from a local noble, banker, crime-lord, warlord, or oligarch. This \textlf{perk} can only be chosen at character creation.
 
 
-\subsection{Commanding Presence (6)}
+\subsection{Chink in the armour [2]}
+Close-combat attacks against enemies who are \textlf{knocked down} or \textlf{grappled} gain \textlf{penetration} + 2.
+
+
+\subsection{Choose your targets [3]}
+The character's \textlf{sneak attacks} versus stationary (not actively moving or in combat) or \textlf{immobilised} targets gain \textlf{penetration} 2.
+
+
+\subsection{Commanding Presence [6]}
 (Requires \textlf{Skill proficiency: leadership}) Whenever the character succeeds on a leadership check an ally within range 0 of the character gains 1 point of missing \textlf{endurance}.
 
 
-\subsection{Crusader (4)}
+\subsection{Crusader [4]}
 When your ammunition is righteousness you seldom run out. Each time the character defeats an enemy they can regain a point of missing \textlf{endurance}. A defeated enemy is either: killed, knocked out, surrendering, or fleeing.
 
 
-\subsection{Cunning Plan (3)}\label{sec:sneak-expd}
+\subsection{Cunning Plan [3]}\label{sec:sneak-expd}
 Better than other plans. When making \textlf{sneak attacks}, the character may use their \textlf{cunning} as the base statistic of \textlf{power} (rather than \textlf{might}, see Section~\ref{sec:comstat}).
 
 
-\subsection{Duelist (3)}
+\subsection{Duelist [3]}
 Elegance and advantage, what's not to love? Fighting with a single weapon only, that does not require two-hands for effective use, allows for much more precise weapon control. Fighting in such a manner grants 1 bonus to \textlf{deflect}. Example: fighting with only a single rapier, or a longsword in only one hand (common theme is there is a free hand).
 
-\subsubsection{Upgrade: Buckle Your Swash (2)}
+\subsubsection{Upgrade: Buckle Your Swash [2]}
 (Requires \textlf{Duelist}) While fighting with a single weapon (as detailed in \textlf{Duelist}), the character gains an \textlf{edge} bonus to their next \textlf{deflect} after \textlf{critical success} on such checks. You cannot claim this bonus if you use \textlf{Swash their buckle} on the same \textlf{deflected} attack.
 
-\subsubsection{Upgrade: Swash Their Buckle (2)}
-(Requires \textlf{Buckle Your Swash}) The character may gain an \textlf{edge} bonus on \textlf{aim} against any target whose attacks they \textlf{deflect} with \textlf{critical success}. You cannot claim this bonus if you use \textlf{Buckle your swash} on the same \textlf{deflected} attack.
+\subsubsection{Upgrade: Swash Their Buckle [2]}
+(Requires \textlf{Duelist}) The character may gain an \textlf{edge} bonus on \textlf{aim} against any target whose attacks they \textlf{deflect} with \textlf{critical success}. You cannot claim this bonus if you use \textlf{Buckle your swash} on the same \textlf{deflected} attack.
 
 
-\subsection{Eagle Eye (2)}
+\subsection{Eagle Eye [2]}
 You don't need glasses. The character adds 1 to the range score of all ranged weapons they employ.
 
 
-\subsection{Evasive (4)}
-It's hard to pin you down. This grants + 1 \textlf{deflect}.
-
-\subsubsection{Upgrade: Quick-Step (3)}
-No, not the dance. The character gains a further + 1 bonus to \textlf{deflect} provided they don't wear heavy armour.
+\subsection{Evasive [4]}
+It's hard to pin you down. This grants + 1 \textlf{deflect} provided they are not wearing \textlf{heavy armour}.
 
 
-\subsection{Executioner (3)}
+\subsection{Executioner [3]}
 The character has learned to deal death swiftly when the chance arises. As such, when striking an opponent who suffered a \textlf{critical hit} this round, the character benefits from a \textlf{lethality} upgrade. This effect applies only to creatures a maximum of 1 size category larger than the character.
 
 
-\subsection{Extension of Self (3)}
+\subsection{Extension of Self [3]}
 (Requires \textlf{Weapon proficiency: unarmed}) The best weapon is you. This extends the effects of \textlf{Snake Fist}, \textlf{Meteor Strike}, and \textlf{Dragon Kick} to a single chosen close-combat weapon type.
 
 
-\subsection{Favoured Enemy: X (4)}
+\subsection{Favoured Enemy: X [4]}
 Everyone hates something. The character is skilled in the killing of a chosen creature type (X). Against targets of type X  the character has an \textlf{edge} bonus on \textlf{aim}. X must be specific, ``humanoids'' is too broad for instance, but ``humans'' is fine in a cosmopolitan fantasy setting. If the setting is mostly human then ``human'' is still too broad and it must be further narrowed down to a group, ``pirates'' or ``ninjas'' for instance.
 
 
-\subsection{Favoured Environment: X (4)}
+\subsection{Favoured Environment: X [4]}
 The character is skilled at moving and fighting in the chosen environment (X). This grants them an \textlf{edge} bonus to stealth, as well as survival checks while in this setting. The character is also not affected by \textlf{rough} or \textlf{dangerous terrain} associated with this environment.
 
 
-\subsection{Fighting retreat (2)}
+\subsection{Fighting retreat [2]}
 You are categorically not running away. The retreat action now costs only a single action point.
 
-\subsubsection{Upgrade: Rear-guard action (3)}
+\subsubsection{Upgrade: Rear-guard action [3]}
 (Requires \textlf{Fighting retreat}) And neither are your friends. The benefits of \textlf{Fighting retreat} also apply to all allies adjacent to your character.
 
 
-\subsection{Hardy (3)}
+\subsection{Hardy [3]}
 \textlf{Hardy} characters are mighty and indefatigable, they have an extra point of \textlf{endurance}.
 
-\subsubsection{Upgrade: Stoic (5)}
+\subsubsection{Upgrade: Stoic [5]}
 (Requires \textlf{Hardy}) The character is so tough they can just ignore pain. This grants an additional point of \textlf{endurance}.
 
 
-\subsection{Indomitable (3)}
+\subsection{Indomitable [3]}
 Don't tell me what to do. This allows the character an \textlf{edge} bonus on checks against effects that would inflict \textlf{stagger}, \textlf{cripple}, \textlf{immobilise}, or \textlf{knock-down}.
 
-\subsubsection{Upgrade: Stability (4)}
+\subsubsection{Upgrade: Stability [4]}
 (Requires \textlf{Indomitable}) Inner strength is outer strength. Grants immunity to the \textlf{knock-down} and knock-back effects. If targeted by such an effect the character may still trigger \textlf{Juggernaut}.
 
-\subsubsection{Upgrade: Juggernaut (3)}
+\subsubsection{Upgrade: Juggernaut [3]}
 (Requires \textlf{Indomitable}) Now they are just making you angry. This grants a free action point action after successfully passing a check against an effect that would inflict \textlf{stagger}, \textlf{cripple}, \textlf{immobilise}, or \textlf{knock-down}.
 
 
-\subsection{Leverage (3)}
+\subsection{Leverage [3]}
 \textlf{Trip} and \textlf{disarm} actions also \textlf{stagger} their victims.
 
 
-\subsection{Low Blow (4)}
-Uncool, man. The character may also make \textlf{sneak attacks} against enemies who have zero \textlf{endurance}, even if they don't meet any other pre-requisites for \textlf{sneak attacks} (see Section~\ref{sec:sneak-attk}).
+\subsection{Low Blow [4]}
+Uncool, man. The character may also make \textlf{sneak attacks} against enemies who have half, or less, of their \textlf{endurance} remaining, even if they don't meet any other pre-requisites for \textlf{sneak attacks} (see Section~\ref{sec:sneak-attk}).
 
 
-\subsection{Made You Look (4)}
+\subsection{Made You Look [4]}
 If the character succeeds on a \textlf{feint} action, their subsequent attacks are \textlf{sneak attacks}.
 
 
-\subsection{Martial Skill (4)}
-The character counts all close-combat weapons as having the \textlf{trip} and \textlf{disarm} rules. 
-
-
-\subsection{Merciless (3)}
+\subsection{Merciless [3]}
 The character shows no mercy, dispatching the weak with even greater abandon. Damage rolls against \textlf{bleeding} or \textlf{crippled} targets gain a \textlf{lethality} bonus.
 
 
-\subsection{Might of heroes (5)}
+\subsection{Might of heroes [5]}
 Some warriors display such shear poise that they wield even the most awkward weapons with grace and skill. Your character can ignore the \textlf{cumbersome} rule.
 
 
-\subsection{Moving Target (3)}
+\subsection{Moving Target [3]}
 When mounted/driving and moving, the character has an \textlf{edge} bonus to \textlf{deflect} checks.
 
 
-\subsection{Nimble (3)}
+\subsection{Nimble [3]}
 \textlfirst{Nimble} characters are quick and agile. Their movement actions have +1 range while wearing, at most, \textlf{light} armour.
 
 
-\subsection{On Guard (3)}
+\subsection{On Guard [3]}
 When the enemy strikes be prepared, when you strike be even more prepared. Every time the character \textlf{staggers} or \textlf{cripples} an enemy, they get an \textlf{edge} bonus on their next \textlf{deflect} check. 
 
 
-\subsection{Pack Animal (2)}
+\subsection{Pack Animal [2]}
 (Requires Wanderer) The hunter brings their hunting companion wherever they go. This grants them  a sympathetic animal companion that understands simple verbal commands and hand signals. The creature must be, at maximum, roughly equivalent to a dog in size and mass. \textlf{survival} checks can be made to get the animal to perform more complicated actions, like stealing a particular object, or distracting someone's attention. The creatures attributes are species specific. If you are proficient in \textlf{survival}, add 1 to all the combat statistics of your companion. This \textlf{perk} can only be chosen at character creation. A companion can be replaced, once dead, only at a cost of 5 experience. 
 
 \begin{table}[ht!]
@@ -1671,61 +1670,69 @@ When the enemy strikes be prepared, when you strike be even more prepared. Every
 \end{table}
 
 
-\subsection{Poisoner (2)}
+\subsection{Poisoner [2]}
 The character has knowledge of poisons and toxins. As such, they cannot accidentally poison themselves while applying poison to a weapon.
 
-\subsubsection{Master Poisoner (3)}
+\subsubsection{Master Poisoner [3]}
 (Requires \textlf{Poisoner}) The character has suspiciously good knowledge of poisons and toxins. Any poison effects used by the character cause the victim to make their \textlf{resolve} checks against the poison effect with an \textlf{edge} penalty.
 
 
-\subsection{Professional wrestling (3)}
+\subsection{Professional wrestling [3]}
 The character no longer suffers \textlf{moment of weakness} penalties associated with \textlf{Grapple} or \textlf{Shove} actions.
 
 
-\subsection{Quick Draw (2)}
-The character can change or draw weapons as a \textlf{free action} and is not subject to a \textlf{moment of weakness} for doing so. 
+\subsection{Quick Draw [2]}
+The character can change or draw weapons for 0 action points and is not subject to a \textlf{moment of weakness} for doing so. 
 
-\subsubsection{Upgrade: Shoot First (3)}
+\subsubsection{Upgrade: Shoot First [3]}
 (Requires \textlf{Quick Draw}) The character's attacks, made after making a surprise \textlf{Quick Draw} of \textlf{small} weapons (dagger or pistol sized) are \textlf{sneak attacks}. This bonus cannot be claimed outside the first round of (or prior to) a combat situation.
 
 
-\subsection{Roll with It (3)}
+\subsection{Quick learner [5]}
+Pick 3 weapon proficiencies for the character.
+
+
+\subsection{Roll with It [3]}
 (Requires \textlf{Weapon proficiency: unarmed}) While wearing light or no armour the character may add their \textlf{Wit} score to their \textlf{toughness}.
 
 
-\subsection{Schadenfreude (3)}
+\subsection{Schadenfreude [3]}
 The character gets an \textlf{edge} bonus to the next damage roll after inflicting \textlf{stagger} upon an enemy (see Section~\ref{sec:special}).
 
 
-\subsection{Seize the Advantage (4)}
+\subsection{Seize the Advantage [4]}
 The character may make \textlf{sneak attacks} versus foes who are \textlf{vulnerable}, even if they don't meet any other pre-requisites for \textlf{sneak attacks} (see Section~\ref{sec:sneak-attk}.
 
 
-\subsection{Set to Defend (3)}
+\subsection{Set to Defend [3]}
 When the character uses \textlf{defensive stance}, he has \textlf{edge} on \textlf{deflect} for 1 round (not just 1 attack).
 
 
-\subsection{Sixth Sense (2)}
+\subsection{Sixth Sense [2]}
 The character is so sharp they can evade even unseen attacks at the very last minute. This allows the character to attempt \textlf{deflect} against \textlf{sneak attacks}, however, they suffer an \textlf{edge} penalty on this.
 
 
-\subsection{Snake fist (4)}
+\subsection{Snake fist [4]}
 (Requires \textlf{Weapon proficiency: unarmed}) The character has learned to unleash a volley of strikes with hands and feet. Unarmed attacks make an extra damage roll. This does not incur \textlf{dual-wielding} penalties.
 
 
-\subsection{Spontaneous Brawler (2)}
+\subsection{Spontaneous Brawler [2]}
 This allows the character to treat any weapon or improvised projectile as though it had the \textlf{throw} rule. 
 
 
-\subsection{Two in the Sleeve (4)}
+\subsection{Two in the Sleeve [4]}
 Attacks with \textlf{small} throwing weapons allow two of them to be thrown from the same hand. This adds an extra damage roll when such attacks hit their target, but the attack costs an extra action point.
 
 
-\subsection{Weapon Specialisation: X (6)}
+\subsection{True Grit [3]}
+Pain is just information. The first time a character loses \textlf{endurance} each round the amount lost is reduced by 1. 
+
+
+\subsection{Weapon Specialisation: X [6]}
 (Requires \textlf{weapon proficiency: X}) The character has trained long and hard in the use of a particular weapon type (X). As such, they gain an \textlf{edge} bonus on \textlf{aim} when wielding such a weapon. 
 
 
-\subsection{Your mother was a hamster (3)}
+\subsection{Your mother was a hamster [3]}
 The character has great knowledge of insults and is a master of taunting jibes. The character has an \textlf{edge} bonus on \textlf{resolve} checks intended to taunt or provoke a target into attacking them.
 
 
