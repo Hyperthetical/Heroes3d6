@@ -1,4 +1,4 @@
-%Copyright (C) 2021  Geoff Beck
+%Copyright (C) 2022  Geoff Beck
 %
 %This document is falls under the category of free software: you can redistribute it and/or modify
 %it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@
 \maketitle
 
 \section{Natural Attributes}
-These reflect the inherent capabilities of the character and consist of: \textlf{Might}, \textlf{Cunning}, \textlf{Wit}, and \textlf{Resolve}.
+These reflect various aspects of the character's personality and consist of: \textlf{Might}, \textlf{Cunning}, \textlf{Wit}, and \textlf{Resolve}.
 
 \textlf{Might} is the character's aggression, \textlf{Cunning} is a measure of their craftiness, \textlf{Wit} is their alertness and attention to detail,  and \textlf{Resolve} their force of will and personal magnetism.
 
@@ -46,14 +46,16 @@ This is the characters capacity for heroic actions and is tracked in terms of av
 \section{Perks}
 These represent talents gained while adventuring and can be purchased at the cost of experience.
 
-\textlf{Perks} are divided into two categories: active and passive. Active \textlf{perks} alter the kind of actions your character can take. Passive \textlf{perks} provide their bonuses all the time. A single character can only have 3 active and 3 passive \textlf{perks} equipped at a time. They can still have \textlf{perks} purchased but these effects do not apply unless equipped. Changing equipped \textlf{perks} requires 1 hour of rest and concentration. There are slots on the character sheet for you to note your currently equipped \textlf{perks} in.
+\textlf{Perks} are divided into two categories: active and passive. Active \textlf{perks} alter the kind of actions your character can take. Passive \textlf{perks} provide their bonuses all the time. A single character can only have 3 active and 3 passive \textlf{perks} equipped at a time. They can still have \textlf{perks} purchased but these effects do not apply unless equipped. Changing equipped \textlf{perks} requires 1 hour of rest. There are slots on the character sheet for you to note your currently equipped \textlf{perks} in.
 
+\section{Edge}
+When rolling 3d6 with an \textlf{edge} bonus (\textlf{edge+}), a character rolls 4d6 and chooses the highest 3. In contrast, an \textlf{edge} penalty (\textlf{edge-}) makes the character roll 4d6 dice and choose the lowest 3.  The general pattern is: when rolling $n$d6 and having $m$ \textlf{edge} bonuses/penalties, you instead roll $(n+m)$d6 and choose the highest/lowest $n$ dice. 
 
 \section{Difficulty Checks}
-A \textlf{difficulty check} is made using a given \textlf{Attribute} or \textlf{Skill}. In order to succeed you must roll equal to or higher than the \textlf{Difficulty} on 3d6, adding your \textlf{Attribute/Skill} score.
+A \textlf{difficulty check} is made using a given \textlf{Attribute} or \textlf{Skill}. In order to succeed you must roll equal to or higher than the \textlf{Difficulty} on 3d6, adding the appropriate \textlf{Attribute} score.
 
 \section{Opposed Rolls}
-Each of the creatures contesting the roll add the given score to the result of 3d6. The winner is the one with the higher score. Re-roll if it is a tie.
+Each of the creatures contesting the roll adds the given score to the result of 3d6. The winner is the one with the highest total. Re-roll if it is a tie.
 
 
 \section{Skills and Professions}
@@ -61,11 +63,11 @@ Each of the creatures contesting the roll add the given score to the result of 3
 How to use a skill:
 \begin{itemize}
 \item
-Roll 3d6, adding total -1 or the synergy attribute (if proficient)
+Roll 3d6, adding synergy attribute (this has \textlf{edge-} if not proficient)
 \item
 If the roll equals or exceeds the \textlf{Difficulty}, the \textlf{skill} use is successful, and if it exceeds the \textlf{Difficulty} by $\dicecritlvl$ or more it is a \textlf{critical success}. Failing by $\dicecritlvl$ or more produces a \textlf{critical failure}. 
 \item
-These results have direct effect upon the quality of the item produced by crafting or how well the desired task is achieved for the other skills (see the skill rules for detailed consequences).
+These results have direct effect upon how well the desired task is achieved (see the skill rules for detailed consequences).
 \end{itemize}
 
 
@@ -92,39 +94,36 @@ The character can make two move actions and gains \textlf{edge} on \textlf{defle
 The character can leave a combat area that contains an enemy without suffering a \textlf{moment of weakness}. 
 
 \subsubsection{Attack (1)}
-Make an opposed roll with \textlf{aim} versus the target's \textlf{deflect}. If you win, make a damage roll for each of your weapons by rolling with your \textlf{power} versus target's \textlf{toughness}. Many \textlf{perks} can enhance or alter attacks.
+Make an opposed roll with \textlf{aim} versus the target's \textlf{deflect} (you have \textlf{edge-} if not proficient with your weapon). If you win, make a damage roll for each of your weapons by rolling with your \textlf{power} versus target's \textlf{toughness}. Many \textlf{perks} can enhance or alter attacks.
 
 \subsubsection{All-out attack (2)}  
 Same procedure as an attack but make 1 extra damage roll.
 
 \subsubsection{Shove (1)}
-Opposed \textlf{might} check with target. If you win, they are \textlf{knocked down}, otherwise you suffer a \textlf{moment of weakness}.
+Opposed \textlf{might} check with target. If you win, they are \textlf{knocked down} or moved into an adjacent combat area (at the shover's discretion), otherwise you suffer a \textlf{moment of weakness} on \textlf{critical failure}.
 
 \subsubsection{Feint (1)}
-Opposed \textlf{cunning} check with target. If you win, gain \textlf{edge} on \textlf{aim}, otherwise you suffer a \textlf{moment of weakness}.
+Opposed \textlf{cunning} check with target. If you win, gain \textlf{edge} on \textlf{aim}, otherwise you suffer a \textlf{moment of weakness} on \textlf{critical failure}.
 
 \subsubsection{Grapple (1)}
-Opposed \textlf{might} check with target. If you win, they cannot move, otherwise you suffer a \textlf{moment of weakness}. The victim must make an opposed \textlf{Might} check (and spend 1 action point) to escape.
-
-\subsubsection{Bull-rush (2)}
-Make a move action. Make an opposed \textlf{Might} roll versus all enemies in destination area. Any who you beat are \textlf{knocked down}, other can exploit a \textlf{moment of weakness}. 
+Opposed \textlf{might} check with target. If you win, they cannot move, otherwise you suffer a \textlf{moment of weakness} on \textlf{critical failure}. The victim must make an opposed \textlf{Might} check (and spend 1 action point) to escape. It costs 1 action point each round after the first to maintain a grapple.
 
 \subsubsection{Trip (-)}
-Sacrifice a damage roll for an attack that hits, instead make an opposed \textlf{cunning} check. If you win, the victim is \textlf{knocked down}.
+Sacrifice a damage roll for an attack that hits, instead make an opposed \textlf{cunning} check. If you win, the victim is \textlf{knocked down}. Weapons with the \textlf{Trip} rule cause damage on a \textlf{critical success}.
 
 \subsubsection{Disarm (-)}
-Sacrifice a damage roll for an attack that hits, instead make an opposed \textlf{wit} check. If you win, the victim cannot use their equipped weapon without spending 1 action point to retrieve it and suffering a \textlf{moment of weakness}. 
+Sacrifice a damage roll for an attack that hits, instead make an opposed \textlf{wit} check. If you win, the victim cannot use their equipped weapon without spending 1 action point or suffering a \textlf{moment of weakness} to retrieve it. Weapons with the \textlf{disarm} rule cause damage on a \textlf{critical success}.
 
 \subsubsection{Defensive stance (1)}
 The character gains \textlf{edge} on \textlf{deflect} for the next attack they suffer.
 
 \subsubsection{Combat Attributes}
 \begin{tabular}{lll}
-\textlf{Aim} & = & -1 or \textlf{wit} (if proficient with weapon)\\ 
+\textlf{Aim} & = & \textlf{wit} \\ 
 \textlf{Deflect} & = & \textlf{Cunning}\\
-\textlf{Power} & = & Weapon Bonus -1/+\textlf{might}(if proficient)\\
+\textlf{Power} & = & Weapon Bonus +\textlf{might}\\
 \textlf{Toughness} & = & 8 + armour value\\
-\textlf{endurance} & = & 3 + \textlf{resolve} \\
+\textlf{endurance} & = & 2 + \textlf{resolve} \\
 \end{tabular}
 
 \subsection{Attacks}
@@ -143,7 +142,7 @@ For every $\dicecritlvl$ the damage roll exceeds the difficulty by the attack ga
  
 \begin{itemize}
 \item
-\textlf{Wounded} inflicts an instance of the \textlf{staggered} effect on the victim. 
+\textlf{Wounded} inflicts \textlf{staggered} effect on the victim. 
 A character with two active \textlf{wounded} effects replaces them with a \textlf{badly-wounded} effect.
 \item
 A \textlf{Badly Wounded} effect causes you to suffer an \textlf{edge} penalty on all actions.
@@ -211,13 +210,13 @@ When hiding behind cover the character receives a bonus to their \textlf{Deflect
 Condition & Effect \\
 \hline
 \textlf{Vulnerable} & Attackers get \textlf{edge} bonus on damage rolls\\
-\textlf{Stagger} X & \textlf{edge} penalty on next X rolls\\
-\textlf{Blind} & \textlf{Deflect} and \textlf{Aim} set to -3 \\
-\textlf{Bleeding} & Lose 1 \textlf{endurance} each round for 2 rounds \\
-\textlf{Knocked Down} & \textlf{vulnerable} until it can stand up \\
-\textlf{Immobilised} & No move actions\\
-\textlf{Cripple} & Action costs increased by 1 \\
-\textlf{Cursed} & \textlf{Critical Success} becomes \textlf{Critical Failure} \\
+\textlf{Staggered} X & Lose 1 reaction point\\
+\textlf{Blind} & \textlf{Deflect} and \textlf{Aim} have \textlf{edge-} \\
+\textlf{Bleeding} & Lose 1 \textlf{endurance} on failed \textlf{resolve} vs \textlf{might} check each round for 2 rounds \\
+\textlf{Knocked Down} & \textlf{edge-} on \textlf{deflect} until it can stand up \\
+\textlf{Immobilised} & No move actions and \textlf{edge-} on \textlf{deflect}\\
+\textlf{Stunned} & Action costs increased by 1 \\
+\textlf{Cursed} & \textlf{Critical success} on any roll is reduced by 1 level \\
 \hline
 \end{tabular}
 \end{table}
@@ -235,9 +234,8 @@ Condition & Effect \\
 		Stealth (C) & Disguise (C) & Religion (W) \\
 		Healing (R)  & Persuade (R) & Arcana (W)\\
 		Mechanical (W)  & Insight (R) & \\
-		Ride/Drive (C) & & \\
+		Ride/Drive (C) & Intimidation (M) & \\
 		Survival (C) & & \\
-		Alchemy (C) & & \\
 		\hline
 	\end{tabular}
 \end{table}
