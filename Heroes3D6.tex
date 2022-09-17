@@ -1,4 +1,4 @@
-%Copyright (C) 2022  Geoff Beck
+%Copyright (C) 2021-2022  Geoff Beck
 %
 %This document is open-source: you can redistribute it and/or modify
 %it under the terms of the GNU General Public License as published by
@@ -58,7 +58,7 @@ This is a simple system to pick up, as it applies a central set of mechanics acr
 
 This weighty tome encompasses all the essential rules needed to play a game of \textit{Heroes3D6} independent of setting, other books merely contain rules for playing the game within a famous/iconic world or setting, all these other books require these Core Rules, but do occasionally over-ride them when necessary.
 
-This rule book is open-source~\footnote{Copyright (C) 2022  Geoff Beck}: you can redistribute it and/or modify
+This rule book is open-source~\footnote{Copyright (C) 2021-2022  Geoff Beck}: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or any later version (see \url{https://www.gnu.org/licenses/}).
 
@@ -470,29 +470,29 @@ Is how observant and alert a character is, this skill allows you to spot secret 
 
 
 \subsection{Healing (Resolve)}
-A healer is one who is skilled is speeding the recovery of their allies through strictly medical/surgical means (potions are the province of the chemist), a healer can employ their healing skill to remove injuries inflicted to an ally. You may only ever make 1 re-attempt on a failed healing roll, should this also fail, you may not re-attempt to heal that particular patient in the same day. The kind of healing actions are:
+A healer is one who is skilled is speeding the recovery of their allies through strictly medical/surgical means (potions are the province of the chemist), a healer can employ their healing skill to remove injuries inflicted to an ally. The kind of healing actions are:
 
 \begin{itemize}
-	\item Cure a single \textlf{wounded} effect
+	\item Cure the \textlf{wounded} status
 	\begin{itemize}
-		\item \textlf{difficulty}: $\dicediffbase$ (add 1 extra for each other wound effect present)
-		\item Failure means nothing changes
+		\item \textlf{difficulty}: $10$
+		\item Cannot re-attempt healing for 1 day
 		\item \textlf{Critical failure} increases healing \textlf{difficulty} for that target by 1 for 3 days
-		\item \textlf{critical success} removes an extra wounded effect per critical threshold, or badly-wounded per two thresholds instead
+		\item \textlf{critical success} also restores 1 \textlf{endurance} per critical threshold
 	\end{itemize}
-	\item Cure a single \textlf{badly wounded} effect
+	\item Reduce \textlf{badly wounded} to \textlf{wounded}
 	\begin{itemize}
-		\item \textlf{difficulty}: 11 (add 1 extra \textlf{difficulty} for each additional wound effect present)
-		\item Failure means nothing changes
+		\item \textlf{difficulty}: 12 
+		\item Cannot re-attempt healing for 1 day
 		\item \textlf{Critical failure} increases healing \textlf{difficulty} for that target by 1 for 3 days
-		\item \textlf{critical success} removes an extra wounded effect per critical threshold, or badly-wounded per two thresholds instead
+		\item \textlf{critical success} also cures the \textlf{wounded} status
 	\end{itemize}
-	\item Cure a single \textlf{Mortally wounded} effect
+	\item Reduce \textlf{Mortally wounded} to \textlf{badly wounded}
 	\begin{itemize}
-		\item \textlf{difficulty}: 13 (add 1 extra \textlf{difficulty} for each additional wound effect present)
-		\item Failure means nothing changes
+		\item \textlf{difficulty}: 14 
+		\item Cannot re-attempt healing for 1 day
 		\item \textlf{Critical failure} increases healing difficulty for that target by 1 for 3 days
-		\item \textlf{critical success} removes an extra wounded effect per critical threshold, or badly-wounded per two thresholds instead
+		\item \textlf{critical success} reduces this to \textlf{wounded} instead
 	\end{itemize}
 	\item Identify poison or disease
 	\begin{itemize}
@@ -733,18 +733,18 @@ This is a skill that can be used to ``persuade'' someone via threats, either exp
 Leadership gauges the character's ability to inspire others to follow them, or to bring out the best in each of their companions. This skill can only be used on creatures who can understand you. This skill can be used to:
 
 \begin{itemize}
-	\item Make a creature ``snap out of it'suspicious of your intentions'
+	\item Make a creature ``snap out of it''
 	\begin{itemize}
 		\item This negates a condition affecting a target
 		\item The allowed conditions: \textlf{Stagger}, \textlf{Stunned}, \textlf{Immobilized}, \textlf{Knock-down}.
-		\item The \textlf{difficulty} is given by $\dicediffbase +$ the \textlf{power} of the condition 
+		\item The \textlf{difficulty} is given by $11 +$ the \textlf{power} of the condition 
 		\item \textlf{Critical success} allows you to use this action again for no action points
 	\end{itemize}
 	
 	\item Direct an action 
 	\begin{itemize}
 		\item Give an order to an ally
-		\item Make an opposed check with your \textlf{Leadership} vs \textlf{difficulty}
+		\item Make a check with your \textlf{Leadership} vs \textlf{difficulty}
 		\item \textlf{difficulty} determined by the directed action
 		\item If you succeed, and the ally obeys, the action has \textlf{edge+}
 		\item \textlf{Critical success} grants an extra \textlf{edge+} per threshold
@@ -762,7 +762,7 @@ Leadership gauges the character's ability to inspire others to follow them, or t
 	\item Restore \textlf{endurance} to others
 	\begin{itemize}
 		\item Choose a single ally to inspire
-		\item Make \textlf{Leadership} check against $\dicediffbase$ + target's missing \textlf{endurance}
+		\item Make \textlf{Leadership} check against $10$ + target's missing \textlf{endurance}
 		\item Success restores 1 missing \textlf{endurance}
 		\item \textlf{Critical success} restores extra \textlf{endurance}.
 	\end{itemize}
@@ -786,7 +786,7 @@ The amount of audience appreciation/fruit-throwing also scales with the number o
   
 
 \subsection{Persuade (Resolve)}
-This is a skill that can be used to weedle favours out of people, convince them of your trustworthiness (or some other fact), and for bargaining and bartering. This skill cannot be used to convince a person of something that is untrue (you can't lie while using it) and also cannot involves either explicit or implicit threats.
+This is a skill that can be used to weedle favours out of people, convince them of your trustworthiness (or some other fact), and for bargaining and bartering. This skill cannot be used to convince a person of something that is untrue (you can't lie while using it) and also cannot involve either explicit or implicit threats.
 \begin{itemize}
 	\item In ordinary conversation
 	\begin{itemize}
@@ -968,7 +968,9 @@ Character's without certain \textlf{perks} (see Section~\ref{sec:dual}) suffer \
 \label{sec:dmg}
 This represents whether or not a telling blow penetrates your target's armour.
 
-This is a \textlf{difficulty check} with your \textlf{power} against the victim's \textlf{toughness}. If not \textlf{proficient} with their equipped weapon, the character suffers \textlf{edge-} on these checks. If the check succeeds then the victim loses \textlf{endurance}. How many points are lost depends on the \textlfirst{lethality} of the attack (see table~\ref{tab:lethal}). Once a character has no \textlf{endurance} left, further damage is accumulated as actual injuries which are tracked via \textlf{wound} effects. If a character would be reduced to negative \textlf{endurance}, the lost points beyond zero are converted to wounds (i.e. -1 to \textlf{wounded} or -2 to \textlf{badly-wounded} following table~\ref{tab:lethal}).
+This is a \textlf{difficulty check} with your \textlf{power} against the victim's \textlf{toughness}. If not \textlf{proficient} with their equipped weapon, the character suffers \textlf{edge-} on these checks. If the check succeeds then the victim loses \textlf{endurance}. How many points are lost depends on the \textlfirst{lethality} of the attack (see table~\ref{tab:lethal}). Once a character has no \textlf{endurance} left (minimum is 0), further damage is accumulated as actual injuries which are tracked via \textlf{wound} effects. If a character would be reduced to negative \textlf{endurance}, the lost points beyond zero are converted to wounds (i.e. -1 to \textlf{wounded} or -2 to \textlf{badly-wounded} following table~\ref{tab:lethal}). 
+
+If a \textlf{wounded} character has their \textlf{endurance} restored to values $>0$ there is no effect on their \textlf{wounds}, the latter can only be remedied by the \textlf{healing skill} or time.
 
 \begin{table}[htbp]
 	\centering
@@ -987,20 +989,20 @@ This is a \textlf{difficulty check} with your \textlf{power} against the victim'
 \end{table}  
 
 \subsubsection{Critical hits}
-If a character succeeds on a \textlf{damage check} by \dicecritlvl or more, the attack's \textlf{lethality} is upgraded by 1 level per $\dicecritlvl$ they exceeded it by.
+If a character succeeds on a \textlf{damage check} by $\dicecritlvl$ or more, the attack's \textlf{lethality} is upgraded by 1 level per $\dicecritlvl$ they exceeded it by.
 
 \subsubsection{Wounded}
-Such a hit represents a flesh-wound and inflict \textlf{staggered} on the victim (see \ref{sec:special}). The \textlf{wound} effect itself lasts until healed. 
+This represents a moderately serious flesh-wound and inflicts \textlf{staggered} on the victim (see \ref{sec:special}) until healed. 
 
 A character who receives two \textlf{wounded} effects replaces them with a \textlf{badly-wounded} effect.
 
 \subsubsection{Badly wounded}
 If a character suffers a successful \textlf{damage check} from a weapon with \textlf{crushing lethality}, or accumulates two \textlf{wounded} effects, they become \textlf{badly-wounded}. This results in \textlf{edge-} on all rolls until remedied.
 
-A man-sized character subject to two \textlf{badly-wounded} effects replaces them with \textlf{mortally wounded}.
+A man-sized character subject to further damage when \textlf{badly-wounded} becomes \textlf{mortally wounded}.
 
 \subsubsection{Mortally wounded}
-If a character suffers a successful \textlf{damage check} from a weapon with \textlf{devastating lethality}, or accumulates two \textlf{badly-wounded} effects, they are \textlf{mortally-wounded}. Such a character cannot make actions and will die in three days unless they receive some medical attention. This status can only be removed by active healing. If a \textlf{mortally wounded} character is healed, change this effect to \textlf{badly wounded}.
+If a character suffers a successful \textlf{damage check} from a weapon with \textlf{devastating lethality}, or accumulates enough \textlf{wounded} effects, they are \textlf{mortally-wounded}. Such a character cannot make actions and will die in three days unless they receive some medical attention. This status can only be removed by active healing. If a \textlf{mortally wounded} character is healed, change this effect to \textlf{badly wounded}.
 
 
 \subsection{Armour}
@@ -1067,7 +1069,7 @@ Attempt to entangle your foe's legs with your weapon's haft, or pointy bit built
 \section{Recovery and healing}
 \textlf{endurance} is recovered completely if the character can rest for 8 hours. Otherwise, a short rest of around an hour restores 1 \textlf{endurance}.
 
-A character that has suffered wounds can be healed via use of the \textlf{Healing skill} or by a non-player healer. Without healing, a character heals one \textlf{wounded} effect every 3 days and one \textlf{badly-wounded} every 10 days.
+A character that has suffered wounds can be healed via use of the \textlf{Healing skill} or by a non-player healer. Without healing, a character recovers from the \textlf{wounded} effect after 3 days. It takes 6 days before the \textlf{badly-wounded} effect is reduced to \textlf{wounded}.
 
 
 
@@ -1187,7 +1189,7 @@ These enemies are followers, they need to be lead. Without a leader to direct th
 \subsection{Elite enemies}
 These are generally creatures who are extremely proficient combatants or are enhanced by some magical or technological power.
 \subsubsection{Abilities and attributes}
-Such fighters are likely to have above average attributes, e.g. two at level 1. Elite enemies do not have any heroic attributes but may have multiple combat proficiencies.
+Such fighters are likely to have above average attributes, e.g. two at level 1, with \textlf{aim} of at least $+1$. Elite enemies do not have any heroic attributes but may have multiple combat proficiencies. 
 \subsubsection{Tactics}
 Such enemies are independent, they do not need to be lead, but are more effective with a leader to direct them. These foes are unlikely to be easily demoralised or intimidated by powerful opposition and will coordinate and work together to defeat stronger opponents. suffer the \textlf{panic} effect (see section~\ref{sec:special}) if they run out of \textlf{endurance} or if they suffer a wound effect. Enemies who believe in their cause, or are \textlf{mindless}, are immune to this. When being lead, an elite creature may use its leader's leadership score to make \textlf{panic} checks.
 
@@ -1459,7 +1461,7 @@ At a cost of 1 reaction point an attack against a \textlf{knocked down} target b
 
 
 \subsection{Lightning fast [4]}
-The character reacts so quickly that, during action declaration in combat, they may seize the initiative for their side at a cost of 1 reaction point. A character may not use \textlf{Lightning Fast} more than once per encounter (additionally, each side in combat can only benefit from this once per encounter).
+The character reacts so quickly that, during action declaration in combat, they may seize the initiative for their side at a cost of 1 reaction point and 1 \textlf{heroism}.
 
 \subsubsection{Upgrade: Swift as death [2]}
 (Requires \textlf{Lightning Fast}) The character has \textlf{edge+} on \textlf{aim} and \textlf{damage checks} during a turn when they have triggered \textlf{Lightning fast}.
@@ -1595,7 +1597,7 @@ Elegance, advantage, and a free hand to make sweeping gestures; what's not to lo
 (Requires \textlf{Duelist}) While fighting with a single weapon (as detailed in \textlf{Duelist}), the character may spend a reaction point to gain \textlf{edge+} on the next \textlf{aim} roll after they \textlf{deflect} with \textlf{critical success}. 
 
 
-\subsection{Eagle eye [2]}
+\subsection{Eagle-eye [2]}
 You don't need glasses. The character adds 1 to the range score of all shooting and throwing weapons they employ.
 
 
@@ -1705,7 +1707,7 @@ The character gains \textlf{edge+} on \textlf{Grapple} and \textlf{Shove} action
 The character can draw/change weapon at a cost of 1 reaction point.
 
 \subsubsection{Upgrade: Shoot first [3]}
-(Requires \textlf{Quick Draw}) The character's attacks, made after making a surprise \textlf{Quick Draw} of \textlf{small} weapons are \textlf{sneak attacks}. This bonus cannot be claimed outside the first round of (or prior to) a combat situation.
+(Requires \textlf{Quick Draw}) The character's attacks, after making a surprise \textlf{Quick Draw} of \textlf{small} weapons are \textlf{sneak attacks}. This bonus cannot be claimed if the target is already fighting the character.
 
 
 \subsection{Schadenfreude [4]}
@@ -1741,7 +1743,7 @@ A precisely placed shot causes the target to drop their weapon. The character ca
 
 
 \subsection{True grit [4]}
-Pain is just information. When the character loses \textlf{endurance} they can spend a reaction point to regain 2 \textlf{endurance} (up to their usual maximum). 
+Pain is just information. When the character is reduced to 0 \textlf{endurance} they can spend a reaction point to regain 1 \textlf{endurance}. 
 
 
 \subsection{Turn the tables [4]}
