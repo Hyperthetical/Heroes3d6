@@ -2,7 +2,7 @@
 
 This is an open and flexible rule-set for table-top RPGs
 
-Copyright (C) 2021  Geoff Beck
+Copyright (C) 2021-2023  Geoff Beck
 
 This document is open source: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
