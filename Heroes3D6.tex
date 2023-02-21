@@ -1166,7 +1166,7 @@ The lighting of an environment greatly influences the difficulty of fighting wit
 \label{sec:sneak-attk}
 A target that does not know of your presence, aggressive intent, or is otherwise fully engaged in combat with someone else (the target must have been unaware of your combat participation, if not your presence) is vulnerable to \textlfirst{sneak attacks}.
 
-The victim of a \textlf{sneak attack} gets no opportunity to \textlf{deflect}, unless otherwise modified.
+The victim of a \textlf{sneak attack} has \textlf{edge--} on \textlf{deflect}.
 Such attacks gain \textlf{edge+} to \textlf{damage checks} when made with \textlf{small} weapons, such as daggers, or with specialist tools, such as garrotte wire. Multiple \textlf{perks} can improve \textlf{sneak attacks}. \textlf{Small} weapon bonuses are lost on \textlf{Huge creatures} or larger targets.
 
 \subsection{Rage}
@@ -1362,7 +1362,7 @@ The character has experience moving and fighting in \textlf{heavy armour}. Thus,
 \subsection{Language: X [2]}
 (X is a language) The character has complete fluency in the chosen language. 
 
-\subsection{Master: X [6]}
+\subsection{Skill mastery: X [6]}
 (Requires \textlf{Skill proficiency: X}) The character has achieved mastery of their art. Any check for the mastered skill X benefits from \textlf{edge+}.
 
 \subsection{Skill proficiency: X [2]}
@@ -1419,7 +1419,7 @@ These \textlf{perks} are oriented towards surviving damage in combat. They must 
 
 
 \subsection{Sixth sense [2]}
-\textlf{Passive perk}. The character is so sharp they can evade even unseen attacks at the very last minute. This allows the character to attempt \textlf{deflect} against \textlf{sneak attacks}, however, they suffer \textlf{edge-} on this.
+\textlf{Passive perk}. The character is so sharp they can evade even unseen attacks at the very last minute. This allows the character to only suffer \textlf{edge-} on \textlf{deflect} against \textlf{sneak attacks}.
 
 
 \subsection{True grit [4]}
@@ -1499,6 +1499,9 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 \subsection{The ol' one-two [3]}
 \textlf{Active perk}. A close quarters manoeuvre where a quick blow with a fist, or the weapon itself, is used to make room for firing a ranged weapon. This special attack costs 2 action points. Make an unarmed attack, if it hits you may perform \textlf{damage checks} for both the unarmed hit and for a shooting-type, ranged weapon you are wielding. 
 
+\subsubsection{Upgrade: A new one-two [2]}
+(Requires \textlf{The ol' one-two}). You can make any close-combat attack in place of the required unarmed one.
+
 
 \subsection{Whirlwind of steel [3]}
 \textlf{Active perk}. Danger, sharp objects. The character lashes out around them, striking all too slow to escape. This costs 2 action points and allows the character to make an attack action with their close-combat weapons that has \textlf{cleave} + 1.
@@ -1536,7 +1539,7 @@ These \textlf{perks} are oriented towards unarmed combat. They must occupy an eq
 \textlf{Active perk} (Requires \textlf{Weapon proficiency: unarmed}). The character gathers all their strength and makes a single unarmed attack, with only a single \textlf{damage check}, at a cost of 2 action points. If this attack causes damage then its victim is \textlf{vulnerable} to the next \textlf{damage check} it suffers.
 
 
-\subsection{Snake fist [4]}
+\subsection{Snake fist [3]}
 \textlf{Passive perk} (Requires \textlf{Weapon proficiency: unarmed}). The character has learned to unleash a volley of strikes with hands and feet. Unarmed attacks make an extra \textlf{damage check}. This does not incur \textlf{dual-wielding} penalties.
 
 
@@ -1549,7 +1552,7 @@ These \textlf{perks} are oriented towards unarmed combat. They must occupy an eq
 
 
 \subsection{Turn the tables [4]}
-\textlf{Passive perk}. If the character is targeted by a \textlf{grapple} or \textlf{shove} attempt that fails they can spend a reaction point to successfully use this effect on the grappler/shover. 
+\textlf{Passive perk}. If the character is targeted by a \textlf{grapple} or \textlf{shove} attempt that fails, they can spend a reaction point to successfully use this effect on the grappler/shover. 
 
 
 
@@ -1612,7 +1615,7 @@ These \textlf{perks} are oriented towards utility and skill in combat. They must
 
 
 \subsection{Plan B [3]}
-\textlf{Passive perk} (Requires \textlf{Duelist}). Whenever one of the character's attacks is \textlf{deflected}, while in \textlf{Duelist} mode, they may spend a reaction point to draw and throw/fire a \textlf{small} weapon (this doesn't provoke a \textlf{moment of weakness} or suffer penalties for close range).
+\textlf{Passive perk} (Requires \textlf{Duelist}). Whenever one of the character's attacks is \textlf{deflected}, while in \textlf{Duelist} mode, they may spend a reaction point to draw and throw/fire a \textlf{small} weapon (this doesn't suffer penalties for close range).
 
 
 \subsection{Suppressing fire! [4]}
@@ -1719,7 +1722,7 @@ These \textlf{perks} are oriented towards sneaky tricks in combat. They must occ
 \label{sec:perks-sneaky}
 
 \subsection{Always carry a spare [2]}
-\textlf{Passive perk} (Requires \textlf{Skill proficiency: perform}). It pays to be prepared. The character can produce a single extra dagger (or other \textlf{small} throwing weapon) in an emergency. This can be used at most once per day.
+\textlf{Passive perk} (Requires \textlf{Skill proficiency: perform}). It pays to be prepared. The character can produce a single extra dagger (or other \textlf{small} throwing weapon) in an emergency. This can only be used once per day.
 
 
 \subsection{Arrow to the knee [4]}
@@ -1762,7 +1765,7 @@ A\textlf{Active perk}. For 1 reaction point, attacks this round against \textlf{
 
 
 \subsection{Made you look [4]}
-\textlf{Passive perk}. If the character succeeds on a \textlf{feint} action, then associated \textlf{damage checks} gain any benefits that apply to \textlf{sneak attacks}.
+\textlf{Passive perk}. If the character succeeds on a \textlf{feint} action, then any associated attack actions are \textlf{sneak attacks}.
 
 
 \subsection{Now you see me, now you don't [5]} 
@@ -1792,10 +1795,10 @@ A\textlf{Active perk}. For 1 reaction point, attacks this round against \textlf{
 
 
 \subsection{Quick draw [2]}
-\textlf{Passive perk}. The character can draw/change weapon at a cost of 1 reaction point.
+\textlf{Passive perk}. The character can draw/change weapons at a cost of 1 reaction point.
 
-\subsubsection{Upgrade: Shoot first [3]}
-(Requires \textlf{Quick Draw}) The character's attacks, after making a surprise \textlf{Quick Draw} of \textlf{small} weapons are \textlf{sneak attacks}. This bonus cannot be claimed if the target is already fighting the character.
+\subsubsection{Upgrade: Deceptive draw [3]}
+(Requires \textlf{Quick Draw}) The character's attacks, after making a surprise \textlf{Quick Draw} of \textlf{small} weapons are \textlf{sneak attacks}. This bonus cannot be claimed unless the character also changed weapon type (i.e. swapping from a dagger or unarmed to a pistol). %This bonus cannot be claimed if the target is already fighting the character.
 
 
 \subsection{Too hot to handle [4]}
