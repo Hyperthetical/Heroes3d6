@@ -1255,41 +1255,41 @@ This is a collection of special rules that apply in all campaign settings and al
 \subsection{Conditions}
 These are negative statuses that a character can become subject to. 
 
-\subsubsection{Vulnerable}
-A powerful blow can sometimes open up a fighter to being easily finished off. The next attack directed at the victim benefits from \textlf{edge+} to \textlf{damage checks}.
-
-\subsubsection{Staggered}
-The shock of injury is a difficult thing to ignore and can incapacitate even the most hardened fighters. A \textlf{staggered} creature loses 1 reaction point. If this reduces a character to negative points, i.e. $-X$, they lose the next $X$ points they would normally gain.
-
-\subsubsection{Knocked down}
-A creature that is \textlfirst{knocked down} loses its footing and falls over. Such a creature has \textlf{edge-} on \textlf{deflect} until it can stand up. Standing up can be done only in your own turn. This costs 1 action point. Characters in \textlf{heavy armour} must spend 2 action points.
+\subsubsection{Bleeding}
+This state represents severe bleeding. It lasts 2 rounds, each round the victim must make an opposed check: their \textlf{resolve} against the \textlf{power} of the effect. Their failure results in the loss of 1 \textlf{endurance} (this does not scale with levels of \textlf{critical failure}). 
 
 \subsubsection{Blind}
 A \textlfirst{blind} creature has \textlf{edge--} on both \textlf{aim} and \textlf{deflect} for the effect's duration. In addition, it must randomise direction if it wishes to move.  
 
-\subsubsection{Immobilised}
-An \textlfirst{immobilised} creature cannot move, either due to some magical malaise or due to having suffered damage to its legs. In addition, they suffer \textlf{edge-} on \textlf{deflect}.
-
-\subsubsection{Stunned}
-The sudden shock of a well-placed blow can often neutralise retaliation. If a \textlfirst{stunned} creature attempts to make attacks in its next turn these cost 1 more action point than normal. 
-
 \subsubsection{Cursed}
 A \textlfirst{cursed} creature is afflicted by a malignant magical effect sapping its luck and increasing the chance of misfortune. \textlf{Critical success} on any roll is reduced by 1 level. \textlf{Curse} lasts until removed.
-
-\subsubsection{Bleeding}
-This state represents severe bleeding. It lasts 2 rounds, each round the victim must make an opposed check: their \textlf{resolve} against the \textlf{power} of the effect. Their failure results in the loss of 1 \textlf{endurance} (this does not scale with levels of \textlf{critical failure}). 
 
 \subsubsection{Fear}
 If a character is afflicted by this effect they must make a \textlf{resolve} check against a \textlf{difficulty}, chosen by the GM, based on how scary the situation is. Should the character fail, they suffer \textlf{edge-} on \textlf{aim}, each subsequent turn the character may try to pass the check again. 
 
-\subsubsection{Terror}
-If a character is afflicted by this effect they must make a \textlf{resolve} check against a \textlf{difficulty}, chosen by the GM, based on how scary the situation is. Should the character fail, they must spend each turn cowering in fear. Each subsequent turn the character may try to pass the check again.
+\subsubsection{Immobilised}
+An \textlfirst{immobilised} creature cannot move, either due to some magical malaise or due to having suffered damage to its legs. In addition, they suffer \textlf{edge-} on \textlf{deflect}.
+
+\subsubsection{Knocked down}
+A creature that is \textlfirst{knocked down} loses its footing and falls over. Such a creature has \textlf{edge-} on \textlf{deflect} until it can stand up. Standing up can be done only in your own turn. This costs 1 action point. Characters in \textlf{heavy armour} must spend 2 action points.
 
 \subsubsection{Panic}
 A non-hero creature may \textlfirst{panic} if it suffers considerable injury. If an elite or mundane enemy runs out of \textlf{endurance}, or receives a \textlf{wound} effect, it must make a \textlf{resolve} check vs \textlf{difficulty} 13. Should it fail, it flees or surrenders. In general, intelligent creatures will surrender, but this is up to the Game Master's choice. Note that the presence of a commander or leader will prevent weaker creature from giving up so easily. In this case the creature may add it's leader's \textlf{Resolve} to \textlf{panic} checks.
 
 \subsubsection{Poisoned}
 Poisoned is a state that results from harmful chemicals being introduced into the victim's system. A poisoned attack that injures a creature, poisons that creature if it fails a \textlf{resolve} check versus a \textlf{difficulty} associated with the virulence of the poison and the size of the dose. A \textlf{poisoned} character has one fewer action point in combat (to a minimum of 1) for 3 days or until cured of the poison.
+
+\subsubsection{Staggered}
+The shock of injury is a difficult thing to ignore and can incapacitate even the most hardened fighters. A \textlf{staggered} creature loses 1 reaction point. If this reduces a character to negative points, i.e. $-X$, they lose the next $X$ points they would normally gain.
+
+\subsubsection{Stunned}
+The sudden shock of a well-placed blow can often neutralise retaliation. If a \textlfirst{stunned} creature attempts to make attacks in its next turn these cost 1 more action point than normal.
+
+\subsubsection{Terror}
+If a character is afflicted by this effect they must make a \textlf{resolve} check against a \textlf{difficulty}, chosen by the GM, based on how scary the situation is. Should the character fail, they must spend each turn cowering in fear. Each subsequent turn the character may try to pass the check again.
+
+\subsubsection{Vulnerable}
+A powerful blow can sometimes open up a fighter to being easily finished off. The next attack directed at the victim benefits from \textlf{edge+} to \textlf{damage checks}.
 
 
 \subsection{Additional weapon effects}
@@ -1385,8 +1385,10 @@ The character is \textlf{proficient} in the class of weapons X. Classes should b
 These \textlf{perks} are oriented towards surviving damage in combat. They must occupy an equipment slot for active/passive \textlf{perks} to be usable.
 \label{sec:perks-defence}
 
+
 \subsection{Evasive [3]}
 \textlf{Passive perk}. It's hard to pin you down. This grants the character + 1 \textlf{deflect} provided they wear \textlf{light armour} or are unarmoured.
+
 
 \subsection{Fighting retreat [2]}
 \textlf{Passive perk}. You are categorically not running away. The retreat action now costs only a single action point.
@@ -1411,7 +1413,7 @@ These \textlf{perks} are oriented towards surviving damage in combat. They must 
 
 
 \subsection{Reactive defence [4]}
-\textlf{Passive perk}. The character can spend a reaction point to gain the effect of \textlf{defensive fighting} when they are targeted by an attack. 
+\textlf{Active perk}. The character can spend a reaction point to gain the effect of \textlf{defensive fighting} when they are targeted by an attack. 
 
 
 \subsection{Set to defend [3]}
@@ -1423,7 +1425,7 @@ These \textlf{perks} are oriented towards surviving damage in combat. They must 
 
 
 \subsection{True grit [4]}
-\textlf{Passive perk}. Pain is just information. When the character is reduced to 0 \textlf{endurance} they can spend a reaction point to regain 1 \textlf{endurance}.
+\textlf{Active perk}. Pain is just information. When the character is reduced to 0 \textlf{endurance} they can spend a reaction point to regain 1 \textlf{endurance}.
 
 
 \subsection{Your mother was a hamster [3]}
@@ -1436,8 +1438,9 @@ These \textlf{perks} are oriented towards surviving damage in combat. They must 
 These \textlf{perks} are oriented towards dealing damage in combat. They must occupy an equipment slot for active/passive \textlf{perks} to be usable.
 \label{sec:perks-offence}
 
+
 \subsection{Adrenaline rush [3]}
-\textlf{Passive perk}. A surge of adrenaline can grant a fighter great power in times of danger. If the character loses \textlf{endurance} to a \textlf{damage check}, they can spend a reaction point to gain \textlf{edge+} to their next \textlf{damage check}.
+\textlf{Active perk}. A surge of adrenaline can grant a fighter great power in times of danger. If the character loses \textlf{endurance} to a \textlf{damage check}, they can spend a reaction point to gain \textlf{edge+} to their next \textlf{damage check}.
 
 \subsubsection{Upgrade: Savage reprisal [3]}
 (Requires \textlf{Adrenaline Rush}) Whenever the character triggers \textlf{Adrenaline Rush} they may make a single, free, close-combat \textlf{damage check} against their assailant (provided it is within reach). This attack may also claim the benefit of the bonus granted by \textlf{Adrenaline Rush}. 
@@ -1448,7 +1451,7 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 
 
 \subsection{Berserker [4]}
-\textlf{Passive perk}. You mad, bro? The character can quickly be overtaken by the pulse of battle, they can spend a reaction point to \textlf{enrage} if they take or deal any damage.
+\textlf{Active perk}. You mad, bro? The character can quickly be overtaken by the pulse of battle, they can spend a reaction point to \textlf{enrage} if they take or deal any damage.
 
 \subsubsection{Upgrade: Berserkergang [2]}
 (Requires \textlf{berserker}). The character unleashes their inner fury in a remorseless hail of attacks. When \textlf{enraged} the character can spend a reaction point to grant \textlf{burst} + 1 to an attack that hits.  
@@ -1469,7 +1472,7 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 
 
 \subsection{Furious assault [4]}
-\textlf{Active perk}. A risky manoeuvre, the fighter replaces a considered attack with a hail of furious strikes. When declaring an attack the character may elect it to be a \textlf{furious assault} granting \textlf{burst} + 1. However, the character suffers \textlf{edge-} to \textlf{aim}. This cannot be used if the weapon requires \textlf{reload} actions.
+\textlf{Active perk}. A risky manoeuvre, the fighter replaces a considered attack with a hail of furious strikes. When declaring an attack the character may elect it to be a \textlf{furious assault}, granting \textlf{burst} + 1. However, the character suffers \textlf{edge-} to \textlf{aim}. This cannot be used if the weapon requires \textlf{reload} actions.
 
 
 \subsection{Guard breaker [3]}
@@ -1516,6 +1519,7 @@ This adds an additional \textlf{cleave} + 1 when using \textlf{Whirlwind of stee
 These \textlf{perks} are oriented towards unarmed combat. They must occupy an equipment slot for active/passive \textlf{perks} to be usable.
 \label{sec:perks-martial}
 
+
 \subsection{Dragon kick [3]}
 \textlf{Active perk} (Requires \textlf{Weapon proficiency: unarmed}). The character may make an unarmed attack in the form of a flying kick. This costs 2 action points and the character must move a distance of 1 (ignoring terrain effects) and then make an unarmed attack. Such attacks that succeed on their \textlf{damage check} also inflict \textlf{knocked-down}. The \textlf{knock-down} effect applies only to creatures a maximum of 1 size category larger than the character.
 
@@ -1544,7 +1548,7 @@ These \textlf{perks} are oriented towards unarmed combat. They must occupy an eq
 
 
 \subsection{Spontaneous brawler [2]}
-\textlf{Passive perk}. This allows the character to treat any weapon or improvised projectile as though it had the \textlf{throw} rule. 
+\textlf{Passive perk}. This allows the character to treat any weapon or improvised projectile as though it had the \textlf{throw 2} rule. 
 
 
 \subsection{Take-down [2]}
@@ -1552,7 +1556,7 @@ These \textlf{perks} are oriented towards unarmed combat. They must occupy an eq
 
 
 \subsection{Turn the tables [4]}
-\textlf{Passive perk}. If the character is targeted by a \textlf{grapple} or \textlf{shove} attempt that fails, they can spend a reaction point to successfully use this effect on the grappler/shover. 
+\textlf{Active perk}. If the character is targeted by a \textlf{grapple} or \textlf{shove} attempt that fails, they can spend a reaction point to successfully use this effect on the grappler/shover. 
 
 
 
@@ -1562,10 +1566,7 @@ These \textlf{perks} are oriented towards utility and skill in combat. They must
 \label{sec:perks-mastery}
 
 \subsection{Best offence [3]}
-\textlf{Passive perk}. Is a good defence. When the character scores \textlf{critical success} on \textlf{deflect}, they may spend a reaction point so that the attacker suffers a \textlf{moment of weakness}. 
-
-%\subsubsection{Upgrade: Unassailable [2]}
-%(Requires \textlf{Best defence}) \textlf{Best defence} can be triggered once per round against each unique attacker (and you can exploit the effect every time).
+\textlf{Active perk}. Is a good defence. When the character scores \textlf{critical success} on \textlf{deflect}, they may spend a reaction point so that the attacker suffers a \textlf{moment of weakness}. 
 
 
 \subsection{Bull-headed [2]}
@@ -1615,7 +1616,7 @@ These \textlf{perks} are oriented towards utility and skill in combat. They must
 
 
 \subsection{Plan B [3]}
-\textlf{Passive perk} (Requires \textlf{Duelist}). Whenever one of the character's attacks is \textlf{deflected}, while in \textlf{Duelist} mode, they may spend a reaction point to draw and throw/fire a \textlf{small} weapon (this doesn't suffer penalties for close range).
+\textlf{Active perk} (Requires \textlf{Duelist}). Whenever one of the character's attacks is \textlf{deflected}, while in \textlf{Duelist} mode, they may spend a reaction point to draw and throw/fire a \textlf{small} weapon (this doesn't suffer penalties for close range).
 
 
 \subsection{Suppressing fire! [4]}
@@ -1641,7 +1642,7 @@ These \textlf{perks} don't fit into the other categories. They must occupy an eq
 
 
 \subsection{Decisive leadership [3]}
-\textlf{Passive perk}. The character can spend a reaction point to use a \textlf{leadership} action at any time during combat.
+\textlf{Active perk}. The character can spend a reaction point to use a \textlf{leadership} action at any time during combat.
 
 
 \subsection{Deeds, not words [3]}
@@ -1722,7 +1723,7 @@ These \textlf{perks} are oriented towards sneaky tricks in combat. They must occ
 \label{sec:perks-sneaky}
 
 \subsection{Always carry a spare [2]}
-\textlf{Passive perk} (Requires \textlf{Skill proficiency: perform}). It pays to be prepared. The character can produce a single extra dagger (or other \textlf{small} throwing weapon) in an emergency. This can only be used once per day.
+\textlf{Active perk} (Requires \textlf{Skill proficiency: perform}). It pays to be prepared. The character can produce a single extra dagger (or other \textlf{small} throwing weapon) in an emergency. This can only be used once per day.
 
 
 \subsection{Arrow to the knee [4]}
@@ -1730,11 +1731,11 @@ These \textlf{perks} are oriented towards sneaky tricks in combat. They must occ
 
 
 \subsection{Blind side [3]}
-\textlf{Active perk}. A deft feint allows the character enough room to fire their ranged weapons against close-combat assailants. When using a ranged weapon against a target within range 0 you may feint as though you were using a close-combat weapon. 
+\textlf{Passive perk}. A deft feint allows the character enough room to fire their ranged weapons against close-combat assailants. When using a ranged weapon against a target within range 0 you may feint as though you were using a close-combat weapon. 
 
 
 \subsection{Chink in the armour [3]}
-\textlf{Passive perk}. Close-combat attacks against enemies who are \textlf{knocked down} or \textlf{grappled} gain \textlf{penetration} + 2 at a cost of 1 reaction point.
+\textlf{Active perk}. Close-combat attacks against enemies who are \textlf{knocked down} or \textlf{grappled} gain \textlf{penetration} + 2 at a cost of 1 reaction point.
 
 
 \subsection{Choose your targets [3]}
@@ -1769,7 +1770,7 @@ A\textlf{Active perk}. For 1 reaction point, attacks this round against \textlf{
 
 
 \subsection{Now you see me, now you don't [5]} 
-\textlf{Passive perk} (Requires \textlf{Skill proficiency: stealth}). The character may attempt to use the \textlf{stealth} skill while in combat for 1 action point, fading seamlessly into the background. \textlf{critical failure} results in a \textlf{moment of weakness}. All attacks made after hiding are \textlf{sneak attacks} but reveal the presence of the character. While hidden, the character only incurs \textlf{moment of weakness} penalties due to movement if they are detected.
+\textlf{Active perk} (Requires \textlf{Skill proficiency: stealth}). The character may attempt to use the \textlf{stealth} skill while in combat for 1 action point, fading seamlessly into the background. \textlf{critical failure} results in a \textlf{moment of weakness}. All attacks made after hiding are \textlf{sneak attacks} but reveal the presence of the character. While hidden, the character only incurs \textlf{moment of weakness} penalties due to movement if they are detected.
 
 
 \subsection{One step ahead [3]}
@@ -1795,7 +1796,7 @@ A\textlf{Active perk}. For 1 reaction point, attacks this round against \textlf{
 
 
 \subsection{Quick draw [2]}
-\textlf{Passive perk}. The character can draw/change weapons at a cost of 1 reaction point.
+\textlf{Passive perk}. The character can draw/change weapons at a cost of 1 reaction point instead of an action point.
 
 \subsubsection{Upgrade: Deceptive draw [3]}
 (Requires \textlf{Quick Draw}) The character's attacks, after making a surprise \textlf{Quick Draw} of \textlf{small} weapons are \textlf{sneak attacks}. This bonus cannot be claimed unless the character also changed weapon type (i.e. swapping from a dagger or unarmed to a pistol). %This bonus cannot be claimed if the target is already fighting the character.
