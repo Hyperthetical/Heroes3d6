@@ -736,18 +736,17 @@ Leadership gauges the character's ability to inspire others to follow them, or t
 \begin{itemize}
 	\item Make a creature ``snap out of it''
 	\begin{itemize}
-		\item This negates a condition affecting a target
-		\item The allowed conditions: \textlf{Stagger}, \textlf{Stunned}, \textlf{Immobilized}, \textlf{Knock-down}.
-		\item The \textlf{difficulty} is given by $11 +$ the \textlf{power} of the condition 
+		\item This costs 1 action point negates a condition affecting a target
+		\item The allowed conditions: \textlf{Staggered}, \textlf{Stunned}, \textlf{Immobilized}, \textlf{Knocked-down}.
+		\item The \textlf{difficulty} is given by $10 +$ the \textlf{power} of the condition 
 		\item \textlf{Critical success} allows you to use this action again for no action points
 	\end{itemize}
 	
-	\item Direct an action 
+	\item Inspire an ally 
 	\begin{itemize}
-		\item Give an order to an ally
-		\item Make a check with your \textlf{Leadership} vs \textlf{difficulty}
-		\item \textlf{difficulty} determined by the directed action
-		\item If you succeed, and the ally obeys, the action has \textlf{edge+}
+		\item After an ally makes a roll you may spend a reaction point
+		\item Make a check with your \textlf{Leadership} vs 10
+		\item If successful, the ally gains \textlf{edge+} on the roll (roll the extra dice only, don't re-roll)
 		\item \textlf{Critical success} grants an extra \textlf{edge+} per threshold
 	\end{itemize}
 	
@@ -762,7 +761,7 @@ Leadership gauges the character's ability to inspire others to follow them, or t
 	
 	\item Restore \textlf{endurance} to others
 	\begin{itemize}
-		\item Choose a single ally to inspire
+		\item Spend 2 action points and choose a single ally to inspire
 		\item Make \textlf{Leadership} check against $10$ + target's missing \textlf{endurance}
 		\item Success restores 1 missing \textlf{endurance}
 		\item \textlf{Critical success} restores extra \textlf{endurance}.
@@ -892,8 +891,8 @@ For the side with the initiative, each fighter gets a chance to make their decla
 \subsection{A round of combat}
 A round of combat is complete once all actions are resolved. 
 
-%\subsubsection{Things that last 1 round}
-%If an effect upon a character states that it lasts 1 round, then it lasts until all the sides of the combat have made actions with the effect in place. For example: consider a battle between 2 goblins and a knight. The goblins have initiative and inflict an \textlf{edge-} on the knight's \textlf{deflect} for 1 round. The knight takes his action and the round ends. However, the \textlf{edge-} will last until the goblins have completed their next actions, regardless of who has initiative next round.    
+\subsubsection{Things that last 1 round}
+If an effect upon a character states that it lasts 1 round, then it lasts until all the sides of the combat have made actions with the effect in place. For example: consider a battle between 2 goblins and a knight. The goblins have initiative and inflict an \textlf{edge-} on the knight's \textlf{deflect} for 1 round. The knight takes his action and the round ends. However, the \textlf{edge-} will last until the goblins have completed their next actions, regardless of who has initiative next round.    
 
 
 \section{Combat statistics}
@@ -1136,7 +1135,7 @@ Good examples of soft cover are: small trees, bushes, wooden crates, soft furnis
 Sandbags, hedges, low walls, small rocks, solid furniture. These kind of things provide a moderate amount of protection and concealment from enemies and \textlf{edge+} to rolls to hide in the cover. Objects that provide medium cover can be broken with a \textlf{might}/\textlf{power} check against \textlf{difficulty} 9-13.
 
 \subsection{Heavy cover}
-Battlements, Large walls, trees, big rocks, barricades, serious furniture (made of stone or steel). These things are built to provide a lot of cover and protection and also grant \textlf{edge+} to rolls to hide in the cover. Objects that provide heavy cover can be broken with a \textlf{might}/\textlf{power} check against \textlf{difficulty} 13-20.
+Battlements, large walls, trees, big rocks, barricades, serious furniture (made of stone or steel). These things are built to provide a lot of cover and protection and also grant \textlf{edge+} to rolls to hide in the cover. Objects that provide heavy cover can be broken with a \textlf{might}/\textlf{power} check against \textlf{difficulty} 13-20.
 
 
 \section{Combat areas - examples}
@@ -1349,7 +1348,7 @@ These are skills and talents learned or gained by a hero through the course of t
 \section{Proficiencies}
 These do \textbf{not} occupy equipment slots for passive or active \textlf{perks}, their benefits are always available.
 
-\subsection{Heavy armour [3]}
+\subsection{Heavy armour [5]}
 The character has experience moving and fighting in \textlf{heavy armour}. Thus, they no longer experience \textlf{edge-} on \textlf{deflect} when wearing it.
 
 \subsection{Hero/Villain [0]}
@@ -1513,6 +1512,38 @@ This adds an additional \textlf{cleave} + 1 when using \textlf{Whirlwind of stee
 
 
 
+\section{Leadership}
+These \textlf{perks} are oriented towards leadership and inspiring allies to greater efforts. They must occupy an equipment slot for active/passive \textlf{perks} to be usable.
+\label{sec:perks-leader}
+
+\subsection{At the double! [3]}
+\textlf{Active perk} (Requires \textlf{Skill proficiency: leadership}). For 1 action point you grant allies within range 1 (15 m) + 1 movement range this round. 
+
+
+\subsection{By example [3]}
+\textlf{Passive perk} (Requires \textlf{Skill proficiency: leadership}). When you score \textlf{critical success} on a roll, you may inspire an ally this round without spending a reaction point.
+
+
+\subsection{Decisive leadership [3]}
+\textlf{Active perk}. The character can spend a reaction point to use a \textlf{leadership} action at any time during combat.
+
+
+\subsection{Deeds, not words [3]}
+\textlf{Active perk} (Requires \textlf{Skill proficiency: leadership}). Any time the character defeats a foe in combat they may make a leadership action, that would otherwise cost 1 action point, for free. Defeat is defined by the enemy fleeing, surrendering, being incapacitated, or dying. This only triggers if the character's own action resulted in the target's defeat. 
+
+
+\subsection{Inspiring oratory [4]}
+\textlf{Passive perk} (Requires \textlf{Skill proficiency: leadership}). Whenever the character succeeds on a \textlf{leadership} check in combat they can restore 1 \textlf{endurance} to an ally within range 0.
+
+
+\subsection{Now for wrath! [4]}
+\textlf{Active perk} (Requires \textlf{Skill proficiency: leadership}). Spend an action point, and pass a \textlf{leadership} check vs 10, to grant allies, within range 1 (15 m), who target the same enemy as another ally + 1 \textlf{aim}.
+
+\subsubsection{Upgrade: Now for ruin! [3]}
+(Requires \textlf{Now for wrath!}). \textlf{Now for wrath!} also grants +1 \textlf{power} to eligible allies. However, the \textlf{difficulty} of the \textlf{leadership} check increases by 2.
+
+
+
 
 \section{Martial arts}
 These \textlf{perks} are oriented towards unarmed combat. They must occupy an equipment slot for active/passive \textlf{perks} to be usable.
@@ -1618,6 +1649,10 @@ These \textlf{perks} are oriented towards utility and skill in combat. They must
 \textlf{Active perk} (Requires \textlf{Duelist}). Whenever one of the character's attacks is \textlf{deflected}, while in \textlf{Duelist} mode, they may spend a reaction point to draw and throw/fire a \textlf{small} weapon (this doesn't suffer penalties for close range).
 
 
+\subsection{Sudden feint [2]}
+\textlf{passive perk}. The character can spend a reaction point to use the \textlf{feint} action (instead of 1 action point).
+
+
 \subsection{Suppressing fire! [4]}
 \textlf{Active perk}. The character fires an indiscriminate volley of projectiles, forcing enemies and allies alike to get their heads down. This costs two action points, the character chooses a target enemy and makes a normal attack action against them. In addition, moving into, through, or out of the target's combat area costs 1 extra action point until the end of the next round. This cannot be used with a weapon that requires action points be spent to reload it between shots. 
 
@@ -1640,27 +1675,12 @@ These \textlf{perks} don't fit into the other categories. They must occupy an eq
 \textlf{Passive perk} (Requires \textlf{Background: Silver Spoon}). The character can leverage their social connections to obtain a favour from a local noble, banker, crime-lord, warlord, or oligarch. This \textlf{perk} can only be chosen at character creation. This can only be used once per week.
 
 
-\subsection{Decisive leadership [3]}
-\textlf{Active perk}. The character can spend a reaction point to use a \textlf{leadership} action at any time during combat.
-
-
-\subsection{Deeds, not words [3]}
-\textlf{Active perk} (Requires \textlf{Skill proficiency: leadership}). Any time the character defeats a foe in combat they may make a leadership action, that would otherwise cost 1 action point, for free. Defeat is defined by the enemy fleeing, surrendering, being incapacitated, or dying. This only triggers if the character's own action resulted in the target's defeat.
-
-
 \subsection{Favoured enemy: X [4]}
 \textlf{Passive perk}. Everyone hates something. The character is skilled in the killing of a chosen creature type (X). Against targets of type X  the character has \textlf{edge+} on \textlf{aim}. X must be specific, ``humanoids'' is too broad for instance, but ``humans'' is fine in a cosmopolitan fantasy setting. If the setting is mostly human then ``human'' is still too broad and it must be further narrowed down to a group, ``pirates'' or ``ninjas'' for instance.
 
 
 \subsection{Favoured environment: X [4]}
 \textlf{Passive perk}. The character is skilled at moving and fighting in the chosen environment (X). This grants them \textlf{edge+} to stealth, as well as \textlf{survival} checks while in this setting. The character is also not affected by \textlf{rough} or \textlf{dangerous terrain} associated with this environment.
-
-
-\subsection{Inspiring oratory [4]}
-\textlf{Passive perk} (Requires \textlf{Skill proficiency: leadership}). Whenever the character succeeds on a \textlf{leadership} check in combat they can restore 1 \textlf{endurance} to an ally within range 0.
-
-%\subsection{On Guard [3]}
-%When the enemy strikes be prepared, when you strike be even more prepared. Every time the character \textlf{staggers} or \textlf{stuns} an enemy, they get \textlf{edge+} on their next \textlf{deflect} check. 
 
 
 \subsection{Pack animal [3]}
