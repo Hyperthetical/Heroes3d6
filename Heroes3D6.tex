@@ -958,7 +958,7 @@ A character can make close-combat attacks against any creature within the same c
 \subsubsection{Ranged}
 A character armed with a ranged weapon can often attack enemies that are in different combat areas to itself. How far it is allowed to do so is defined by the weapon's range score. A range of 1 would allow shots to be fired at a target in any adjacent area to that of the firer. To determine the required range to a target, simply draw a straight line between it and the shooter then count the number of area boundaries it passes over. 
 
-These weapons are divided into two types: shooting and throwing. Throwing a weapon/object without the \textlf{throw} property incurs \textlf{edge-} on \textlf{aim}. Firing a shooting weapon at a target within range 0 incurs a similar penalty. 
+These weapons are divided into two types: shooting and throwing. Throwing a weapon/object without the \textlf{throw} property incurs \textlf{edge-} on \textlf{aim}. Firing a shooting weapon at a target within range 0 incurs a similar penalty. Unless specially constructed or robust, shooting weapons usually incur \textlf{edge-} on \textlf{aim} when used as close-combat weapons.
 
 \subsubsection{All-out attack}
 The character channels all their energy into aggression. This attack action can be made with any weapon that has no \textlf{reload} rule, it costs 2 action points but grants \textlf{burst} + 1 to the attack (for one of the character's weapons if attacking with two).
@@ -967,9 +967,12 @@ The character channels all their energy into aggression. This attack action can 
 A character can attack their opponents with fists and feet, or other appendages. Unarmed characters may make a single punch/kick for 1 action point, this fighting style has its own weapon proficiency.
 
 \subsubsection{Multiple weapons}
-If the character is using a weapon in each hand, they may attack with both for 1 action point. Only one \textlf{opposed roll} of \textlf{deflect} vs \textlf{aim} is made, but, each weapon gets a separate \textlf{damage check}. If the character wishes to divide their attack between opponents then make separate \textlf{deflect} vs \textlf{aim} checks for each target.
+If the character is using a weapon in each hand, it costs 1 action point per weapon when attacking. Only one \textlf{opposed roll} of \textlf{deflect} vs \textlf{aim} is made, but, each weapon gets a separate \textlf{damage check}. If the character wishes to divide their attack between opponents then make separate \textlf{deflect} vs \textlf{aim} checks for each target.
 
-Character's without certain \textlf{perks} (\textlf{Two-weapon mastery perk}) suffer \textlf{edge-} on \textlf{aim} when attacking with two weapons at once. If either weapon has a \textlf{reload} rule, the reload time is increased by 1 action point. Finally, a character with \textlf{two-weapon fighting proficiency} may swap two weapons at once for a single action point.
+Character's with certain \textlf{perks} (\textlf{Two-weapon mastery perk}) reduce the attack cost to 1 action point for both weapons. If either weapon has a \textlf{reload} rule, the reload time is increased by 1 action point. Finally, a character with \textlf{two-weapon fighting proficiency} may swap two weapons at once for a single action point.
+
+\subsubsection{Attacking objects or huge enemies}
+Sometimes you need to attack an inanimate object, like a door, or a vast enemy that is easier to hit than a barn door. These targets obviously cannot actively evade your attacks. However, you could still miss or land glancing blows due to the situation or your own incompetence. As such, you make an \textlf{aim} check versus \textlf{difficulty} 7 for an object within 5 m and at least 1 m long in some dimension. Small or moving objects should be more difficult, the GM should choose an appropriate difficulty between 5 (extremely easy, 5\% chance to miss) and 18 (almost impossible). This should also be applied when trying to target small regions of large targets (e.g. eyes). In some cases highly mobile parts of a huge enemy (the head of a giant snake for instance) will still be able to actively \textlf{deflect}.
 
 
 \subsection{Damage checks}
@@ -1000,12 +1003,12 @@ If a \textlf{wounded} character has their \textlf{endurance} restored to values 
 If a character succeeds on a \textlf{damage check} by $\dicecritlvl$ or more, the attack's \textlf{lethality} is upgraded by 1 level per $\dicecritlvl$ they exceeded it by.
 
 \subsubsection{Wounded}
-This represents a moderately serious flesh-wound and inflicts \textlf{staggered} on the victim (see \ref{sec:special}) until healed. 
+This represents a moderately serious flesh-wound and inflicts \textlf{stunned} on the victim (attack actions cost 1 extra action point) until healed. 
 
 A character who receives two \textlf{wounded} effects replaces them with a \textlf{badly-wounded} effect.
 
 \subsubsection{Badly wounded}
-If a character suffers a successful \textlf{damage check} from a weapon with \textlf{crushing lethality}, or accumulates two \textlf{wounded} effects, they become \textlf{badly-wounded}. This results in \textlf{edge-} on all rolls until remedied.
+If a character suffers a successful \textlf{damage check} from a weapon with \textlf{crushing lethality}, or accumulates two \textlf{wounded} effects, they become \textlf{badly-wounded}. This results in \textlf{edge-} on all rolls until remedied in addition to the \textlf{wounded} effects.
 
 A man-sized character subject to further damage when \textlf{badly-wounded} becomes \textlf{mortally wounded}.
 
@@ -1065,6 +1068,9 @@ At a cost of two action points the character can make a normal move, while leavi
 \subsection{Shove}
 This costs 1 action point and involves an \textlf{opposed roll} between yourself and the target using \textlf{might}. If the shover is successful, the target is either knocked down or moved into an adjacent combat area (at the shover's discretion). \textlf{critical failure} results in the shoving character experiencing a \textlf{Moment of weakness}. \textlf{critical success} results in the victim suffering a \textlf{damage check}.
 
+\subsection{Taunt}
+With cutting words, or obscene gestures, you bait a foe into attacking you. This costs 1 action point and the target must be able to understand the provocation in some way. Make an opposed check with your \textlf{resolve} and the target's \textlf{wit}. If you win, the target now attempts to attack you instead other targets.   
+
 \subsection{Trip}
 Attempt to entangle your foe's legs with your weapon's haft, or pointy bit built for tripping. This modifies an attack action: replace a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{cunning}. Should you win, the target is \textlf{knocked down} (see Section~\ref{sec:special}). Weapons with the \textlf{Trip} rule cause damage on a \textlf{critical success}.
 
@@ -1073,7 +1079,7 @@ Attempt to entangle your foe's legs with your weapon's haft, or pointy bit built
 These are the default reactions available to all combatants. Numerous additional reactions can be acquired by buying \textlf{perks}. 
 
 \subsection{Desperate effort}
-This costs 1 reaction point and can be used when the character fails an \textlf{aim}, \textlf{deflect}, or \textlf{power} check. This allows the character to re-roll the check, they must accept the result of this re-roll. This cannot be used if the character has any \textlf{edge} bonuses on the roll.
+This costs 1 reaction point and can be used when the character fails an \textlf{aim}, \textlf{deflect}, \textlf{resist}, or \textlf{power} check. This allows the character to re-roll the check, they must accept the result of this re-roll. This cannot be used if the character has any \textlf{edge} bonuses on the roll.
 
 \subsection{Exploit weakness}
 \label{sec:exploit}
@@ -1083,7 +1089,7 @@ This costs 1 reaction point and can be used when an enemy within range 0 experie
 \section{Recovery and healing}
 \textlf{endurance} is recovered completely if the character can rest for 8 hours. Otherwise, a short rest of around an hour restores 1 \textlf{endurance}.
 
-A character that has suffered wounds can be healed via use of the \textlf{Healing skill} or by a non-player healer. Without healing, a character recovers from the \textlf{wounded} effect after 3 days. It takes 6 days before the \textlf{badly-wounded} effect is reduced to \textlf{wounded}.
+A character that has suffered wounds can be healed via use of the \textlf{Healing skill} or by a non-player healer. Without healing, a character recovers from the \textlf{wounded} effect after 3 days. It takes 7 days before the \textlf{badly-wounded} effect is reduced to \textlf{wounded}.
 
 
 
@@ -1198,14 +1204,14 @@ These are generally creatures of humanoid or smaller size, this category is larg
 \subsubsection{Abilities and attributes}
 Mundane enemies have no \textlf{heroism/villainy}, they can have \textlf{aim} bonuses ranging from -1 to +1, -1 being an inexperienced impromptu fighter and +1 being a well trained soldier. Such foes are likely to have zeros for most attributes, although the more experienced combatants may have one attribute at level 1. The \textlf{endurance} scores of such creatures should be either 0 or 1.
 \subsubsection{Tactics}
-These enemies are followers, they need to be lead. Without a leader to direct them, they are likely to be easily demoralised by powerful opponents or to simply attack the enemy they feel is the most threatening. Such behaviour is over-ridden in the presence of a leader. Mundane enemies suffer the \textlf{panic} effect (see section~\ref{sec:special}) if they run out of \textlf{endurance} or suffer a wound effect. Enemies who believe in their cause, or are mindless, have immunity to this. When being lead, a mundane creature may add its leader's \textlf{Resolve} score when making \textlf{panic} checks.
+These enemies are followers, they need to be lead. Without a leader to direct them, they are likely to be easily demoralised by powerful opponents or to simply attack the enemy they feel is the most threatening. Such behaviour is over-ridden in the presence of a leader. Mundane enemies suffer the \textlf{panic} effect (see section~\ref{sec:special}) if they run out of \textlf{endurance} or suffer a wound effect. Enemies who believe in their cause, or are mindless, have immunity to this. When being lead, a mundane creature may add $1+$ its leader's \textlf{Resolve} score when making \textlf{panic} checks.
 
 \subsection{Elite enemies}
 These are generally creatures who are extremely proficient combatants or are enhanced by some magical or technological power.
 \subsubsection{Abilities and attributes}
 Such fighters are likely to have above average attributes, e.g. two at level 1, with \textlf{aim} of at least $+1$. Elite enemies do not have any heroic attributes but may have multiple combat proficiencies and \textlf{endurance} between 1 and 4. 
 \subsubsection{Tactics}
-Such enemies are independent, they do not need to be lead, but are more effective with a leader to direct them. These foes are unlikely to be easily demoralised or intimidated by powerful opposition and will coordinate and work together to defeat stronger opponents. Elites still suffer the \textlf{panic} effect (see section~\ref{sec:special}) if they run out of \textlf{endurance} or suffer a wound effect. Enemies who believe in their cause, or are \textlf{mindless}, have immunity to this. When being lead, an elite creature may add its leader's \textlf{Resolve} score when making \textlf{panic} checks.
+Such enemies are independent, they do not need to be lead, but are more effective with a leader to direct them. These foes are unlikely to be easily demoralised or intimidated by powerful opposition and will coordinate and work together to defeat stronger opponents. Elites still suffer the \textlf{panic} effect (see section~\ref{sec:special}) if they run out of \textlf{endurance} or suffer a wound effect. Enemies who believe in their cause, or are \textlf{mindless}, have immunity to this. When being lead, an elite creature may add $1+$ its leader's \textlf{Resolve} score when making \textlf{panic} checks.
 
 \subsection{Enemy leaders}
 These are generally creatures who are proficient combatants but are also skilled at directing the actions of underlings.
@@ -1219,7 +1225,7 @@ These enemies are powerful heroes, much like the player-characters, except that 
 \subsubsection{Abilities and attributes}
 These enemies are individually as capable and powerful as player characters, sometimes more-so, and thus follow the same rules for heroic attributes and determining combat statistic scores. Heroic foes have attributes generated in a similar manner to players, although the Game Master may decide to give them more, or less, attribute points.
 \subsubsection{Tactics}
-Such enemies are leaders, they direct lesser foes in ways that will maximise their own advantage within a fight, they will also use their heroic attributes to the maximum possible effect. The presence of such enemies inspires and emboldens lesser enemies, making them less susceptible to intimidation and fear. Heroic enemies may surrender if they are severely injured or near death but are more likely to try and escape.
+Such enemies are leaders, they direct lesser foes in ways that will maximise their own advantage within a fight, they will also use their heroic attributes to the maximum possible effect. The presence of such enemies inspires and emboldens lesser enemies, making them less susceptible to intimidation and fear ($+1$ to \textlf{panic} checks). Heroic enemies may surrender if they are severely injured or near death but are more likely to try and escape.
 
 \subsection{Monsters}
 These are enemies that are usually at least \textlf{large creatures} and often \textlf{huge} or \textlf{titanic creatures} (see Section~\ref{sec:special}). However, enemies that possess incredible supernatural powers or extreme natural abilities might fall into this field as well.
@@ -1275,7 +1281,7 @@ A creature that is \textlfirst{knocked down} loses its footing and falls over. S
 A non-hero creature may \textlfirst{panic} if it suffers considerable injury. If an elite or mundane enemy runs out of \textlf{endurance}, or receives a \textlf{wound} effect, it must make a \textlf{resolve} check vs \textlf{difficulty} 13. Should it fail, it flees or surrenders. In general, intelligent creatures will surrender, but this is up to the Game Master's choice. Note that the presence of a commander or leader will prevent weaker creature from giving up so easily. In this case the creature may add it's leader's \textlf{Resolve} to \textlf{panic} checks.
 
 \subsubsection{Poisoned}
-Poisoned is a state that results from harmful chemicals being introduced into the victim's system. A poisoned attack that injures a creature, poisons that creature if it fails a \textlf{resolve} check versus a \textlf{difficulty} associated with the virulence of the poison and the size of the dose. A \textlf{poisoned} character has one fewer action point in combat (to a minimum of 1) for 3 days or until cured of the poison.
+Poisoned is a state that results from harmful chemicals being introduced into the victim's system. A poisoned attack that injures a creature, poisons that creature if it fails a \textlf{resolve} check versus a \textlf{difficulty} associated with the virulence of the poison and the size of the dose. A \textlf{poisoned} character has one fewer action point in combat (to a minimum of 1) for 3 days or until cured of the poison. Increase the duration by 1 day per \textlf{critical failure} threshold on the \textlf{resolve} check.
 
 \subsubsection{Staggered}
 The shock of injury is a difficult thing to ignore and can incapacitate even the most hardened fighters. A \textlf{staggered} creature loses 1 reaction point. If this reduces a character to negative points, i.e. $-X$, they lose the next $X$ points they would normally gain.
@@ -1305,10 +1311,10 @@ Weapons with this rule are either massively heavy or just awkward to manoeuvre. 
 (X is an integer) A weapon with \textlfirst{penetration} is designed to deal with heavily armoured opponents, sliding into weak-points or just inflicting blunt trauma through armour. Attacks from this weapon count the target's \textlf{toughness} as reduced by X, but cannot reduce it below $12$ in this way.
 
 \subsubsection{Reach}
-\textlfirst{Reach} represents the ability of close-combat weapons, like pikes, to attack from a longer distance. A character with a \textlf{reach} weapon can make close combat attacks at range 1.
+\textlfirst{Reach} represents the ability of close-combat weapons, like pikes, to attack from a longer distance. A character with a \textlf{reach} weapon can make close-combat attacks at range 1. In addition, entering a combat area (5 m radius) containing foes with such weapons incurs a \textlf{Moment of weakness} unless an extra action point is spent when making the \textlf{move}.
 
 \subsubsection{Rending X}
-(X is an integer) A well-placed blow from a \textlfirst{rending} weapon rips deep into the target. \textlf{Penetrating} hits from \textlf{rending} weapons benefit from +X \textlf{Power}. 
+(X is an integer) A well-placed blow from a \textlfirst{rending} weapon rips deep into the target. \textlf{Penetrating} hits from \textlf{rending} weapons have +X \textlf{Power}. 
 
 \subsubsection{Small}
 \textlfirst{Small} weapons represent dagger-sized implements. These can used with great speed and easily concealed. Thus, they gain \textlf{edge+} when used as part of \textlf{slight of hand} checks. These weapons also receive additional bonuses during \textlf{sneak attacks} (see Section~\ref{sec:adv-spc}).
@@ -1324,16 +1330,20 @@ Weapons with the \textlf{Throw} rule are finely balanced for use as projectiles.
 A creature is declared large if it exceeds 3 m in the main dimension (height, length,width depending on creature geometry). Thus, such creatures can only hide in medium or better cover but gain \textlf{cleave} 2 on all close-combat attacks. A \textlf{large creature} has an innate bonus of +1 \textlf{power}. Such a creature has at least 4 \textlf{endurance} points.
 
 \subsubsection{Huge creature}
-Such vast beasts barely notice the damage inflicted by even the largest weapons a man can wield. In consequence they have at least 6 \textlf{endurance} points. Their colossal might means that these creatures also have \textlf{cleave} 3 on all close-combat attacks. \textlf{Huge creatures} have an innate bonus of +2 \textlf{power} and the size threshold to be declared huge is a requirement of least 6 m in the main dimension (height, length, or width depending on monster geometry). 
+Such vast beasts barely notice the damage inflicted by even the largest weapons a man can wield. In consequence they have at least 6 \textlf{endurance} points. Their colossal might means that these creatures also have \textlf{cleave} 3 on all close-combat attacks. \textlf{Huge creatures} have an innate bonus of +2 \textlf{power} and the size threshold to be declared huge is a requirement of least 5 m in the main dimension (height, length, or width depending on monster geometry). 
+
+These creatures are large enough for body areas to take damage independently. Typical division would be 1 region per limb, head, and torso. Such a beast dies if at least 3 body areas are \textlf{Mortally wounded} or if the heart/head/vital-region is destroyed (suffers damage beyond \textlf{Mortally wounded}). 
 
 \subsubsection{Titanic creature}
-These behemoths are all but inured to the attacks of normal weaponry. In consequence they have at least 8 \textlf{endurance} points. \textlf{Titanic creatures} have \textlf{cleave} 4 on all close-combat attacks and \textlf{edge+} on \textlf{damage checks} against smaller targets. \textlf{Titanic creatures} have an innate bonus of +3 \textlf{power} and the size threshold to be declared titanic is a requirement of least 12 m in the main dimension (height, length, or width depending on monster geometry). Such beasts have range 1 on their close-combat attacks. 
+These behemoths are all but inured to the attacks of normal weaponry. In consequence they have at least 8 \textlf{endurance} points. \textlf{Titanic creatures} have \textlf{cleave} 4 on all close-combat attacks and \textlf{edge+} on \textlf{damage checks} against smaller targets. \textlf{Titanic creatures} have an innate bonus of +3 \textlf{power} and the size threshold to be declared titanic is a requirement of least 10 m in the main dimension (height, length, or width depending on monster geometry). Such beasts have range 1 on their close-combat attacks. 
+
+These creatures are large enough for body areas to take damage independently. Typical division would be 1 region per limb, head, and torso. Such a beast dies if at least 4 body areas are \textlf{Mortally wounded} or if the heart/head/vital-region is destroyed (suffers damage beyond \textlf{Mortally wounded}).
 
 \subsubsection{Small creature}
 Diminutive creatures are easily missed, even by the most vigilant of larger things. Consequently they get + 1 \textlf{deflect}.
 
 \subsubsection{Mindless}
-\textlfirst{Mindless} creatures have no thoughts, emotions, fear or creativity. Because of this, \textlf{mindless} creatures are immune to many occult powers, as well as the \textlf{fear}, \textlf{terror}, and \textlf{panic} effects. These creatures cannot use any advanced combat rules (no \textlf{flanking}, \textlf{sneak attacks} etc.) apart from \textlf{grapple} and \textlf{shove}. Mindless creatures are destroyed when they run out of \textlf{endurance}.
+\textlfirst{Mindless} creatures have no thoughts, emotions, fear or creativity. Because of this, \textlf{mindless} creatures are immune to many occult powers, as well as the \textlf{fear}, \textlf{terror}, and \textlf{panic} effects. These creatures cannot use any advanced combat rules apart from \textlf{grapple} and \textlf{shove}.
 
 
 
@@ -1361,7 +1371,7 @@ The character has experience moving and fighting in \textlf{heavy armour}. Thus,
 (X is a language) The character has complete fluency in the chosen language. 
 
 \subsection{Skill mastery: X [6]}
-(Requires \textlf{Skill proficiency: X}) The character has achieved mastery of their art. Any check for the mastered skill X benefits from \textlf{edge+}.
+(Requires \textlf{Skill proficiency: X}) The character has achieved mastery of their art. Any check for the mastered skill X benefits from \textlf{edge+}. A character can only purchase this once.
 
 \subsection{Skill proficiency: X [2]}
 (Where X is a skill) The character is \textlf{proficient} with skill X, see Section~\ref{sec:skill-prof} for details. This increases its cost by 1 each time a character takes it.
@@ -1385,7 +1395,7 @@ These \textlf{perks} are oriented towards surviving damage in combat. They must 
 
 
 \subsection{Evasive [3]}
-\textlf{Passive perk}. It's hard to pin you down. This grants the character + 1 \textlf{deflect} provided they wear \textlf{light armour} or are unarmoured.
+\textlf{Passive perk}. It's hard to pin you down. This grants the character + 1 \textlf{deflect}, provided they wear \textlf{light armour} or are unarmoured.
 
 
 \subsection{Fighting retreat [2]}
@@ -1411,7 +1421,7 @@ These \textlf{perks} are oriented towards surviving damage in combat. They must 
 
 
 \subsection{Reactive defence [4]}
-\textlf{Active perk}. The character can spend a reaction point to gain the effect of \textlf{defensive fighting} when they are targeted by an attack. 
+\textlf{Active perk}. The character can spend a reaction point to gain the effect of \textlf{defensive stance} when they are targeted by an attack. 
 
 
 \subsection{Set to defend [3]}
@@ -1462,7 +1472,7 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 
 
 \subsection{Butcher's blow [3]}
-\textlf{Active perk}. The character aims their strikes to maim the target. This is an attack action that costs 2 action points. Should the attack cause damage, the target is subject to the \textlf{stunned} and \textlf{staggered} effects. This effect applies only to creatures a maximum of 1 size category larger than the character.
+\textlf{Active perk}. The character aims their strikes to inflict maximum trauma. This is an attack action that costs 2 action points. Should the attack cause damage, the target is subject to the \textlf{stunned} and \textlf{staggered} effects. This effect applies only to creatures a maximum of 1 size category larger than the character.
 
 
 \subsection{Executioner [3]}
@@ -1490,7 +1500,7 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 
 
 \subsection{Schadenfreude [4]}
-\textlf{Passive perk}. The character gets \textlf{edge+} to \textlf{aim} versus enemies who suffered damage in the last round.
+\textlf{Passive perk}. The character gets \textlf{edge+} to \textlf{aim} versus enemies who are subject to any condition (see section~\ref{sec:special}).
 
 
 \subsection{Splatter [3]}
@@ -1498,7 +1508,7 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 
 
 \subsection{The ol' one-two [3]}
-\textlf{Active perk}. A close quarters manoeuvre where a quick blow with a fist, or the weapon itself, is used to make room for firing a ranged weapon. This special attack costs 2 action points. Make an unarmed attack, if it hits you may perform \textlf{damage checks} for both the unarmed hit and for a shooting-type, ranged weapon you are wielding. 
+\textlf{Active perk}. A close quarters manoeuvre where a quick blow with a fist is used to make room for firing a ranged weapon. This special attack costs 2 action points. Make an unarmed attack, if it hits you may perform \textlf{damage checks} for both the unarmed hit and for a shooting-type, ranged weapon you are wielding. 
 
 \subsubsection{Upgrade: A new one-two [2]}
 (Requires \textlf{The ol' one-two}). You can make any close-combat attack in place of the required unarmed one.
@@ -1658,7 +1668,7 @@ These \textlf{perks} are oriented towards utility and skill in combat. They must
 
 
 \subsection{Two-weapon mastery [8]}
-\textlf{Passive perk}. This allows the character to fight with two weapons simultaneously without \textlf{edge-} on \textlf{aim} checks. 
+\textlf{Passive perk}. This allows the character to fight with two weapons for 1 action point instead of 2.
 
 
 \subsection{Warrior's grace [5]}
@@ -1770,7 +1780,7 @@ These \textlf{perks} are oriented towards sneaky tricks in combat. They must occ
 
 
 \subsection{Kick `em while they're down [4]}
-A\textlf{Active perk}. For 1 reaction point, attacks this round against \textlf{knocked down} targets become \textlf{sneak attacks}.
+\textlf{Active perk}. For 1 reaction point, attacks this round against \textlf{knocked down} targets become \textlf{sneak attacks}.
 
 
 \subsection{Low blow [5]}
@@ -1785,7 +1795,7 @@ A\textlf{Active perk}. For 1 reaction point, attacks this round against \textlf{
 
 
 \subsection{Made you look [4]}
-\textlf{Passive perk}. If the character succeeds on a \textlf{feint} action, then any associated attack actions are \textlf{sneak attacks}.
+\textlf{Passive perk}. If the character succeeds on a \textlf{feint} action, then the next attack-action against the same target is a \textlf{sneak attack}.
 
 
 \subsection{Now you see me, now you don't [5]} 
@@ -1815,7 +1825,7 @@ A\textlf{Active perk}. For 1 reaction point, attacks this round against \textlf{
 
 
 \subsection{Quick draw [2]}
-\textlf{Passive perk}. The character can draw/change weapons at a cost of 1 reaction point instead of an action point.
+\textlf{Passive perk}. The character can draw/change a weapon at a cost of 1 reaction point instead of an action point.
 
 \subsubsection{Upgrade: Deceptive draw [3]}
 (Requires \textlf{Quick Draw}) The character's attacks, after making a surprise \textlf{Quick Draw} of \textlf{small} weapons are \textlf{sneak attacks}. This bonus cannot be claimed unless the character also changed weapon type (i.e. swapping from a dagger or unarmed to a pistol). %This bonus cannot be claimed if the target is already fighting the character.
