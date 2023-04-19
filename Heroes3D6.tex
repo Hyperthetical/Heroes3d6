@@ -30,19 +30,28 @@
 \usepackage{lmodern}
 
 
+\usepackage{fancyhdr}
+\usepackage{titling}
+\title{\textbf{\huge Heroes3D6\\Core rules}}
+\author{Geoff Beck}
+\predate{\centering}
+\date{}
+\postdate{\vfill{\copyright 2021-2023 Geoff Beck. This work is licensed under a Creative Commons Attribution- ShareAlike 4.0 License. To view a copy of this license visit: \url{https://creativecommons.org/licenses/by-sa/4.0/legalcode}}\hfill}
+\usepackage{lipsum}
+\pagestyle{plain}
+
+
 \newcommand{\dicediffbase}{9}
 \newcommand{\dicecritlvl}{4}
 
 \newcommand{\textlf}[1]{\textbf{\titlecap{#1}}}
 \newcommand{\textlfirst}[1]{\textbf{\textit{\titlecap{#1}}}}
 
-\title{\textbf{\huge Heroes3D6\\Core rules}}
-\author{Geoff Beck}
-\date{}
+
 
 \begin{document}
-\maketitle
 \frontmatter
+\maketitle
 \tableofcontents
 \mainmatter
 
@@ -56,10 +65,6 @@ A player's character is their representative in the world of \textit{Heroes3D6} 
 This is a simple system to pick up, as it applies a central set of mechanics across the board, but is complicated enough to please even the most hardcore of gamers, due to the depth and freedom of its mechanics, should you choose to delve into them. The system itself is very open to interpretation and lots of work is required by the Game Master to make this work, as they must make many decisions on the spot as to how the rules apply in a given situation. Other than that, just read and play.
 
 This weighty tome encompasses all the essential rules needed to play a game of \textit{Heroes3D6} independent of setting, other books merely contain rules for playing the game within a famous/iconic world or setting, all these other books require these Core Rules, but do occasionally over-ride them when necessary.
-
-This rule book is open-source~\footnote{Copyright (C) 2021-2023  Geoff Beck}: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or any later version (see \url{https://www.gnu.org/licenses/}).
 
 \section{The core system}
 \label{sec:base}
@@ -964,7 +969,7 @@ These weapons are divided into two types: shooting and throwing. Throwing a weap
 The character channels all their energy into aggression. This attack action can be made with any weapon that has no \textlf{reload} rule, it costs 2 action points but grants \textlf{burst} + 1 to the attack (for one of the character's weapons if attacking with two).
 
 \subsubsection{Unarmed attacks}
-A character can attack their opponents with fists and feet, or other appendages. Unarmed characters may make a single punch/kick for 1 action point, this fighting style has its own weapon proficiency.
+A character can attack their opponents with fists and feet, or other appendages. Unarmed characters may make a single punch/kick for 1 action point, this fighting style has its own \textlf{weapon proficiency}.
 
 \subsubsection{Multiple weapons}
 If the character is using a weapon in each hand, it costs 1 action point per weapon when attacking. Only one \textlf{opposed roll} of \textlf{deflect} vs \textlf{aim} is made, but, each weapon gets a separate \textlf{damage check}. If the character wishes to divide their attack between opponents then make separate \textlf{deflect} vs \textlf{aim} checks for each target.
@@ -972,7 +977,7 @@ If the character is using a weapon in each hand, it costs 1 action point per wea
 Character's with certain \textlf{perks} (\textlf{Two-weapon mastery perk}) reduce the attack cost to 1 action point for both weapons. If either weapon has a \textlf{reload} rule, the reload time is increased by 1 action point. Finally, a character with \textlf{two-weapon fighting proficiency} may swap two weapons at once for a single action point.
 
 \subsubsection{Attacking objects or huge enemies}
-Sometimes you need to attack an inanimate object, like a door, or a vast enemy that is easier to hit than a barn door. These targets obviously cannot actively evade your attacks. However, you could still miss or land glancing blows due to the situation or your own incompetence. As such, you make an \textlf{aim} check versus \textlf{difficulty} 7 for an object within 5 m and at least 1 m long in some dimension. Small or moving objects should be more difficult, the GM should choose an appropriate difficulty between 5 (extremely easy, 5\% chance to miss) and 18 (almost impossible). This should also be applied when trying to target small regions of large targets (e.g. eyes). In some cases highly mobile parts of a huge enemy (the head of a giant snake for instance) will still be able to actively \textlf{deflect}.
+Sometimes you need to attack an inanimate object, like a barn door, or a vast enemy that is easier to hit than a barn door. These targets obviously cannot actively evade your attacks. However, you could still miss or land glancing blows due to the situation or your own incompetence. As such, you make an \textlf{aim} check versus \textlf{difficulty} 7 for an object within 5 m and at least 1 m long in some dimension. Small or moving objects should be more difficult, the GM should choose an appropriate difficulty between 5 (extremely easy, 5\% chance to miss) and 18 (almost impossible). This should also be applied when trying to target small regions of large targets (e.g. eyes). In some cases highly mobile parts of a huge enemy (the head of a giant snake for instance) will still be able to actively \textlf{deflect}.
 
 
 \subsection{Damage checks}
@@ -1015,7 +1020,7 @@ A man-sized character subject to further damage when \textlf{badly-wounded} beco
 \subsubsection{Mortally wounded}
 If a character suffers a successful \textlf{damage check} from a weapon with \textlf{devastating lethality}, or accumulates enough \textlf{wounded} effects, they are \textlf{mortally-wounded}. Such a character cannot make actions and will die in three days unless they receive some medical attention. This status can only be removed by active healing. If a \textlf{mortally wounded} character is healed, change this effect to \textlf{badly wounded}.
 
-If a \textlf{mortally wounded} creature dies if it suffers any damage. If your character dies then you need to make a new one.
+A \textlf{mortally wounded} creature dies if it suffers any damage. If your character dies then you need to make a new one.
 
 
 \subsection{Armour}
@@ -1118,7 +1123,7 @@ For characters riding or driving, \textlf{dangerous terrain} requires a riding/d
 
 \section{Combat areas - cover}
 \label{sec:cover}
-If a combat zone offers cover then any creature within the zone may claim a bonus to \textlf{deflect}. Cover is divided into three categories and examples will be given below.
+If a combat zone offers cover then any creature within the zone may claim a bonus to \textlf{deflect} against attacks made from outside the zone. Cover is divided into three categories and examples will be given below.
 \begin{table}[ht]
 	\centering
 	\caption{Cover table}
@@ -1141,7 +1146,7 @@ Good examples of soft cover are: small trees, bushes, wooden crates, soft furnis
 Sandbags, hedges, low walls, small rocks, solid furniture. These kind of things provide a moderate amount of protection and concealment from enemies and \textlf{edge+} to rolls to hide in the cover. Objects that provide medium cover can be broken with a \textlf{might}/\textlf{power} check against \textlf{difficulty} 9-13.
 
 \subsection{Heavy cover}
-Battlements, large walls, trees, big rocks, barricades, serious furniture (made of stone or steel). These things are built to provide a lot of cover and protection and also grant \textlf{edge+} to rolls to hide in the cover. Objects that provide heavy cover can be broken with a \textlf{might}/\textlf{power} check against \textlf{difficulty} 13-20.
+Battlements, large walls, trees, big rocks, barricades, serious furniture (made of stone or steel). These things are built to provide a lot of cover and protection and also grant \textlf{edge+} to \textlf{hide}. Objects that provide heavy cover can be broken with a \textlf{might}/\textlf{power} check against \textlf{difficulty} 13-20.
 
 
 \section{Combat areas - examples}
@@ -1149,12 +1154,12 @@ Battlements, large walls, trees, big rocks, barricades, serious furniture (made 
 \includegraphics[scale=0.5]{combat1}
 
 
-In our first example we see a fight with three combat areas. We can see it also has three participants, one player character and two enemies attacking them. The first area is the forest, which is \textlf{rough terrain} and provides medium cover. The road is open ground that confers no effects. Finally there is a river which is fast-flowing and thus \textlf{dangerous terrain}. We can see that in the road the player and enemy will be able to attack each other with any weapons. While the baddy hiding in the forest will be able to claim a cover bonus but will need a range 1 weapon to strike at the player.
+In our first example we see a fight with three combat areas. We can see it also has three participants, one player character and two enemies attacking them. The first area is the forest, which is \textlf{rough terrain} and provides \textlf{medium cover}. The road is open ground that confers no effects. Finally, there is a river which is fast-flowing and thus \textlf{dangerous terrain}. We can see that the player and enemy on the road will be able to attack each other with any weapons. While the baddy hiding in the forest will be able to claim a cover bonus but will need a range 1 weapon to strike at the player.
 
 
 \includegraphics[scale=0.5]{combat2}
 
-Our second example has a far more complex layout consisting of 5 areas. One is a house occupied by two player characters. The house provides medium cover to its occupants and they can attack out of the windows. Additionally, because it is a good defensive position it is labelled \textlf{rough terrain}, so enemies have difficulty moving into/through it. The garden has no special effect on combat and neither does the distant road. The players in the house will need range 1 weapons to hit the foes in the garden and range 2 to target the one out on the road. The player and enemy within one garden block can engage in either close-combat or fire ranged weapons at each other.
+Our second example has a far more complex layout consisting of 5 areas. One is a house occupied by two player characters. The house provides medium cover to its occupants and they can attack out of the windows. Additionally, because it is a good defensive position it is labelled \textlf{rough terrain}, so everyone has difficulty moving into/out-of it. The garden has no special effect on combat and neither does the distant road. Players in the house will need range 1 weapons to hit the foes in the garden and range 2 to target the one out on the road. The player and enemy within one garden block can engage in either close-combat or fire ranged weapons at each other.
 
 
 
@@ -1164,7 +1169,7 @@ Our second example has a far more complex layout consisting of 5 areas. One is a
 
 \subsection{Light and darkness}
 \label{sec:dark}
-The lighting of an environment greatly influences the difficulty of fighting within it. There are three types of lighting: \textlfirst{full}, \textlfirst{low}, \textlfirst{dark}. \textlf{full} lighting has no effect, \textlf{low} incurs \textlf{edge-} on \textlf{aim} and \textlf{awareness}, and \textlf{dark} means the character cannot see at all outside of 5 m (radius 0) and also incurs \textlf{low} light penalties.
+The lighting of an environment greatly influences the difficulty of fighting within it. There are three types of lighting: \textlfirst{full}, \textlfirst{low}, and \textlfirst{dark}. \textlf{full} lighting has no effect, \textlf{low} incurs \textlf{edge-} on \textlf{aim} and \textlf{awareness}, while \textlf{dark} means the character cannot see at all outside of 5 m (radius 0) and also incurs \textlf{edge--} on \textlf{aim} and \textlf{awareness}.
 
 \subsection{Sneak attacks}
 \label{sec:sneak-attk}
@@ -1186,7 +1191,7 @@ An enraged character is immune to \textlf{fear} and \textlf{terror} effects and 
 
 \subsection{Moment of weakness}
 \label{sec:aoo}
-These are moments when an opponent opens their guard or shows vulnerability, allowing an attacker to strike unhindered. A creature subject to a \textlf{moment of weakness} is open to being targeted by the \textlf{Exploit weakness} reaction~\ref{sec:exploit}. 
+These are moments when an opponent opens their guard or shows vulnerability, allowing an attacker to strike unhindered. A creature subject to a \textlf{moment of weakness} is open to being targeted by the \textlf{Exploit weakness} reaction~\ref{sec:exploit} which allows a nearby enemy to make a close-combat \textlf{damage check} against them. 
 
 \subsection{Resisting effects}
 Some attacks/powers have special effects. These should always be mitigated via \textlfirst{resist}. This involves an \textlf{opposed roll} between the \textlf{power} of the effect and most appropriate choice from the victim's attributes. For instance, resisting poison might use \textlf{Resolve}, whereas avoiding being hypnotised would require \textlf{wit}.    
@@ -1204,21 +1209,25 @@ These are generally creatures of humanoid or smaller size, this category is larg
 \subsubsection{Abilities and attributes}
 Mundane enemies have no \textlf{heroism/villainy}, they can have \textlf{aim} bonuses ranging from -1 to +1, -1 being an inexperienced impromptu fighter and +1 being a well trained soldier. Such foes are likely to have zeros for most attributes, although the more experienced combatants may have one attribute at level 1. The \textlf{endurance} scores of such creatures should be either 0 or 1.
 \subsubsection{Tactics}
-These enemies are followers, they need to be lead. Without a leader to direct them, they are likely to be easily demoralised by powerful opponents or to simply attack the enemy they feel is the most threatening. Such behaviour is over-ridden in the presence of a leader. Mundane enemies suffer the \textlf{panic} effect (see section~\ref{sec:special}) if they run out of \textlf{endurance} or suffer a wound effect. Enemies who believe in their cause, or are mindless, have immunity to this. When being lead, a mundane creature may add $1+$ its leader's \textlf{Resolve} score when making \textlf{panic} checks.
+These enemies are followers, they need to be lead. Without a leader to direct them, they are likely to be easily demoralised by powerful opponents or to simply attack the closest enemy. Such behaviour is over-ridden in the presence of a leader. Mundane enemies suffer the \textlf{panic} effect (see section~\ref{sec:special}) if they lose \textlf{endurance}, suffer a \textlf{wound} effect, or their leader is defeated. Enemies who believe in their cause, or are mindless, have immunity to this. When being lead, a mundane creature may add $1+$ its leader's \textlf{Resolve} score when making \textlf{panic} checks.
 
 \subsection{Elite enemies}
 These are generally creatures who are extremely proficient combatants or are enhanced by some magical or technological power.
 \subsubsection{Abilities and attributes}
 Such fighters are likely to have above average attributes, e.g. two at level 1, with \textlf{aim} of at least $+1$. Elite enemies do not have any heroic attributes but may have multiple combat proficiencies and \textlf{endurance} between 1 and 4. 
+\subsubsection{Perks}
+Equip these enemies with 1 to 3 \textlf{perks} appropriate to their combat style.
 \subsubsection{Tactics}
-Such enemies are independent, they do not need to be lead, but are more effective with a leader to direct them. These foes are unlikely to be easily demoralised or intimidated by powerful opposition and will coordinate and work together to defeat stronger opponents. Elites still suffer the \textlf{panic} effect (see section~\ref{sec:special}) if they run out of \textlf{endurance} or suffer a wound effect. Enemies who believe in their cause, or are \textlf{mindless}, have immunity to this. When being lead, an elite creature may add $1+$ its leader's \textlf{Resolve} score when making \textlf{panic} checks.
+Such enemies are independent, they do not need to be lead, but are more effective with a leader to direct them. These foes are unlikely to be easily demoralised or intimidated by powerful opposition and will coordinate and work together to defeat stronger opponents. Elites still suffer the \textlf{panic} effect (see section~\ref{sec:special}), but, only if they suffer a \textlf{wound} effect or their leader is defeated. Enemies who believe ardently in their cause, or are \textlf{mindless}, have immunity to this. When being lead, an elite creature may add $1+$ its leader's \textlf{Resolve} score when making \textlf{panic} checks.
 
 \subsection{Enemy leaders}
 These are generally creatures who are proficient combatants but are also skilled at directing the actions of underlings.
 \subsubsection{Abilities and attributes}
-Leader enemies are similar to elites in attributes but also have leadership proficiency.
+Leader enemies are similar to elites in attributes but also have \textlf{leadership skill proficiency} (and likely a \textlf{resolve} score of 1).
+\subsubsection{Perks}
+Equip these enemies with 1 to 3 \textlf{perks} appropriate to their combat style.
 \subsubsection{Tactics}
-Such enemies co-ordinate their allies, using their leadership skill to enhance their fighting prowess and allowing lesser allies to adopt more sophisticated tactics. Leaders will attempt to avoid combat unless they are heavily reinforced. In other regards they behave similarly to elite enemies.
+Such enemies co-ordinate their allies, using their \textlf{leadership skill} to enhance fighting prowess and allowing lesser allies to adopt more sophisticated tactics. Leaders will attempt to avoid close-combat unless they are heavily reinforced. In other regards they behave similarly to elite enemies.
 
 \subsection{Heroic enemies}
 These enemies are powerful heroes, much like the player-characters, except that they oppose the heroes for whatever reason that the GM decides should motivate them.
@@ -1257,7 +1266,7 @@ This is a collection of special rules that apply in all campaign settings and al
 
 
 \subsection{Conditions}
-These are negative statuses that a character can become subject to. 
+These are negative statuses that a creature can become subject to. 
 
 \subsubsection{Bleeding}
 This state represents severe bleeding. It lasts 2 rounds, each round the victim must make an opposed check: their \textlf{resolve} against the \textlf{power} of the effect. Their failure results in the loss of 1 \textlf{endurance} (this does not scale with levels of \textlf{critical failure}). 
@@ -1266,19 +1275,19 @@ This state represents severe bleeding. It lasts 2 rounds, each round the victim 
 A \textlfirst{blind} creature has \textlf{edge--} on both \textlf{aim} and \textlf{deflect} for the effect's duration. In addition, it must randomise direction if it wishes to move.  
 
 \subsubsection{Cursed}
-A \textlfirst{cursed} creature is afflicted by a malignant magical effect sapping its luck and increasing the chance of misfortune. \textlf{Critical success} on any roll is reduced by 1 level. \textlf{Curse} lasts until removed.
+A \textlfirst{cursed} creature is afflicted by a malignant magical effect sapping its luck. \textlf{Critical success} on any roll is reduced by 1 level. \textlf{Curse} lasts until removed.
 
 \subsubsection{Fear}
-If a character is afflicted by this effect they must make a \textlf{resolve} check against a \textlf{difficulty}, chosen by the GM, based on how scary the situation is. Should the character fail, they suffer \textlf{edge-} on \textlf{aim}, each subsequent turn the character may try to pass the check again. 
+If a creature is afflicted by \textlfirst{Fear}, they suffer \textlf{edge-} on \textlf{aim} until the effect ends. 
 
 \subsubsection{Immobilised}
 An \textlfirst{immobilised} creature cannot move, either due to some magical malaise or due to having suffered damage to its legs. In addition, they suffer \textlf{edge-} on \textlf{deflect}.
 
 \subsubsection{Knocked down}
-A creature that is \textlfirst{knocked down} loses its footing and falls over. Such a creature has \textlf{edge-} on \textlf{deflect} until it can stand up. Standing up can be done only in your own turn. This costs 1 action point. Characters in \textlf{heavy armour} must spend 2 action points.
+A creature that is \textlfirst{knocked down} loses its footing and falls over. Such a creature has \textlf{edge-} to \textlf{deflect} close-combat attacks until it can stand up. Standing up can be done only in your own turn. This costs 1 action point. Characters in \textlf{heavy armour} must spend 2 action points.
 
 \subsubsection{Panic}
-A non-hero creature may \textlfirst{panic} if it suffers considerable injury. If an elite or mundane enemy runs out of \textlf{endurance}, or receives a \textlf{wound} effect, it must make a \textlf{resolve} check vs \textlf{difficulty} 13. Should it fail, it flees or surrenders. In general, intelligent creatures will surrender, but this is up to the Game Master's choice. Note that the presence of a commander or leader will prevent weaker creature from giving up so easily. In this case the creature may add it's leader's \textlf{Resolve} to \textlf{panic} checks.
+A creature subject to \textlf{panic} must make a \textlf{resolve} check vs \textlf{difficulty} 10 + missing \textlf{endurance} + a wound score (1 for \textlf{Wounded} etc.). Should it fail, it flees or surrenders, which is up to the Game Master's choice. 
 
 \subsubsection{Poisoned}
 Poisoned is a state that results from harmful chemicals being introduced into the victim's system. A poisoned attack that injures a creature, poisons that creature if it fails a \textlf{resolve} check versus a \textlf{difficulty} associated with the virulence of the poison and the size of the dose. A \textlf{poisoned} character has one fewer action point in combat (to a minimum of 1) for 3 days or until cured of the poison. Increase the duration by 1 day per \textlf{critical failure} threshold on the \textlf{resolve} check.
@@ -1290,7 +1299,7 @@ The shock of injury is a difficult thing to ignore and can incapacitate even the
 The sudden shock of a well-placed blow can often neutralise retaliation. If a \textlfirst{stunned} creature attempts to make attacks in its next turn these cost 1 more action point than normal.
 
 \subsubsection{Terror}
-If a character is afflicted by this effect they must make a \textlf{resolve} check against a \textlf{difficulty}, chosen by the GM, based on how scary the situation is. Should the character fail, they must spend each turn cowering in fear. Each subsequent turn the character may try to pass the check again.
+A character afflicted by \textlfirst{Terror} must run for cover then spend each turn cowering in fear until the effect ends. 
 
 \subsubsection{Vulnerable}
 A powerful blow can sometimes open up a fighter to being easily finished off. The next attack directed at the victim benefits from \textlf{edge+} to \textlf{damage checks}.
@@ -1298,11 +1307,14 @@ A powerful blow can sometimes open up a fighter to being easily finished off. Th
 
 \subsection{Additional weapon effects}
 
+\subsubsection{Blast X}
+(X is an integer) \textlfirst{Blast} weapons explode or fire indiscriminately into a crowd. The attacks of these weapons target an area of radius X (usually 5 + $10\times$ X m). The attacker rolls \textlf{aim} once and each target rolls \textlf{deflect}.
+
 \subsubsection{Burst X}
 (X is an integer) \textlfirst{Burst} represents attacks that explode, spray, splash, or carve into a wide area of flesh. An attack with \textlf{burst} X causes 1 + X \textlf{damage checks} on a successful hit, rather than just one. 
 
 \subsubsection{Cleave X}
-(X is an integer) An attack with \textlfirst{cleave} is one that can sweep in great arcs, cutting through many hapless foes with each swing. Such an attack may target up to X enemies at once. The attacker rolls once with their \textlf{aim} and each defender rolls with their \textlf{deflect}.
+(X is an integer) An attack with \textlfirst{cleave} is one that can sweep in great arcs, cutting through many hapless foes with each swing. Such an attack may target up to 1 + X enemies at once. The attacker rolls once with their \textlf{aim} and each defender rolls with their \textlf{deflect}.
 
 \subsubsection{Cumbersome}
 Weapons with this rule are either massively heavy or just awkward to manoeuvre. They cost an extra action point to make attacks with.
@@ -1368,7 +1380,7 @@ The character has experience moving and fighting in \textlf{heavy armour}. Thus,
 (Where X is a musical instrument type) The character has learned to play a chosen type of musical instrument (X) and no longer suffers the unknown-instrument penalties when playing this type of instrument.  
 
 \subsection{Language: X [2]}
-(X is a language) The character has complete fluency in the chosen language. 
+(X is a language) The character has complete fluency in the chosen language. This increases its cost by 1 each time a character takes it.
 
 \subsection{Skill mastery: X [6]}
 (Requires \textlf{Skill proficiency: X}) The character has achieved mastery of their art. Any check for the mastered skill X benefits from \textlf{edge+}. A character can only purchase this once.
@@ -1462,7 +1474,7 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 \textlf{Active perk}. You mad, bro? The character can quickly be overtaken by the pulse of battle, they can spend a reaction point to \textlf{enrage} if they take or deal any damage.
 
 \subsubsection{Upgrade: Berserkergang [2]}
-(Requires \textlf{berserker}). The character unleashes their inner fury in a remorseless hail of attacks. When \textlf{enraged} the character can spend a reaction point to grant \textlf{burst} + 1 to an attack that hits.  
+(Requires \textlf{berserker}). The character unleashes their inner fury in a remorseless hail of attacks. When \textlf{enraged}, the character can spend a reaction point to grant \textlf{burst} + 1 to an attack that hits.  
 
 \subsubsection{Upgrade: Seething rage [3]}
 (Requires \textlf{berserker}). The character's rage is turns them into a highly focussed killer, inured to all but the worst blows. When \textlf{enraged}, reduce the \textlf{lethality} of any damage suffered by one level, to a minimum of normal.
@@ -1488,7 +1500,7 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 
 
 \subsection{Merciless [4]}
-\textlf{Passive perk}. The character shows no mercy, dispatching the weak with even greater abandon. \textlf{damage checks} against \textlf{bleeding}, \textlf{staggered}, or \textlf{stunned} targets gain a \textlf{lethality} bonus.
+\textlf{Passive perk}. The character shows no mercy, dispatching the weak with even greater abandon. \textlf{damage checks} against \textlf{bleeding}, \textlf{knocked down}, or \textlf{stunned} targets gain a \textlf{lethality} bonus.
 
 
 \subsection{Power attack [4]}
@@ -1507,18 +1519,18 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 \textlf{Active perk}. The violence of your blows causes the blood of your foes to stain the soil. This can be used when declaring an attack, the cost is increased by 1 action point. Should the attack cause damage, the target is subject to the \textlf{bleeding} effect.
 
 
+\subsection{Sweeping strike [3]}
+\textlf{Active perk}. The character lashes out around them, striking all too slow to escape. This costs 2 action points and allows the character to make an attack action with their close-combat weapons that has \textlf{cleave} + 1.
+
+\subsubsection{Upgrade: Whirlwind of steel [2]}
+This adds an additional \textlf{cleave} + 1 when using \textlf{Sweeping strike}.
+
+
 \subsection{The ol' one-two [3]}
 \textlf{Active perk}. A close quarters manoeuvre where a quick blow with a fist is used to make room for firing a ranged weapon. This special attack costs 2 action points. Make an unarmed attack, if it hits you may perform \textlf{damage checks} for both the unarmed hit and for a shooting-type, ranged weapon you are wielding. 
 
 \subsubsection{Upgrade: A new one-two [2]}
-(Requires \textlf{The ol' one-two}). You can make any close-combat attack in place of the required unarmed one.
-
-
-\subsection{Whirlwind of steel [3]}
-\textlf{Active perk}. Danger, sharp objects. The character lashes out around them, striking all too slow to escape. This costs 2 action points and allows the character to make an attack action with their close-combat weapons that has \textlf{cleave} + 1.
-
-\subsubsection{Upgrade: Steel tornado [2]}
-This adds an additional \textlf{cleave} + 1 when using \textlf{Whirlwind of steel}.
+(Requires \textlf{The ol' one-two}). You can make any one-handed close-combat attack in place of the required unarmed one. Note that this requires you can still wield the ranged weapon in your free hand.
 
 
 
