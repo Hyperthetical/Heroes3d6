@@ -1,16 +1,4 @@
-%Copyright (C) 2021-2023  Geoff Beck
-%
-%This document is open-source: you can redistribute it and/or modify
-%it under the terms of the GNU General Public License as published by
-%the Free Software Foundation, either version 3 of the License, or
-%(at your option) any later version.
-%
-%This program is distributed in the hope that it will be useful,
-%but WITHOUT ANY WARRANTY; without even the implied warranty of
-%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-%GNU General Public License for more details.
-%
-%See https://www.gnu.org/licenses/ for more details
+%Copyright (C) 2021-2023 Geoff Beck. This work is licensed under a Creative Commons Attribution- ShareAlike 4.0 License. To view a copy of this license visit: \url{https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
 
 \documentclass[a4paper,10pt,oneside]{book}
@@ -86,13 +74,13 @@ The notation ``requires a 3d6 roll of $16+$'' means that a total score of 16 or 
 
 \subsubsection{Opposed rolls and difficulty checks}
 \label{sec:rolls}
-The core of this 3d6 system is the \textlfirst{difficulty check}, any task can be assigned a \textlfirst{difficulty} by the Game Master and then is performed successfully if the character scores equal to or greater than the \textlf{difficulty} on a roll of 3d6. To this roll you add the relevant \textlfirst{attribute/skill} score; for instance when making a climbing check you add your \textlf{athletics} score to the roll. The second core mechanic is the \textlfirst{opposed roll}, this represents a contest between two or more opponents, as such each creature contesting the roll adds the given \textlf{attribute/skill} score to a roll of 3d6. The victor is the one whose resultant score is the highest. In the case of a tie, the tied parties simply roll again.
+The core of this 3d6 system is the \textlfirst{difficulty check}, any task can be assigned a \textlfirst{difficulty} by the Game Master and then is performed successfully if the character scores equal to or greater than the \textlf{difficulty} on a roll of 3d6. To this roll you add the relevant \textlfirst{attribute} score; for instance when making a climbing check you add your \textlf{Might} score to the roll. The second core mechanic is the \textlfirst{opposed roll}, this represents a contest between two or more opponents, as such each creature contesting the roll adds the given \textlf{attribute} score to a roll of 3d6. The victor is the one whose resultant score is the highest. In the case of a tie, the tied parties simply roll again.
 
 \subsubsection{Critical success/failure}
 If you succeed/fail on a check by $\dicecritlvl$ or more you have achieved a \textlfirst{critical success/failure}. For example, if you need to beat \textlf{difficulty} 11 to succeed, then $15+$ is \textlf{critical success} whereas $7-$ is \textlf{critical failure}. Some effects scale with how many multiples of $\dicecritlvl$ you succeed or fail by.
 
 \subsubsection{Rounding conventions}
-When the division of an integer score results in a non-integer number (i.e. it is not a whole number) then the convention is to round up, unless otherwise specified.
+When the division of an integer score results in a non-integer number (i.e. $7.5$ or $9.1$) then the convention is to round up, unless otherwise specified.
 
 \subsubsection{Edge}
 Some circumstances confer great advantage or disadvantage on a character. This is referred to as having an \textlfirst{edge}. When rolling 3d6 with an \textlf{edge} bonus (\textlf{edge+}), a character rolls 4d6 and chooses the highest 3. In contrast, an \textlf{edge} penalty (\textlf{edge-}) makes the character roll 4d6 dice and choose the lowest 3. Example: I roll 3d6 to make a check to see if I jump over a crevasse, luckily I have \textlf{edge+} and thus roll 4d6 scoring 3,4,2, and 3. I keep the highest 3 and total 10. If this was \textlf{edge-} I would have totalled 8. 
@@ -131,7 +119,7 @@ These reflect the inherent predispositions of the character, based on their pers
 Each attribute contributes to many different skills or activities, its influence on dice rolls is direct, just add it to the result of a relevant roll.
 
 \subsection{Might}
-\textlf{Might} is the aggression or assertiveness of the character. A character can make might-checks to, through sheer bloody-mindedness, break objects, bash in doors, or move large objects. The \textlf{difficulty} of breaking objects can be found under the rules for \textlf{Cover}, Section~\ref{sec:cover}, in the Combat rules. \textlf{Difficulty} for lifting or moving heavy objects can be found in Section~\ref{sec:carry} in Baggage and Encumbrance. \textlf{Might} also dictates a character's ability to inflict damage in combat.
+\textlf{Might} is the aggression or assertiveness of the character. A character can make might-checks to, through sheer bloody-mindedness, break objects, bash in doors, or move large objects. \textlf{Might} dictates a character's ability to inflict damage in combat, enhances any attempted feats of \textlf{athletics}, and augments their ability to \textlf{intimidate} others.
 
 \subsection{Cunning}
 \textlf{Cunning} is the craftiness of the character. \textlf{Cunning} can be used to bluff convincingly, make feints in combat, trip people up, or get out of the way of harm. It also contributes to the \textlf{stealth}, \textlf{disguise}, \textlf{deceive}, \textlf{slight of hand}, and \textlf{survival} skills. 
@@ -176,7 +164,7 @@ This guideline is very qualitative and this is because heroism is a qualitative 
 
 Simple guidelines for experience: a point can be earned by actions demonstrating some heroic calibre, such as: single handedly over-coming many foes or performing reckless feats of strength and daring that save the day. Or perhaps by feats of magic or deeds accomplished through strength of will and force of personality. Experience can also be awarded for devious acts of deceit, or from victory through wit and intelligence rather than blade and boot. Note that these achievements are not combat exclusive, heroism is format-independent after all.
 
-Experience points can be spent on purchasing new \textlf{perks} and \textlf{proficiencies}, the costs of these is detailed in Chapter \ref{chap:perks}. Note that experience cannot be spent in high pressure or active situations, only during periods of rest and contemplation.
+Experience points can be spent on purchasing new \textlf{perks} and \textlf{proficiencies}, the costs of these is detailed in Chapter \ref{chap:perks}. Note that experience cannot be spent in high pressure or active situations, only during periods of rest and contemplation. When you purchase a new \textlf{perk} or \textlf{proficiency}, you must spend 2 hours of down-time practising with your new ability before it can be used in any high pressure situation.
 
 \subsection{Advancing attributes}
 Natural attribute points can only be increased in a limited fashion, so choose wisely! The only way to do so is via the \textlf{hero/villain} proficiency from Chapter~\ref{chap:perks}.
@@ -952,7 +940,9 @@ A radius of 1 would cover a single area and ALL neighbouring areas. An effect th
 Most creatures may transfer between combat areas that share a boundary unless otherwise noted or modified by terrain. Movement actions cost 1 action point if the character wishes to change combat area. Normal movement in this manner is thus said to have a range of 1. 
 
 \subsection{Attacks}
-Attack-type actions represent making attempts to injure an enemy, they come in two varieties: ranged attacks, which are made with bows, guns, etc., and close-combat attacks which are made with swords, fists, etc. Successful attacks represent breaking through the target's guard and thus grant an opportunity to inflict damage (more on this later). Declaring an attack costs 1 action point. During resolution the attacker and their target make an \textlf{opposed roll} with \textlf{aim} and \textlf{deflect} respectively. If the attacker wins, then they gets the opportunity to roll \textlf{damage checks} with the weapons they currently wield.  A character can only make one attack-type action per turn. If an attacker is not \textlf{proficient} with their weapon, they have \textlf{edge-} on \textlf{aim}.
+Attack-type actions represent making attempts to injure an enemy, they come in two varieties: ranged attacks, which are made with bows, guns, etc., and close-combat attacks which are made with swords, fists, etc. Successful attacks represent breaking through the target's guard and thus grant an opportunity to inflict damage (more on this later). 
+
+Declaring an attack costs 1 action point. During resolution the attacker and their target make an \textlf{opposed roll} with \textlf{aim} and \textlf{deflect} respectively. If the attacker wins, then they gets the opportunity to roll \textlf{damage checks} with the weapons they currently wield.  A character can only make one attack-type action per turn. If an attacker is not \textlf{proficient} with their weapon, they have \textlf{edge-} on \textlf{aim}.
 
 \subsubsection{Penetrating hits} 
 If an attacker wins their \textlf{opposed roll} of \textlf{aim} vs \textlf{deflect} by $\dicecritlvl$ or more, then they have achieved a \textlfirst{penetrating hit}. This allows associated \textlf{damage checks} to gain one \textlf{edge+} per \textlf{critical success} threshold. 
@@ -966,7 +956,7 @@ A character armed with a ranged weapon can often attack enemies that are in diff
 These weapons are divided into two types: shooting and throwing. Throwing a weapon/object without the \textlf{throw} property incurs \textlf{edge-} on \textlf{aim}. Firing a shooting weapon at a target within range 0 incurs a similar penalty. Unless specially constructed or robust, shooting weapons usually incur \textlf{edge-} on \textlf{aim} when used as close-combat weapons.
 
 \subsubsection{All-out attack}
-The character channels all their energy into aggression. This attack action can be made with any weapon that has no \textlf{reload} rule, it costs 2 action points but grants \textlf{burst} + 1 to the attack (for one of the character's weapons if attacking with two).
+The character channels all their energy into aggression. This attack action costs 2 action points but grants \textlf{burst} + 1 to the attack (for one of the character's weapons if attacking with two).
 
 \subsubsection{Unarmed attacks}
 A character can attack their opponents with fists and feet, or other appendages. Unarmed characters may make a single punch/kick for 1 action point, this fighting style has its own \textlf{weapon proficiency}.
@@ -982,45 +972,34 @@ Sometimes you need to attack an inanimate object, like a barn door, or a vast en
 
 \subsection{Damage checks}
 \label{sec:dmg}
-This represents whether or not a telling blow penetrates your target's armour.
+This represents whether or not a telling blow penetrates your target's armour. This is a \textlf{difficulty check} with your \textlf{power} against the victim's \textlf{toughness}. If not \textlf{proficient} with their equipped weapon, the character suffers \textlf{edge-} on these checks. If the check succeeds then the victim loses \textlf{endurance} or suffers \textlf{wound} effects.
 
-This is a \textlf{difficulty check} with your \textlf{power} against the victim's \textlf{toughness}. If not \textlf{proficient} with their equipped weapon, the character suffers \textlf{edge-} on these checks. If the check succeeds then the victim loses \textlf{endurance}. How many points are lost depends on the \textlfirst{lethality} of the attack (see table~\ref{tab:lethal}). Once a character has no \textlf{endurance} left (minimum is 0), further damage is accumulated as actual injuries which are tracked via \textlf{wound} effects. If a character would be reduced to negative \textlf{endurance}, the lost points beyond zero are converted to wounds (i.e. -1 to \textlf{wounded} or -2 to \textlf{badly-wounded} following table~\ref{tab:lethal}). 
+\subsubsection{Losing endurance}
+If the victim of a \textlf{damage check} has remaining \textlf{endurance} then these points will be lost before any \textlf{wounds} are suffered. One \textlf{endurance} is lost per point of the attack's \textlf{lethality} (default is 1). Once a character has no \textlf{endurance} left (minimum is 0), further damage is accumulated as actual injuries which are tracked via \textlf{wound} effects. 
 
-If a \textlf{wounded} character has their \textlf{endurance} restored to values $>0$ there is no effect on their \textlf{wounds}, the latter can only be remedied by the \textlf{healing skill} or time.
-
-\begin{table}[htbp]
-	\centering
-	\caption{Lethality table}
-	\label{tab:lethal}
-	\begin{tabular}{|l|l|l|}
-		\hline
-		Lethality & Endurance loss & Wound \\
-		\hline
-		Normal & 1 & \textlf{Wounded} \\
-		Crushing & 2 & \textlf{Badly wounded} \\
-		Devastating & 3 & \textlf{Mortally Wounded} \\
-		Vorpal & 5 & Instant death\\
-		\hline
-	\end{tabular}
-\end{table}  
+\subsubsection{Wound effects}
+A character with 0 \textlf{endurance}, who suffers further damage increments their \textlfirst{wound level} by the attack's \textlf{lethality}. \textlf{wound levels} are \textlf{wounded}, \textlf{badly wounded}, \textlf{mortally wounded}, and \textlf{dead}.
 
 \subsubsection{Critical hits}
-If a character succeeds on a \textlf{damage check} by $\dicecritlvl$ or more, the attack's \textlf{lethality} is upgraded by 1 level per $\dicecritlvl$ they exceeded it by.
+If a character succeeds on a \textlf{damage check} by $\dicecritlvl$ or more, the attack's \textlf{lethality} is increased by 1 per $\dicecritlvl$ they exceeded it by.
+
+\subsubsection{Restoring endurance}
+If a character suffering from \textlf{wounds} has their \textlf{endurance} restored to values $>0$ there is no effect on their \textlf{wounds}, the latter can only be remedied by the \textlf{healing skill} or time.
+
+\subsection{Wound levels}  
+Here we detail the effects of each \textlf{wound level}.
 
 \subsubsection{Wounded}
 This represents a moderately serious flesh-wound and inflicts \textlf{stunned} on the victim (attack actions cost 1 extra action point) until healed. 
 
-A character who receives two \textlf{wounded} effects replaces them with a \textlf{badly-wounded} effect.
-
 \subsubsection{Badly wounded}
-If a character suffers a successful \textlf{damage check} from a weapon with \textlf{crushing lethality}, or accumulates two \textlf{wounded} effects, they become \textlf{badly-wounded}. This results in \textlf{edge-} on all rolls until remedied in addition to the \textlf{wounded} effects.
-
-A man-sized character subject to further damage when \textlf{badly-wounded} becomes \textlf{mortally wounded}.
+This represents severe injuries that temporarily cripple the character's ability to take decisive action. This results in \textlf{edge-} on all rolls until remedied, in addition to the \textlf{wounded} effects.
 
 \subsubsection{Mortally wounded}
-If a character suffers a successful \textlf{damage check} from a weapon with \textlf{devastating lethality}, or accumulates enough \textlf{wounded} effects, they are \textlf{mortally-wounded}. Such a character cannot make actions and will die in three days unless they receive some medical attention. This status can only be removed by active healing. If a \textlf{mortally wounded} character is healed, change this effect to \textlf{badly wounded}.
+A \textlf{mortally-wounded} character is on the brink of death. They cannot make actions and will die in three days unless they receive some medical attention. This status can only be removed by active healing (you obviously can't wait for it to get better).
 
-A \textlf{mortally wounded} creature dies if it suffers any damage. If your character dies then you need to make a new one.
+\subsubsection{Dead}
+Time to make a new character.
 
 
 \subsection{Armour}
@@ -1049,7 +1028,7 @@ This costs 1 action point. The character gains \textlf{edge+} to \textlf{deflect
 
 \subsection{Disarm}
 Even the mightiest warrior can be flummoxed by the loss of their precious sword. 
-This modifies an attack action: replace a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{wit}. Should you win, the target cannot use their current weapon without either spending 1 action point or suffering a \textlf{moment of weakness} to retrieve it. Weapons with the \textlf{disarm} rule cause damage on a \textlf{critical success}.
+This modifies an attack action: replace a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{wit}. Should you win, the target cannot use their current weapon without either spending 1 action point or suffering a \textlf{moment of weakness} to retrieve it. Weapons with the \textlf{disarm} rule cause damage on a \textlf{critical success}. If an attack benefits from two copies of this rule then it deals damage as normal when disarming.
 
 \subsection{Feint}
 \label{sec:feint}
@@ -1074,10 +1053,10 @@ At a cost of two action points the character can make a normal move, while leavi
 This costs 1 action point and involves an \textlf{opposed roll} between yourself and the target using \textlf{might}. If the shover is successful, the target is either knocked down or moved into an adjacent combat area (at the shover's discretion). \textlf{critical failure} results in the shoving character experiencing a \textlf{Moment of weakness}. \textlf{critical success} results in the victim suffering a \textlf{damage check}.
 
 \subsection{Taunt}
-With cutting words, or obscene gestures, you bait a foe into attacking you. This costs 1 action point and the target must be able to understand the provocation in some way. Make an opposed check with your \textlf{resolve} and the target's \textlf{wit}. If you win, the target now attempts to attack you instead other targets.   
+With cutting words, or obscene gestures, you bait a foe into attacking you. This costs 1 action point and the target must be able to understand the provocation in some way. Make an opposed check with your \textlf{resolve} and the target's \textlf{wit}. If you win, the target now attempts to attack you instead other targets. 
 
 \subsection{Trip}
-Attempt to entangle your foe's legs with your weapon's haft, or pointy bit built for tripping. This modifies an attack action: replace a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{cunning}. Should you win, the target is \textlf{knocked down} (see Section~\ref{sec:special}). Weapons with the \textlf{Trip} rule cause damage on a \textlf{critical success}.
+Attempt to entangle your foe's legs with your weapon's haft, or pointy bit built for tripping. This modifies an attack action: replace a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{cunning}. Should you win, the target is \textlf{knocked down} (see Section~\ref{sec:special}). Weapons with the \textlf{Trip} rule cause damage on a \textlf{critical success}. If an attack benefits from two copies of this rule then it deals damage as normal when tripping.
 
 
 \section{Reactions in combat}
@@ -1115,7 +1094,7 @@ This includes: loose rocks, tree roots, rubble, tables and chairs, obstructions 
 For characters riding or driving, moving in \textlf{rough terrain} requires a ride/drive check versus a \textlf{difficulty} (chosen by the GM) between 8 and 12 (depending on how rough the terrain is) to avoid being unseated or losing control. 
 
 \subsection{Dangerous terrain}
-Marsh-land, fast-flowing water, quicksand, thin ice, brittle rock, pools of acid or hot mud; these sorts of things are \textlfirst{dangerous terrain}. Any character entering, occupying, or moving through this terrain takes a hit with \textlf{crushing lethality} that causes damage on a $\dicediffbase+$ regardless of \textlf{toughness}. \textlf{Rough terrain} movement restrictions apply here as well.
+Marsh-land, fast-flowing water, quicksand, thin ice, brittle rock, pools of acid or hot mud; these sorts of things are \textlfirst{dangerous terrain}. Any character entering, occupying, or moving through this terrain takes a hit with \textlf{lethality} 2 that causes damage on a $\dicediffbase+$ regardless of \textlf{toughness}. \textlf{Rough terrain} movement restrictions apply here as well.
 
 For characters riding or driving, \textlf{dangerous terrain} requires a riding/driving check versus a \textlf{difficulty} (chosen by the GM) between 11 and 16 to avoid being unseated.
 
@@ -1367,6 +1346,8 @@ Diminutive creatures are easily missed, even by the most vigilant of larger thin
 \label{chap:perks}
 These are skills and talents learned or gained by a hero through the course of their adventures. They can be purchased through the expenditure of experience points with their cost given in square brackets. Note that upgrades change their parent \textlf{perk}, they do not occupy a new \textlf{perk} slot.
 
+When you purchase a new \textlf{perk} or \textlf{proficiency}, you must spend 2 hours of down-time practising with your new ability before it can be used in any high pressure situation.
+
 \section{Proficiencies}
 These do \textbf{not} occupy equipment slots for passive or active \textlf{perks}, their benefits are always available.
 
@@ -1448,8 +1429,10 @@ These \textlf{perks} are oriented towards surviving damage in combat. They must 
 \textlf{Active perk}. Pain is just information. When the character is reduced to 0 \textlf{endurance} they can spend a reaction point to regain 1 \textlf{endurance}.
 
 
-\subsection{Your mother was a hamster [3]}
-\textlf{Passive perk}. The character has great knowledge of insults and is a master of taunting jibes. The character has \textlf{edge+} on \textlf{resolve} checks intended to taunt or provoke a target into attacking them.
+\subsection{Your mother was a hamster [2]}
+\textlf{Passive perk}. The character has great knowledge of insults and is a master of taunting jibes. \textlf{critical success}  on \textlf{taunt} actions means the target is so enraged they suffer from \textlf{edge-} on \textlf{deflect} for 1 round.
+\subsubsection{Upgrade: And your father smelled of elderberries [3]}
+True mastery achieved. The character has \textlf{edge+} on \textlf{taunt} actions.
 
 
 
@@ -1477,7 +1460,7 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 (Requires \textlf{berserker}). The character unleashes their inner fury in a remorseless hail of attacks. When \textlf{enraged}, the character can spend a reaction point to grant \textlf{burst} + 1 to an attack that hits.  
 
 \subsubsection{Upgrade: Seething rage [3]}
-(Requires \textlf{berserker}). The character's rage is turns them into a highly focussed killer, inured to all but the worst blows. When \textlf{enraged}, reduce the \textlf{lethality} of any damage suffered by one level, to a minimum of normal.
+(Requires \textlf{berserker}). The character's rage is turns them into a highly focussed killer, inured to all but the worst blows. When \textlf{enraged}, reduce the \textlf{lethality} of any damage suffered by 1, to a minimum of 1.
 
 \subsubsection{Upgrade: Endless rage [3]}
 (Requires \textlf{berserker}). The character's rage makes them indefatigable. They gain 1 \textlf{endurance} (up to their usual maximum) if they inflicted any damage in a given turn while \textlf{enraged}.
@@ -1488,7 +1471,7 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 
 
 \subsection{Executioner [3]}
-\textlf{Passive perk}. The character has learned to deal death swiftly when the chance arises. As such, when striking an opponent with 0 \textlf{endurance}, the character's attacks benefit from a \textlf{lethality} upgrade. This effect applies only to creatures a maximum of 1 size category larger than the character.
+\textlf{Passive perk}. The character has learned to deal death swiftly when the chance arises. As such, when striking an opponent with 0 \textlf{endurance}, the character's attacks gain + 1\textlf{lethality}. This effect applies only to creatures a maximum of 1 size category larger than the character.
 
 
 \subsection{Furious assault [4]}
@@ -1500,7 +1483,7 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 
 
 \subsection{Merciless [4]}
-\textlf{Passive perk}. The character shows no mercy, dispatching the weak with even greater abandon. \textlf{damage checks} against \textlf{bleeding}, \textlf{knocked down}, or \textlf{stunned} targets gain a \textlf{lethality} bonus.
+\textlf{Passive perk}. The character shows no mercy, dispatching the weak with even greater abandon. \textlf{damage checks} against \textlf{bleeding}, \textlf{knocked down}, or \textlf{stunned} targets gain + 1 \textlf{lethality}.
 
 
 \subsection{Power attack [4]}
@@ -1547,7 +1530,7 @@ These \textlf{perks} are oriented towards leadership and inspiring allies to gre
 
 
 \subsection{Decisive leadership [3]}
-\textlf{Active perk}. The character can spend a reaction point to use a \textlf{leadership} action at any time during combat.
+\textlf{Active perk} (Requires \textlf{Skill proficiency: leadership}). The character can spend a reaction point to use a \textlf{leadership} action at any time during combat.
 
 
 \subsection{Deeds, not words [3]}
@@ -1572,12 +1555,8 @@ These \textlf{perks} are oriented towards unarmed combat. They must occupy an eq
 \label{sec:perks-martial}
 
 
-\subsection{Dragon kick [3]}
-\textlf{Active perk} (Requires \textlf{Weapon proficiency: unarmed}). The character may make an unarmed attack in the form of a flying kick. This costs 2 action points and the character must move a distance of 1 (ignoring terrain effects) and then make an unarmed attack. Such attacks that succeed on their \textlf{damage check} also inflict \textlf{knocked-down}. The \textlf{knock-down} effect applies only to creatures a maximum of 1 size category larger than the character.
-
-
-\subsection{Extension of self [3]}
-\textlf{Passive perk} (Requires \textlf{Weapon proficiency: unarmed}). The best weapon is you. This extends the effects of \textlf{Snake Fist}, \textlf{Shatter Strike}, and \textlf{Dragon Kick} to a single chosen close-combat weapon type.
+\subsection{Extension of self [2]}
+\textlf{Passive perk} (Requires \textlf{Weapon proficiency: unarmed}). The best weapon is you. This extends the effects of \textlf{Shatter Strike} and \textlf{Meteor Kick} to a single chosen close-combat weapon type.
 
 
 \subsection{Iron hand [3]}
@@ -1585,6 +1564,10 @@ These \textlf{perks} are oriented towards unarmed combat. They must occupy an eq
 
 \subsubsection{Upgrade: Fist of steel [3]} 
 (Requires \textlf{Iron-Hand}) As long as the character is unarmed, \textlf{Iron-Hand} attacks inflict damage in the same manner as normal unarmed attacks, in addition to their special effects.
+
+
+\subsection{Meteor kick [3]}
+\textlf{Active perk} (Requires \textlf{Weapon proficiency: unarmed}). The character may make an unarmed attack in the form of a flying kick. This costs 2 action points and the character must move a distance of 1 (ignoring terrain effects) and then make an unarmed attack. Such attacks that succeed on their \textlf{damage check} also inflict \textlf{knocked-down}. The \textlf{knock-down} effect applies only to creatures a maximum of 1 size category larger than the character.
 
 
 \subsection{Professional wrestling [4]}
@@ -1603,8 +1586,12 @@ These \textlf{perks} are oriented towards unarmed combat. They must occupy an eq
 \textlf{Passive perk}. This allows the character to treat any weapon or improvised projectile as though it had the \textlf{throw 2} rule. 
 
 
-\subsection{Take-down [2]}
-\textlf{Passive perk}. If you make a \textlf{shove} action against a target you have \textlf{grappled} they are slammed to the ground. This causes a successful \textlf{shove} to deal damage with \textlf{normal lethality} in addition to its usual effects. 
+\subsection{Take-down [3]}
+\textlf{Passive perk}. If you make a \textlf{shove} action against a target you have \textlf{grappled} they are slammed to the ground. This causes a successful \textlf{shove} to deal damage with \textlf{lethality} 1 in addition to its usual effects. 
+
+
+\subsection{Third eye [5]}
+\textlf{Passive perk} (Requires \textlf{Weapon proficiency: unarmed}). The character gains \textlf{edge+} on \textlf{deflect} while unarmed and wearing at most \textlf{light armour}.
 
 
 \subsection{Turn the tables [4]}
@@ -1631,7 +1618,7 @@ These \textlf{perks} are oriented towards utility and skill in combat. They must
 (Requires \textlf{Bull-headed}). The character may make a \textlf{damage check} against one victim of their successful \textlf{bull-headed shove} actions. 
 
 \subsubsection{Upgrade: Pain train [3]}
-(Requires \textlf{Bull-Headed}). Choo! Choo! The character may choose for their \textlf{bull-headed shove} to knock the target(s) flying (distance 1) as well as knocking them down. If a victim hits an obstacle (entering \textlf{rough terrain} or \textlf{cover}) they suffer a \textlf{damage check}, with \textlf{power} equal to the character's \textlf{might} and \textlf{normal lethality}.
+(Requires \textlf{Bull-Headed}). Choo! Choo! The character may choose for their \textlf{bull-headed shove} to knock the target(s) flying (distance 1) as well as knocking them down. If a victim hits an obstacle (entering \textlf{rough terrain} or \textlf{cover}) they suffer a \textlf{damage check}, with \textlf{power} equal to the character's \textlf{might} and \textlf{lethality} 1.
 
 
 \subsection{Combat improvisation [2]}
@@ -1712,12 +1699,12 @@ These \textlf{perks} don't fit into the other categories. They must occupy an eq
 	\centering
 	\begin{tabular}{|l|l|l|l|l|l|}
 		\hline
-		Creature & Might & Cunning & Perception & Resolve & Proficiencies \\
+		Creature & Might & Cunning & Wit & Resolve & Proficiencies \\
 		\hline
 		Canine & 0 & 0 & 0 & 1 & Survival \\
-		Big cat & 1 & 0 & 0 & 0 & Stealth \\
+		Big cat & 0 & 1 & 0 & 0 & Stealth \\
 		Bird & 0 & 0 & 1 & 0 & Awareness  \\
-		Reptile & 0 & 1 & 0 & 0 & Stealth \\ 
+		Reptile & 1 & 0 & 0 & 0 & Stealth \\ 
 		\hline
 	\end{tabular}
 \end{table}
@@ -1726,7 +1713,7 @@ These \textlf{perks} don't fit into the other categories. They must occupy an eq
 
 
 \section{Mobility}
-These \textlf{perks} are oriented towards movement in combat. They must occupy an equipment slot for active/passive \textlf{perks} to be usable.
+These \textlf{perks} are oriented towards movement. They must occupy an equipment slot for active/passive \textlf{perks} to be usable.
 \label{sec:perks-movement}
 
 %\subsection{Acrobatic attack [4]}
@@ -1734,10 +1721,10 @@ These \textlf{perks} are oriented towards movement in combat. They must occupy a
 
 
 \subsection{Acrobatic movement [3]}
-\textlf{Active perk}. Sometimes walking is just too boring. The character can spend a reaction point so that their \textlf{move} actions out of, or through, a combat area containing enemies do not incur a \textlf{moment of weakness}. 
+\textlf{Active perk}. Sometimes walking is just too boring. All \textlf{athletics} checks for jumping have \textlf{difficulty} reduced by 2. The character can also spend a reaction point so that their \textlf{move} actions out of, or through, a combat area containing enemies do not incur a \textlf{moment of weakness}. 
 
 \subsubsection{Upgrade: Elegance [2]}
-(Requires \textlf{Acrobatic movement}). When using \textlf{Acrobatic movement} the character also ignores all the effects of \textlf{rough} or \textlf{dangerous terrain}. 
+(Requires \textlf{Acrobatic movement}). When using \textlf{Acrobatic movement} the character also ignores all the effects of \textlf{rough} or \textlf{dangerous terrain}.  
 
 
 \subsection{Hit and run [3]}
@@ -1758,6 +1745,24 @@ These \textlf{perks} are oriented towards movement in combat. They must occupy a
 
 
 
+\section{Skills}
+
+\subsection{Last-minute save [4]}
+\textlf{Passive perk}. You can spend a reaction point to re-roll a skill check if you \textlf{critically fail}. This can only be used once in a \textlf{multi-stage check}.
+
+
+\subsection{Dramatic arts [2]}
+\textlf{Passive perk} (Requires \textlf{Skill proficiency: perform}). You can use \textlf{resolve} rather \textlf{cunning} when using the \textlf{feint} action.
+
+
+\subsection{Specialist [4]}
+\textlf{Passive perk}. Add + 1 to any rolls with two chosen skills (you must be proficient in them). This can only be chosen once per character.
+
+
+\subsection{Long practiced [5]}
+\textlf{Passive perk}. Select a \textlf{skill} you are \textlf{proficient} with and has a \textlf{synergy attribute} score of 0 (you cannot select a \textlf{skill} that is receiving bonuses from other \textlf{passive perks}). You gain + 2 to rolls with this skill. This can only be chosen once per character.
+
+
 
 \section{Sneaky tricks}
 These \textlf{perks} are oriented towards sneaky tricks in combat. They must occupy an equipment slot for active/passive \textlf{perks} to be usable.
@@ -1767,12 +1772,14 @@ These \textlf{perks} are oriented towards sneaky tricks in combat. They must occ
 \textlf{Active perk} (Requires \textlf{Skill proficiency: perform}). It pays to be prepared. The character can produce a single extra dagger (or other \textlf{small} throwing weapon) in an emergency. This can only be used once per day.
 
 
-\subsection{Arrow to the knee [4]}
-\textlf{Passive perk}. A careful shot to the leg can topple the most stable foes. The character can make \textlf{trip} actions with ranged weapons (these count as having the \textlf{trip} rule).
+\subsection{Arrow to the knee [2]}
+\textlf{Passive perk}. A careful shot to the leg can topple the most stable foes. The character can make \textlf{trip} actions with ranged weapons.
+\subsubsection{Upgrade: Knee-capped [2]}
+The character counts ranged weapons as having the \textlf{trip} rule.
 
 
 \subsection{Blind side [3]}
-\textlf{Passive perk}. A deft feint allows the character enough room to fire their ranged weapons against close-combat assailants. When using a ranged weapon against a target within range 0 you may feint as though you were using a close-combat weapon. 
+\textlf{Passive perk}. A deft feint allows the character enough room to fire their ranged weapons against close-combat assailants. When using a ranged weapon against a target within range 0 you may \textlf{feint} as though you were using a close-combat weapon. 
 
 
 \subsection{Chink in the armour [3]}
@@ -1783,7 +1790,7 @@ These \textlf{perks} are oriented towards sneaky tricks in combat. They must occ
 \textlf{Passive perk}. The character's \textlf{sneak attacks} versus stationary (not actively moving or in combat) or \textlf{immobilised} targets gain \textlf{penetration} + 2.
 
 
-\subsection{Cunning plan [3]}
+\subsection{Cunning plan [5]}
 \textlf{Passive perk}. Better than other plans. When making \textlf{sneak attacks}, the character gains a \textlf{power} bonus of 1 plus their \textlf{cunning}.
 
 
@@ -1814,8 +1821,8 @@ These \textlf{perks} are oriented towards sneaky tricks in combat. They must occ
 \textlf{Active perk} (Requires \textlf{Skill proficiency: stealth}). The character may attempt to use the \textlf{stealth} skill while in combat for 1 action point, fading seamlessly into the background. \textlf{critical failure} results in a \textlf{moment of weakness}. All attacks made after hiding are \textlf{sneak attacks} but reveal the presence of the character. While hidden, the character only incurs \textlf{moment of weakness} penalties due to movement if they are detected.
 
 
-\subsection{One step ahead [3]}
-\textlf{Passive perk}. The character can convert action points into reaction points when declaring actions.
+\subsection{One step ahead [4]}
+\textlf{Passive perk}. The character's \textlf{anticipate} actions convert one action point into two reaction points.
 
 
 \subsection{On the hunt [4]}
@@ -1827,10 +1834,10 @@ These \textlf{perks} are oriented towards sneaky tricks in combat. They must occ
 
 
 \subsection{Poisoner [2]}
-\textlf{Passive perk}. The character has knowledge of poisons and toxins. As such, they can poison a weapon given a few herbs (value 1 d per use). This will inflict \textlf{poison} with \textlf{difficulty} 9 the each time the weapon causes damage within the next hour. It costs 1 action point to apply the poison but it takes 10 minutes to prepare a dose. 
+\textlf{Passive perk}. The character has knowledge of poisons and toxins. As such, they can poison a weapon given a few herbs (value 1 d per use). This will inflict \textlf{poison} with \textlf{difficulty} 10 the each time the weapon causes damage within the next hour. It costs 1 action point to apply the poison but it takes 10 minutes to prepare a dose. 
 
-\subsubsection{Upgrade: Skilled poisoner [2]}
-(Requires \textlf{Poisoner}) You may add 1 + your \textlf{might} to the poison \textlf{difficulty}.
+\subsubsection{Upgrade: Skilled poisoner [3]}
+(Requires \textlf{Poisoner}) You may add 1 + your \textlf{cunning} to the poison \textlf{difficulty}.
 
 \subsubsection{Upgrade: Master poisoner [3]}
 (Requires \textlf{Skilled Poisoner}) The character has suspiciously good knowledge of poisons and toxins. Any poison effects used by the character cause the victim to lose 1 \textlf{endurance} when they fail a \textlf{resolve} check against them.
@@ -1839,12 +1846,14 @@ These \textlf{perks} are oriented towards sneaky tricks in combat. They must occ
 \subsection{Quick draw [2]}
 \textlf{Passive perk}. The character can draw/change a weapon at a cost of 1 reaction point instead of an action point.
 
-\subsubsection{Upgrade: Deceptive draw [3]}
+\subsubsection{Upgrade: Deceptive draw [4]}
 (Requires \textlf{Quick Draw}) The character's attacks, after making a surprise \textlf{Quick Draw} of \textlf{small} weapons are \textlf{sneak attacks}. This bonus cannot be claimed unless the character also changed weapon type (i.e. swapping from a dagger or unarmed to a pistol). %This bonus cannot be claimed if the target is already fighting the character.
 
 
-\subsection{Too hot to handle [4]}
-\textlf{Passive perk}. A precisely placed shot causes the target to drop their weapon. The character can make \textlf{disarm} actions with ranged weapons (these count as having the \textlf{disarm} rule).
+\subsection{Too hot to handle [2]}
+\textlf{Passive perk}. A precisely placed shot causes the target to drop their weapon. The character can make \textlf{disarm} actions with ranged weapons.
+\subsubsection{Upgrade: Underhanded [2]}
+The character counts ranged weapons as having the \textlf{disarm} rule.
 
 
 
