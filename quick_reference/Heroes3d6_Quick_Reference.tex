@@ -103,10 +103,10 @@ Opposed \textlf{cunning} check with target. If you win, gain \textlf{edge+} on \
 Opposed \textlf{might} check with target. If you win, they cannot move, otherwise you suffer a \textlf{moment of weakness} on \textlf{critical failure}. The victim must make an opposed \textlf{Might} check (and spend 1 action point) to escape. It costs 1 action point each round after the first to maintain a grapple.
 
 \subsubsection{Trip (-)}
-Sacrifice a damage roll for an attack that hits, instead make an opposed \textlf{cunning} check. If you win, the victim is \textlf{knocked down}. Weapons with the \textlf{Trip} rule cause damage on a \textlf{critical success}.
+Sacrifice a damage roll for an attack that hits, instead make an opposed \textlf{cunning} check. If you win, the victim is \textlf{knocked down}. Weapons with the \textlf{Trip} rule cause damage on a \textlf{critical success}. If an attack benefits from two copies of this rule then it deals damage as normal when tripping.
 
 \subsubsection{Disarm (-)}
-Sacrifice a damage roll for an attack that hits, instead make an opposed \textlf{wit} check. If you win, the victim cannot use their equipped weapon without spending 1 action point or suffering a \textlf{moment of weakness} to retrieve it. Weapons with the \textlf{disarm} rule cause damage on a \textlf{critical success}.
+Sacrifice a damage roll for an attack that hits, instead make an opposed \textlf{wit} check. If you win, the victim cannot use their equipped weapon without spending 1 action point or suffering a \textlf{moment of weakness} to retrieve it. Weapons with the \textlf{disarm} rule cause damage on a \textlf{critical success}. If an attack benefits from two copies of this rule then it deals damage as normal when disarming.
 
 \subsubsection{Defensive stance (1)}
 The character gains \textlf{edge+} on \textlf{deflect} for the next attack they suffer.
@@ -120,64 +120,61 @@ The character gains \textlf{edge+} on \textlf{deflect} for the next attack they 
 \textlf{endurance} & = & 2 + \textlf{resolve} \\
 \end{tabular}
 
-\subsection{Attacks}
-Attempting to hit an opponent with an attack costs 1 action point and requires an opposed check with your \textlf{Aim} and the target's \textlf{Deflect} (you have \textlf{edge-} if not proficient with your weapon). If the attacker wins, a damage roll may be made against the victim. Attacks can only be made once per turn. An \textlf{all-out attack} costs 2 action points and adds an extra damage roll if it hits. 
+\subsection{Additional attacks rules} 
+Note that only 1 attack-type action can be made per turn.
 
-\subsubsection{Penetrating Hits}
+\subsubsection{Penetrating hits}
 These are scored if a fighter fails a \textlf{Deflect} attempt by $\dicecritlvl$ or more. A \textlf{Penetrating Hit} grants \textlf{edge+} on the subsequent damage rolls.
 
-\subsection{Damage Rolls}
-Are a difficulty check using the \textlf{Power} of the attack against a \textlf{difficulty} given by the target's \textlf{Toughness} (you have \textlf{edge-} if not proficient with your weapon). A successful damage roll results in the target losing \textlf{endurance} based on the attack's \textlf{lethality} (see table~\ref{tab:lethal}). If they run out of \textlf{endurance} they suffer wound effects instead.
+\subsection{Damage checks}
+Are a difficulty check using the \textlf{Power} of the attack against a \textlf{difficulty} given by the target's \textlf{Toughness} (you have \textlf{edge-} if not proficient with your weapon). A successful \textlf{damage check} results in the target losing 1 \textlf{endurance} per point of \textlf{lethality} on the attack (default 1). If they run out of \textlf{endurance} then increment their \textlf{wound level} instead.
 
-\subsubsection{Critical Hits}
-For every $\dicecritlvl$ the damage roll exceeds the difficulty by the attack gains a \textlf{Lethality} upgrade.
+\subsubsection{Critical hits}
+For every $\dicecritlvl$ the \textlf{damage check} exceeds the target's \textlf{toughness} by, the attack gains a + 1 \textlf{Lethality}.
+
+
+\subsection{Wound levels}
+
+\begin{itemize}
+	\item
+	\textlf{Wounded} inflicts \textlf{stunned} effect on the victim (attack actions cost 1 extra action point). 
+	\item
+	A \textlf{Badly Wounded} causes \textlf{edge-} on all actions in addition to \textlf{wounded} effects.
+	\item 
+	A \textlf{Mortally Wounded} effect means the character cannot make actions and will die within 3 days without treatment.
+	\item 
+	A \textlf{dead} character is dead.
+\end{itemize}
+
+\subsection{Recovery and Healing}
+\begin{itemize}
+	\item 
+	1 \textlf{endurance} is restored by 1 hour rest or a hot meal.
+	\item 
+	All \textlf{endurance} is restored via a night's sleep.
+	\item 
+	The \textlf{leadership skill} can restore \textlf{endurance}
+	\item 
+	Restoring \textlf{endurance} has no effect on a target's \textlf{wound level}
+\end{itemize}
+
+\begin{itemize}
+	\item
+	Wounds can be healed via use of the \textlf{Healing} skill or by a non-player healer.
+	\item
+	Barring consequences of these rolls, a character heals from the \textlf{Wounded} effect after 3 days. \textlf{Badly Wounded} down-grades to \textlf{wounded} after 7 days.
+\end{itemize}
 
 
 \subsection{Reactions}
 
 \subsection{Desperate effort}
-This costs 1 reaction point and can be used when the character fails an \textlf{aim}, \textlf{deflect}, or \textlf{power} check. This allows the character to re-roll the check, they must accept the result of this re-roll. This cannot be used if the character has any \textlf{edge} bonuses on the roll.
+This costs 1 reaction point and can be used when the character fails a check in combat (not including \textlf{skill} checks). This allows the character to re-roll the check, they must accept the result of this re-roll. This cannot be used if the character has any \textlf{edge} bonuses on the roll. 
 
 \subsubsection{Exploit weakness}
 This costs 1 reaction point and can be used when an enemy within range 0 experiences a \textlf{moment of weakness}. This allows the character to make a single close combat \textlf{damage check} (with their equipped weapon) against the enemy.
 
-\section{The Effects of Injury}
- 
-\begin{itemize}
-\item
-\textlf{Wounded} inflicts \textlf{stunned} effect on the victim (attack actions cost 1 extra action point). 
-A character who suffers two \textlf{wounded} effects replaces them with a \textlf{badly-wounded} effect.
-\item
-A \textlf{Badly Wounded} causes \textlf{edge-} on all actions in addition to \textlf{wounded} effects.
-A character who takes additional damage while \textlf{badly wounded}, replaces the effect with \textlf{mortally Wounded}.
-\item 
-A \textlf{Mortally Wounded} effect means the character cannot make actions and will die within 3 days without treatment.
-\end{itemize}
 
-\begin{table}[htbp]
-	\centering
-	\caption{Lethality Table}
-	\label{tab:lethal}
-	\begin{tabular}{|l|l|l|}
-		\hline
-		Lethality & Endurance loss & Wound \\
-		\hline
-		Normal & 1 & \textlf{Wounded} \\
-		Crushing & 2 & \textlf{Badly wounded} \\
-		Devastating & 3 & \textlf{Mortally Wounded} \\
-		Vorpal & 5 & Instant death\\
-		\hline
-	\end{tabular}
-\end{table} 
-
-
-\subsection{Recovery and Healing}
-\begin{itemize}
-\item
-Wounds can be healed via use of the \textlf{Healing} skill or by a non-player healer.
-\item
-Barring consequences of these rolls, a character heals from the \textlf{Wounded} effect after 3 days. \textlf{Badly Wounded} down-grades to \textlf{wounded} after 7 days.
-\end{itemize}
 
 \section{Terrain and Cover}
 Moving through \textlf{Rough} or \textlf{Dangerous} terrain has the following consequences:
@@ -212,7 +209,7 @@ When hiding behind/in cover the character receives a bonus to their \textlf{Defl
 \hline
 Condition & Effect \\
 \hline
-\textlf{Vulnerable} & Attackers get \textlf{edge+} on damage rolls\\
+\textlf{Vulnerable} & Next attacker has \textlf{edge+} on damage rolls\\
 \textlf{Staggered} & Lose 1 reaction point\\
 \textlf{Blind} & \textlf{Deflect} and \textlf{Aim} have \textlf{edge--} \\
 \textlf{Bleeding} & Lose 1 \textlf{endurance} on failed \textlf{resolve} vs \textlf{might} check each round for 2 rounds \\
