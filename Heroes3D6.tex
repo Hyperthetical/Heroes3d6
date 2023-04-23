@@ -1,4 +1,4 @@
-%Copyright (C) 2021-2023 Geoff Beck. This work is licensed under a Creative Commons Attribution- ShareAlike 4.0 License. To view a copy of this license visit: \url{https://creativecommons.org/licenses/by-sa/4.0/legalcode
+%Copyright (C) 2021-2023 Geoff Beck. This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license visit: \url{https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
 
 \documentclass[a4paper,10pt,oneside]{book}
@@ -24,7 +24,7 @@
 \author{Geoff Beck}
 \predate{\centering}
 \date{}
-\postdate{\vfill{\copyright 2021-2023 Geoff Beck. This work is licensed under a Creative Commons Attribution- ShareAlike 4.0 License. To view a copy of this license visit: \url{https://creativecommons.org/licenses/by-sa/4.0/legalcode}}\hfill}
+\postdate{\vfill{\copyright 2021-2023 Geoff Beck. This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license visit: \url{https://creativecommons.org/licenses/by-sa/4.0/legalcode}}\hfill}
 \usepackage{lipsum}
 \pagestyle{plain}
 
@@ -227,7 +227,7 @@ The character's background is their history before adventuring and dictates the 
 The character is a hard-bitten veteran of fighting. Having seen their fair share of blood spilt on the orders of others, they now turn their hand to adventuring instead. Soldier encompasses many possible histories. Some examples might be: army conscript, mercenary, city guard, bandit, or gang enforcer. Skill suggestions: Healing, Survival, Ride, Athletics, Leadership. 
 
 \subsection{Guttersnipe}
-The character was born into a life of poverty, scrounging, stealing, and fighting for scraps in back-alleys. This background lends itself to producing street-smart characters who grew up in harsh environments. Such a character is used to being on the wrong side of the law, sometimes even through no fault of their own. Skill suggestions: Stealth, Slight of hand, Deceive, Insight, Athletics, Awareness.
+The character was born into a life of poverty, scrounging, stealing, and fighting for scraps in back-alleys. This background lends itself to producing street-smart characters who grew up in harsh environments. Such a character is used to being on the wrong side of the law, sometimes through no fault of their own. Skill suggestions: Stealth, Slight of hand, Deceive, Insight, Athletics, Awareness.
 
 \subsection{Wanderer}
 The character lives the life of a vagrant or vagabond. They move from place to place seeking opportunity, profit, or just thrills. However, many people are suspicious of such a lifestyle and regard the character with suspicion or outright hostility. Wanderer is suited to a character who likes wild places and is resentful or suspicious of petty authority. Skill suggestions: Survival, Athletics, Stealth, Awareness, Animals, Plants.
@@ -918,7 +918,7 @@ In the diagram above we can see a basic schematic of a battle scenario, you can 
 \subsection{Distances and radii}
 In this system you measure a distance as the number of area boundaries crossed. So from one area to its neighbour is a distance of 1 (around 15 m). To determine if an enemy is in range of a shooting attack you must count how many area borders the projectile must cross and compare it to the weapon range. 
 
-A radius of 1 would cover a single area and ALL neighbouring areas. An effect that is called \textlfirst{adjacent}, or radius 0, applies to a single combat area, which has a radius of $\sim 5$ m. See Table~\ref{tab:distances} for more details about a default system for distance conversions. You can, of course, adjust the distance scale when considering things like spaceship battles etc. The area system means the mechanics can remain the same regardless of the chosen distance scale. 
+A radius of 1 would cover a single area and ALL neighbouring areas. An effect that is called \textlfirst{adjacent}, or radius 0, applies to a single combat area, which has a radius of $\sim 5$ m. See Table~\ref{tab:distances} for more details about a default system for distance conversions. You can, of course, adjust the distance scale when considering things like spaceship battles etc. 
 
 \begin{table}[ht!]
 	\centering
@@ -951,7 +951,7 @@ If an attacker wins their \textlf{opposed roll} of \textlf{aim} vs \textlf{defle
 A character can make close-combat attacks against any creature within the same combat area as they are (range 0).
 
 \subsubsection{Ranged}
-A character armed with a ranged weapon can often attack enemies that are in different combat areas to itself. How far it is allowed to do so is defined by the weapon's range score. A range of 1 would allow shots to be fired at a target in any adjacent area to that of the firer. To determine the required range to a target, simply draw a straight line between it and the shooter then count the number of area boundaries it passes over. 
+A character armed with a ranged weapon can often attack enemies that are in different combat areas to itself. How far it is allowed to do so is defined by the weapon's range score. A range of 1 would allow shots to be fired at a target in any adjacent area to that of the firer. To determine the required range to a target, simply draw a straight line between it and the shooter then count the number of area boundaries it passes over. A ranged weapon can fire a distance up to twice its range score, but receives \textlf{edge-} on \textlf{aim} if doing so.
 
 These weapons are divided into two types: shooting and throwing. Throwing a weapon/object without the \textlf{throw} property incurs \textlf{edge-} on \textlf{aim}. Firing a shooting weapon at a target within range 0 incurs a similar penalty. Unless specially constructed or robust, shooting weapons usually incur \textlf{edge-} on \textlf{aim} when used as close-combat weapons.
 
@@ -972,16 +972,16 @@ Sometimes you need to attack an inanimate object, like a barn door, or a vast en
 
 \subsection{Damage checks}
 \label{sec:dmg}
-This represents whether or not a telling blow penetrates your target's armour. This is a \textlf{difficulty check} with your \textlf{power} against the victim's \textlf{toughness}. If not \textlf{proficient} with their equipped weapon, the character suffers \textlf{edge-} on these checks. If the check succeeds then the victim loses \textlf{endurance} or suffers \textlf{wound} effects.
+This represents whether or not a telling blow penetrates your target's armour. This is a \textlf{difficulty check} with your \textlf{power} against the victim's \textlf{toughness}. If not \textlf{proficient} with their equipped weapon, the attacker suffers \textlf{edge-} on these checks. If the check succeeds then the victim loses \textlf{endurance} or suffers \textlf{wound} effects.
 
 \subsubsection{Losing endurance}
 If the victim of a \textlf{damage check} has remaining \textlf{endurance} then these points will be lost before any \textlf{wounds} are suffered. One \textlf{endurance} is lost per point of the attack's \textlf{lethality} (default is 1). Once a character has no \textlf{endurance} left (minimum is 0), further damage is accumulated as actual injuries which are tracked via \textlf{wound} effects. 
 
 \subsubsection{Wound effects}
-A character with 0 \textlf{endurance}, who suffers further damage increments their \textlfirst{wound level} by the attack's \textlf{lethality}. \textlf{wound levels} are \textlf{wounded}, \textlf{badly wounded}, \textlf{mortally wounded}, and \textlf{dead}.
+A character with 0 \textlf{endurance}, who suffers further damage increments their \textlfirst{wound level} by the attack's \textlf{lethality} score. \textlf{wound levels} are \textlf{wounded}, \textlf{badly wounded}, \textlf{mortally wounded}, and \textlf{dead}.
 
 \subsubsection{Critical hits}
-If a character succeeds on a \textlf{damage check} by $\dicecritlvl$ or more, the attack's \textlf{lethality} is increased by 1 per $\dicecritlvl$ they exceeded it by.
+If an attacker succeeds on a \textlf{damage check} by $\dicecritlvl$ or more, the attack's \textlf{lethality} is increased by 1 per $\dicecritlvl$ they exceeded the victim's \textlf{toughness} by.
 
 \subsubsection{Restoring endurance}
 If a character suffering from \textlf{wounds} has their \textlf{endurance} restored to values $>0$ there is no effect on their \textlf{wounds}, the latter can only be remedied by the \textlf{healing skill} or time.
@@ -1016,6 +1016,7 @@ This does not have adverse effects on the wearer, as it is light and flexible.
 
 
 \section{Other actions in combat}
+There is a lot more you can do in combat than just attack.
 
 \subsection{Anticipate}
 A fighter can try and predict their opponent's next move. This costs 1 action point but grants the character a bonus reaction point that lasts until the next round ends.
@@ -1024,20 +1025,22 @@ A fighter can try and predict their opponent's next move. This costs 1 action po
 To swap a currently held weapon a character must spend 1 action point. To swap two wielded weapons it thus costs 2 action points.
 
 \subsection{Defensive stance}
-This costs 1 action point. The character gains \textlf{edge+} to \textlf{deflect} the next attack made against them.
+A fighter can assume a defensive posture, ready to fend off attackers. This costs 1 action point. The character gains \textlf{edge+} to \textlf{deflect} the next attack made against them.
 
 \subsection{Disarm}
 Even the mightiest warrior can be flummoxed by the loss of their precious sword. 
-This modifies an attack action: replace a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{wit}. Should you win, the target cannot use their current weapon without either spending 1 action point or suffering a \textlf{moment of weakness} to retrieve it. Weapons with the \textlf{disarm} rule cause damage on a \textlf{critical success}. If an attack benefits from two copies of this rule then it deals damage as normal when disarming.
+This is a modified attack action, replacing a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{wit}. Should you win, the target cannot use their current weapon without either spending 1 action point or suffering a \textlf{moment of weakness} to retrieve it. Weapons with the \textlf{disarm} rule cause damage on a \textlf{critical success}. If an attack benefits from two copies of this rule then it deals damage as normal when disarming.
 
 \subsection{Feint}
 \label{sec:feint}
-A feint costs one action point and requires an \textlf{opposed roll} between yourself and the target using \textlf{cunning}. Success allows you \textlf{edge+} to \textlf{aim} this round, while \textlf{critical failure} results in a \textlf{moment of weakness}. This has no effect with ranged weapons unless otherwise modified.
+A \textlf{feint} is an attempt to confuse your target, making them think your attack will come from one angle before changing at the last minute. This costs one action point and requires an \textlf{opposed roll} between yourself and the target using \textlf{cunning}. Success allows you \textlf{edge+} to \textlf{aim} this round, while \textlf{critical failure} results in a \textlf{moment of weakness}. This has no effect with ranged weapons unless otherwise modified.
 
 \subsection{Grapple}
 You can attempt to wrestle your foe into an immobile state at the cost of 1 action point (provided you have at least one free hand). You and your target make an \textlf{opposed roll} with \textlf{Might}. If you win, the target is now \textlf{grappled}. However, if you score a \textlf{critical failure}, you suffer a \textlf{moment of weakness}. A \textlf{critical success} makes your target lose 1 action point in the next round. It costs 1 action point each round after the first to maintain a grapple.
 
 \textlf{Grappled} creatures cannot make any movement actions until they break free of the \textlf{grapple}, this costs 1 action point and requires that they win a \textlf{might}-based \textlf{opposed roll} with the grappler. If they are forced to move by some external effect then the grapple breaks automatically. All participants have \textlf{edge-} on \textlf{aim}, unless using \textlf{small} or natural weapons.
+
+\textit{Designer's note: \textbf{Grapple} is not the same as the \textbf{Immobilised} condition, as it represents a state of active wrestling and thus does not make it easier for other fighters to hit the grappled target}.
 
 \subsection{Prepared actions}
 \label{sec:prep}
@@ -1047,10 +1050,10 @@ A \textlfirst{prepared action} is one that the character does not wish to make i
 A character can run, at a cost of 2 action points, they then add 1 to their movement range and gain \textlf{edge+} on \textlf{deflect} until the round ends. 
 
 \subsection{Retreat}
-At a cost of two action points the character can make a normal move, while leaving an area occupied by enemies, and not suffer a \textlf{moment of weakness}.
+This represents a careful withdrawal from active combat, ready to fend off any parting shots. At a cost of two action points the character can make a normal move, while leaving an area occupied by enemies, and not suffer a \textlf{moment of weakness}.
 
 \subsection{Shove}
-This costs 1 action point and involves an \textlf{opposed roll} between yourself and the target using \textlf{might}. If the shover is successful, the target is either knocked down or moved into an adjacent combat area (at the shover's discretion). \textlf{critical failure} results in the shoving character experiencing a \textlf{Moment of weakness}. \textlf{critical success} results in the victim suffering a \textlf{damage check}.
+A fighter can knock a target off their feet or push them away to create space. This costs 1 action point and involves an \textlf{opposed roll} between yourself and the target using \textlf{might}. If the shover is successful, the target is either knocked down or moved into an adjacent combat area (at the shover's discretion). \textlf{critical failure} results in the shoving character experiencing a \textlf{Moment of weakness}. \textlf{critical success} results in the victim suffering a \textlf{damage check}.
 
 \subsection{Taunt}
 With cutting words, or obscene gestures, you bait a foe into attacking you. This costs 1 action point and the target must be able to understand the provocation in some way. Make an opposed check with your \textlf{resolve} and the target's \textlf{wit}. If you win, the target now attempts to attack you instead other targets. 
@@ -1503,7 +1506,7 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 
 
 \subsection{Sweeping strike [3]}
-\textlf{Active perk}. The character lashes out around them, striking all too slow to escape. This costs 2 action points and allows the character to make an attack action with their close-combat weapons that has \textlf{cleave} + 1.
+\textlf{Active perk}. The character lashes out around them, striking all too slow to escape. This costs 2 action points and allows the character to make a close-combat attack action that has \textlf{cleave} + 1.
 
 \subsubsection{Upgrade: Whirlwind of steel [2]}
 This adds an additional \textlf{cleave} + 1 when using \textlf{Sweeping strike}.
@@ -1513,7 +1516,7 @@ This adds an additional \textlf{cleave} + 1 when using \textlf{Sweeping strike}.
 \textlf{Active perk}. A close quarters manoeuvre where a quick blow with a fist is used to make room for firing a ranged weapon. This special attack costs 2 action points. Make an unarmed attack, if it hits you may perform \textlf{damage checks} for both the unarmed hit and for a shooting-type, ranged weapon you are wielding. 
 
 \subsubsection{Upgrade: A new one-two [2]}
-(Requires \textlf{The ol' one-two}). You can make any one-handed close-combat attack in place of the required unarmed one. Note that this requires you can still wield the ranged weapon in your free hand.
+(Requires \textlf{The ol' one-two}). You can make any close-combat attack in place of the required unarmed one. Note that this requires you can still wield the ranged weapon at the same time.
 
 
 
@@ -1583,7 +1586,7 @@ These \textlf{perks} are oriented towards unarmed combat. They must occupy an eq
 
 
 \subsection{Spontaneous brawler [2]}
-\textlf{Passive perk}. This allows the character to treat any weapon or improvised projectile as though it had the \textlf{throw 2} rule. 
+\textlf{Passive perk}. This allows the character to treat any weapon or improvised projectile as though it had the \textlf{throw 1} rule. 
 
 
 \subsection{Take-down [3]}
@@ -1646,8 +1649,8 @@ These \textlf{perks} are oriented towards utility and skill in combat. They must
 (Requires \textlf{Duelist}). While fighting with a single weapon (as detailed in \textlf{Duelist}), the character may spend a reaction point to gain \textlf{edge+} on the next \textlf{aim} roll after they \textlf{deflect} with \textlf{critical success}. 
 
 
-\subsection{Eagle-eye [3]}
-\textlf{Passive perk}. You don't need glasses. The character adds 1 + \textlf{Wit} to the range score of all shooting and throwing weapons they employ.
+\subsection{Eagle-eye [2]}
+\textlf{Passive perk}. You don't need glasses. The character adds 1 to the range score of all shooting and throwing weapons they employ.
 
 
 \subsection{Leverage [3]}
@@ -1716,10 +1719,6 @@ These \textlf{perks} don't fit into the other categories. They must occupy an eq
 These \textlf{perks} are oriented towards movement. They must occupy an equipment slot for active/passive \textlf{perks} to be usable.
 \label{sec:perks-movement}
 
-%\subsection{Acrobatic attack [4]}
-%\textlf{Active perk} (Requires \textlf{Acrobatic movement}). This costs 1 action point and allows the character to make both an \textlf{acrobatic movement} and attack action (against a target within range during the movement).% This action cannot be made in either \textlf{medium} or \textlf{heavy armour}.
-
-
 \subsection{Acrobatic movement [3]}
 \textlf{Active perk}. Sometimes walking is just too boring. All \textlf{athletics} checks for jumping have \textlf{difficulty} reduced by 2. The character can also spend a reaction point so that their \textlf{move} actions out of, or through, a combat area containing enemies do not incur a \textlf{moment of weakness}. 
 
@@ -1746,6 +1745,8 @@ These \textlf{perks} are oriented towards movement. They must occupy an equipmen
 
 
 \section{Skills}
+These \textlf{perks} are oriented towards enhancing your skills. They must occupy an equipment slot for active/passive \textlf{perks} to be usable.
+\label{sec:perks-skills}
 
 \subsection{Last-minute save [4]}
 \textlf{Passive perk}. You can spend a reaction point to re-roll a skill check if you \textlf{critically fail}. This can only be used once in a \textlf{multi-stage check}.
@@ -1754,13 +1755,17 @@ These \textlf{perks} are oriented towards movement. They must occupy an equipmen
 \subsection{Dramatic arts [2]}
 \textlf{Passive perk} (Requires \textlf{Skill proficiency: perform}). You can use \textlf{resolve} rather \textlf{cunning} when using the \textlf{feint} action.
 
+\subsubsection{Upgrade: Virtuoso [4]}
+(Requires \textlf{dramatic arts}). Your feint performance is so distracting that it leaves the victim wide open. Allies within range 0 (5 m) gain the benefits of your \textlf{feint} actions.
+
 
 \subsection{Specialist [3]}
 \textlf{Passive perk}. Add + 1 to any rolls with two chosen skills (you must be proficient in them). This can only be chosen once per character.
 
 
-\subsection{Long practiced [5]}
+\subsection{Long practised [5]}
 \textlf{Passive perk}. Select a \textlf{skill} you are \textlf{proficient} with and has a \textlf{synergy attribute} score of 0 (you cannot select a \textlf{skill} that is receiving bonuses from other \textlf{passive perks}). You gain + 2 to rolls with this skill. This can only be chosen once per character.
+
 
 
 
@@ -1852,6 +1857,7 @@ The character counts ranged weapons as having the \textlf{trip} rule.
 
 \subsection{Too hot to handle [2]}
 \textlf{Passive perk}. A precisely placed shot causes the target to drop their weapon. The character can make \textlf{disarm} actions with ranged weapons.
+
 \subsubsection{Upgrade: Underhanded [2]}
 The character counts ranged weapons as having the \textlf{disarm} rule.
 
