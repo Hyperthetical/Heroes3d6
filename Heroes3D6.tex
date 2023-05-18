@@ -30,7 +30,7 @@
 
 
 \newcommand{\dicediffbase}{9}
-\newcommand{\dicecritlvl}{4}
+\newcommand{\dicecritlvl}{3}
 
 \newcommand{\textlf}[1]{\textbf{\titlecap{#1}}}
 \newcommand{\textlfirst}[1]{\textbf{\textit{\titlecap{#1}}}}
@@ -77,7 +77,7 @@ The notation ``requires a 3d6 roll of $16+$'' means that a total score of 16 or 
 The core of this 3d6 system is the \textlfirst{difficulty check}, any task can be assigned a \textlfirst{difficulty} by the Game Master and then is performed successfully if the character scores equal to or greater than the \textlf{difficulty} on a roll of 3d6. To this roll you add the relevant \textlfirst{attribute} score; for instance when making a climbing check you add your \textlf{Might} score to the roll. The second core mechanic is the \textlfirst{opposed roll}, this represents a contest between two or more opponents, as such each creature contesting the roll adds the given \textlf{attribute} score to a roll of 3d6. The victor is the one whose resultant score is the highest. In the case of a tie, the tied parties simply roll again.
 
 \subsubsection{Critical success/failure}
-If you succeed/fail on a check by $\dicecritlvl$ or more you have achieved a \textlfirst{critical success/failure}. For example, if you need to beat \textlf{difficulty} 11 to succeed, then $15+$ is \textlf{critical success} whereas $7-$ is \textlf{critical failure}. Some effects scale with how many multiples of $\dicecritlvl$ you succeed or fail by.
+If you succeed/fail on a check by $\dicecritlvl$ or more you have achieved a \textlfirst{critical success/failure}. For example, if you need to beat \textlf{difficulty} 11 to succeed, then $14+$ is \textlf{critical success} whereas $8-$ is \textlf{critical failure}. Some effects scale with how many multiples of $\dicecritlvl$ you succeed or fail by.
 
 \subsubsection{Rounding conventions}
 When the division of an integer score results in a non-integer number (i.e. $7.5$ or $9.1$) then the convention is to round up, unless otherwise specified.
@@ -128,7 +128,7 @@ Each attribute contributes to many different skills or activities, its influence
 \textlf{Wit} is a character's ability to rapidly adjust to changing circumstances. It affects a character's aim in combat as well as the \textlf{awareness}, \textlf{mechanical}, and \textlf{knowledge} skills. \textlf{Wit} checks would be made if the character had to rapidly assess a situation or react quickly to imminent danger. \textlf{Wit} also decides how difficult it is to deceive or confuse the character. 
 
 \subsection{Resolve}
-Is a measure of the character's determination and force of character. \textlf{Resolve} checks can be used to flatter, distract, or to taunt/enrage a target into attacking the character. These checks involve an opposed roll with the target's \textlf{Wit} score. \textlf{Resolve} is also involved in the \textlf{persuade}, \textlf{leadership}, \textlf{healing}, \textlf{insight}, and \textlf{perform} skills. Finally, it regulates a character's ability to resist debilitating effects (magic,drugs,poisons) by pure will. 
+Is a measure of the character's determination and force of character. \textlf{Resolve} checks can be used to flatter, distract, or to taunt/enrage a target into attacking the character. \textlf{Resolve} is also involved in the \textlf{persuade}, \textlf{leadership}, \textlf{healing}, \textlf{insight}, and \textlf{perform} skills. Finally, it regulates a character's ability to resist debilitating effects (magic,drugs,poisons) by pure will. 
 
 
 
@@ -498,7 +498,7 @@ A healer is one who is skilled in speeding the recovery of their allies through 
 	\begin{itemize}
 		\item The \textlf{difficulty} should scale with the rarity of the type of creature/weapon or the healers familiarity with it
 		\item Failure means the healer doesn't know
-		\item \textlf{Critical failure} means they get it wrong
+		\item \textlf{Critical failure} means they get it confidently wrong
 	\end{itemize}
 \end{itemize}
 
@@ -568,7 +568,7 @@ This skill is related to the character's dexterity, it covers the ability to per
 \begin{itemize}
 	\item Perform conjuring tricks
 	\begin{itemize}
-		\item Opposed roll against the audience's collective \textlf{wit}
+		\item Opposed roll against a \textlf{wit} score assigned to the audience
 		\item Success completes the trick impressively
 		\item \textlf{Critical success} could allow an additional skill action like picking an audience member's pockets
 		\item Failure results in the trick being unimpressive
@@ -676,9 +676,9 @@ This skill represents your character's ability to obfuscate their appearance, us
 	\item Concoct your disguise
 	\item The GM assigns \textlf{edge}$\pm$ as appropriate (based on how well the disguise could work) 
 	\item Make a \textlf{disguise} check and record the score
-	\item An observer makes an \textlf{awareness} check against your recorded score
-	\item If they fail they are fooled by the disguise
-	\item If they succeed they are suspicious
+	\item Any observer makes an \textlf{awareness} check against your recorded score
+	\item If they fail, they are fooled by the disguise
+	\item If they succeed, they are suspicious
 	\item Their \textlf{critical success} means they see through you immediately
 \end{itemize}
 
@@ -754,7 +754,7 @@ Leadership gauges the character's ability to inspire others to follow them, or t
 	
 	\item Restore \textlf{endurance} to others
 	\begin{itemize}
-		\item Spend 2 action points and choose a single ally to inspire
+		\item Spend 2 action points and choose a single ally to enthuse
 		\item Make \textlf{Leadership} check against $10$ + target's missing \textlf{endurance}
 		\item Success restores 1 missing \textlf{endurance}
 		\item \textlf{Critical success} restores extra \textlf{endurance}.
@@ -978,7 +978,7 @@ This represents whether or not a telling blow penetrates your target's armour. T
 If the victim of a \textlf{damage check} has remaining \textlf{endurance} then these points will be lost before any \textlf{wounds} are suffered. One \textlf{endurance} is lost per point of the attack's \textlf{lethality} (default is 1). Once a character has no \textlf{endurance} left (minimum is 0), further damage is accumulated as actual injuries which are tracked via \textlf{wound} effects. 
 
 \subsubsection{Wound effects}
-A character with 0 \textlf{endurance}, who suffers further damage increments their \textlfirst{wound level} by the attack's \textlf{lethality} score. \textlf{wound levels} are \textlf{wounded}, \textlf{badly wounded}, \textlf{mortally wounded}, and \textlf{dead}.
+A character with 0 \textlf{endurance}, who suffers further damage increments their \textlfirst{wound level} by the attack's \textlf{lethality} score. \textlf{wound levels} are \textlf{wounded} (1), \textlf{badly wounded} (2), \textlf{mortally wounded} (3), and \textlf{dead} (4).
 
 \subsubsection{Critical hits}
 If an attacker succeeds on a \textlf{damage check} by $\dicecritlvl$ or more, the attack's \textlf{lethality} is increased by 1 per $\dicecritlvl$ they exceeded the victim's \textlf{toughness} by.
@@ -1029,7 +1029,7 @@ A fighter can assume a defensive posture, ready to fend off attackers. This cost
 
 \subsection{Disarm}
 Even the mightiest warrior can be flummoxed by the loss of their precious sword. 
-This is a modified attack action, replacing a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{wit}. Should you win, the target cannot use their current weapon without either spending 1 action point or suffering a \textlf{moment of weakness} to retrieve it. Weapons with the \textlf{disarm} rule cause damage on a \textlf{critical success}. If an attack benefits from two copies of this rule then it deals damage as normal when disarming.
+This is a modified, close-combat attack, replacing a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{wit}. Should you win, the target cannot use their current weapon without either spending 1 action point or suffering a \textlf{moment of weakness} to retrieve it. Weapons with the \textlf{disarming} rule cause damage on a \textlf{critical success}. If your \textlf{disarm} action benefits from two copies of this rule then it deals damage on a \textlf{success} instead.
 
 \subsection{Feint}
 \label{sec:feint}
@@ -1038,7 +1038,7 @@ A \textlf{feint} is an attempt to confuse your target, making them think your at
 \subsection{Grapple}
 You can attempt to wrestle your foe into an immobile state at the cost of 1 action point (provided you have at least one free hand). You and your target make an \textlf{opposed roll} with \textlf{Might}. If you win, the target is now \textlf{grappled}. However, if you score a \textlf{critical failure}, you suffer a \textlf{moment of weakness}. A \textlf{critical success} makes your target lose 1 action point in the next round. It costs 1 action point each round after the first to maintain a grapple.
 
-\textlf{Grappled} creatures cannot make any movement actions until they break free of the \textlf{grapple}, this costs 1 action point and requires that they win a \textlf{might}-based \textlf{opposed roll} with the grappler. If they are forced to move by some external effect then the grapple breaks automatically. All participants have \textlf{edge-} on \textlf{aim}, unless using \textlf{small} or natural weapons.
+\textlf{Grappled} creatures cannot make any movement actions until they break free of the \textlf{grapple}, this costs 1 action point and requires that they win a \textlf{might}-based \textlf{opposed roll} with the grappler. If they are forced to move by some external effect then the grapple breaks automatically. All participants have \textlf{edge-} on \textlf{aim} versus each other, unless using \textlf{small} or natural weapons. Creatures not involved in the grapple suffer \textlf{edge-} to hit any participant.
 
 \textit{Designer's note: \textbf{Grapple} is not the same as the \textbf{Immobilised} condition, as it represents a state of active wrestling and thus does not make it easier for other fighters to hit the grappled target}.
 
@@ -1059,7 +1059,7 @@ A fighter can knock a target off their feet or push them away to create space. T
 With cutting words, or obscene gestures, you bait a foe into attacking you. This costs 1 action point and the target must be able to understand the provocation in some way. Make an opposed check with your \textlf{resolve} and the target's \textlf{wit}. If you win, the target now attempts to attack you instead other targets. 
 
 \subsection{Trip}
-Attempt to entangle your foe's legs with your weapon's haft, or pointy bit built for tripping. This modifies an attack action: replace a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{cunning}. Should you win, the target is \textlf{knocked down} (see Section~\ref{sec:special}). Weapons with the \textlf{Trip} rule cause damage on a \textlf{critical success}. If an attack benefits from two copies of this rule then it deals damage as normal when tripping.
+Attempt to entangle your foe's legs with your weapon's haft, or pointy bit built for tripping. This modifies a close-combat attack: replace a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{cunning}. Should you win, the target is \textlf{knocked down} (see Section~\ref{sec:special}). Weapons with the \textlf{Tripping} rule cause damage on a \textlf{critical success}. If your \textlf{trip} action benefits from two copies of this rule then it deals damage on a \textlf{success} instead.
 
 
 \section{Reactions in combat}
@@ -1176,7 +1176,7 @@ An enraged character is immune to \textlf{fear} and \textlf{terror} effects and 
 These are moments when an opponent opens their guard or shows vulnerability, allowing an attacker to strike unhindered. A creature subject to a \textlf{moment of weakness} is open to being targeted by the \textlf{Exploit weakness} reaction~\ref{sec:exploit} which allows a nearby enemy to make a close-combat \textlf{damage check} against them. 
 
 \subsection{Resisting effects}
-Some attacks/powers have special effects. These should always be mitigated via \textlfirst{resist}. This involves an \textlf{opposed roll} between the \textlf{power} of the effect and most appropriate choice from the victim's attributes. For instance, resisting poison might use \textlf{Resolve}, whereas avoiding being hypnotised would require \textlf{wit}.    
+Some attacks/powers have special effects. These should always be mitigated via \textlfirst{resist(X)}. This involves an \textlf{opposed roll} between the \textlf{power} of the effect and the victim's attribute X. For instance, resisting poison might use \textlf{Resolve}, whereas avoiding being hypnotised would require \textlf{wit}.    
 
 
 
@@ -1225,21 +1225,6 @@ Such creatures have access to unique abilities or methods of fighting that might
 \subsubsection{Tactics}
 These enemies are hugely dangerous and will simply exploit the powers, size or strengths that make them monsters in order to win. They attack enemies that seem the easiest prey, or those that otherwise attract their attention, unless they have the opportunity to get more than one foe at once. Some monsters may be extremely stupid, this limited intelligence can be exploited by players to distract or confuse such foes, such monsters may need a handler to direct them and counteract their innate lack of quick wits. Monsters do not know the meaning of surrender or fear.
 
-%
-%\section{Unnecessarily Advanced Combat Rules}
-%
-%\subsection{Mounted Combat}
-%\label{sec:mountandblade}
-%Mounted combat is, as is quite obvious, combat while riding upon a mount. While mounted you gain the advantage of speed, mobility and the ability to trample your foes in addition to the devastating effects of a mounted charge.
-%
-%\subsubsection{Mounted Charge}
-%Certain weapons, such as the lance and horse sword, utilise the power and speed of a mounted charge to the full, inflicting great damage as they smash into the hapless foe. This action costs 2 action points and allows a normal movement and attack action. The \textlf{difficulty} of the required \textlf{ride} check is 11 + 1 for rough and + 2 for \textlf{dangerous terrain} (with a possible dismount on failure). 
-%
-%A mounted charge grants the rider \textlf{edge+} to \textlf{damage checks} this round.
-%
-%\subsubsection{Trample}
-%You may attempt, while charging, to ride your opponent down and trample over them. This trample attempt requires an \textlf{opposed roll} between your \textlf{aim} and victim's \textlf{deflect}. If the target wins, they evade the trample and you suffer a \textlf{moment of weakness} that the intended victim may exploit. However, if the \textlf{deflect} fails, the target is trampled beneath your mount's hooves/feet/wheels/appendages of motion. This results in the victim being knocked down and taking three \textlf{damage checks} from the mount. You cannot trample a target that is larger than you and your mount.
-%
 
 
 \section{Universal special rules}
@@ -1260,7 +1245,7 @@ A \textlfirst{blind} creature has \textlf{edge--} on both \textlf{aim} and \text
 A \textlfirst{cursed} creature is afflicted by a malignant magical effect sapping its luck. \textlf{Critical success} on any roll is reduced by 1 level. \textlf{Curse} lasts until removed.
 
 \subsubsection{Fear}
-If a creature is afflicted by \textlfirst{Fear}, they suffer \textlf{edge-} on \textlf{aim} until the effect ends. 
+If a creature is afflicted by \textlfirst{Fear}, they suffer \textlf{edge-} on \textlf{aim} (and all \textlf{skills}) until the effect ends. 
 
 \subsubsection{Immobilised}
 An \textlfirst{immobilised} creature cannot move, either due to some magical malaise or due to having suffered damage to its legs. In addition, they suffer \textlf{edge-} on \textlf{deflect}.
@@ -1278,7 +1263,7 @@ Poisoned is a state that results from harmful chemicals being introduced into th
 The shock of injury is a difficult thing to ignore and can incapacitate even the most hardened fighters. A \textlf{staggered} creature loses 1 reaction point. If this reduces a character to negative points, i.e. $-X$, they lose the next $X$ points they would normally gain.
 
 \subsubsection{Stunned}
-The sudden shock of a well-placed blow can often neutralise retaliation. If a \textlfirst{stunned} creature attempts to make attacks in its next turn these cost 1 more action point than normal.
+The sudden shock of a well-placed blow can often neutralise retaliation. If a \textlfirst{stunned} creature attempts to make attacks then these cost 1 more action point than normal.
 
 \subsubsection{Terror}
 A character afflicted by \textlfirst{Terror} must run for cover then spend each turn cowering in fear until the effect ends. 
@@ -1293,13 +1278,16 @@ A powerful blow can sometimes open up a fighter to being easily finished off. Th
 (X is an integer) \textlfirst{Blast} weapons explode or fire indiscriminately into a crowd. The attacks of these weapons target an area of radius X (usually 5 + $10\times$ X m). The attacker rolls \textlf{aim} once and each target rolls \textlf{deflect}.
 
 \subsubsection{Burst X}
-(X is an integer) \textlfirst{Burst} represents attacks that explode, spray, splash, or carve into a wide area of flesh. An attack with \textlf{burst} X causes 1 + X \textlf{damage checks} on a successful hit, rather than just one. 
+(X is an integer) \textlfirst{Burst} represents attacks that splash over, or carve into a wide area of flesh. An attack with \textlf{burst} X causes 1 + X \textlf{damage checks} on a successful hit, rather than just one. 
 
 \subsubsection{Cleave X}
 (X is an integer) An attack with \textlfirst{cleave} is one that can sweep in great arcs, cutting through many hapless foes with each swing. Such an attack may target up to 1 + X enemies at once. The attacker rolls once with their \textlf{aim} and each defender rolls with their \textlf{deflect}.
 
 \subsubsection{Cumbersome}
 Weapons with this rule are either massively heavy or just awkward to manoeuvre. They cost an extra action point to make attacks with.
+
+\subsubsection{Disarming}
+Weapons with this rule inflict damage on \textlf{critical success} for the opposed roll in a \textlf{disarm} action. If a weapon attacks gains two copies of this rule, it inflicts damage on \textlf{success} instead.
 
 \subsubsection{Penetration X}
 (X is an integer) A weapon with \textlfirst{penetration} is designed to deal with heavily armoured opponents, sliding into weak-points or just inflicting blunt trauma through armour. Attacks from this weapon count the target's \textlf{toughness} as reduced by X, but cannot reduce it below $12$ in this way.
@@ -1313,28 +1301,32 @@ Weapons with this rule are either massively heavy or just awkward to manoeuvre. 
 \subsubsection{Small}
 \textlfirst{Small} weapons represent dagger-sized implements. These can used with great speed and easily concealed. Thus, they gain \textlf{edge+} when used as part of \textlf{slight of hand} checks. These weapons also receive additional bonuses during \textlf{sneak attacks} (see Section~\ref{sec:adv-spc}).
 
-\subsubsection{Throw}
-Weapons with the \textlf{Throw} rule are finely balanced for use as projectiles. Thus, weapons without this rule confer \textlf{edge-} to \textlf{Aim} when thrown. 
+\subsubsection{Throw X}
+(X is an integer) Weapons with the \textlf{Throw} rule are finely balanced for use as projectiles with range X. Thus, weapons without this rule confer \textlf{edge-} to \textlf{Aim} when thrown (range 1 only). 
+
+\subsubsection{Tripping}
+Weapons with this rule inflict damage on \textlf{critical success} for the opposed roll in a \textlf{trip} action. If a weapon attacks gains two copies of this rule, it inflicts damage on \textlf{success} instead.
 
 
 
 \subsection{Creature-type rules}
 
+\subsubsection{Small creature}
+Diminutive creatures are easily missed, even by the most vigilant of larger things. Consequently they get + 1 \textlf{deflect}. \textlf{small creatures} must be smaller than 1 m in all dimensions.
+
 \subsubsection{Large creature}
-A creature is declared large if it exceeds 3 m in the main dimension (height, length,width depending on creature geometry). Thus, such creatures can only hide in medium or better cover but gain \textlf{cleave} 2 on all close-combat attacks. A \textlf{large creature} has an innate bonus of +1 \textlf{power}. Such a creature has at least 4 \textlf{endurance} points.
+A creature is declared large if it is bear-sized or larger (2 m in one dimension and 1 m in other dimensions or 3 m in main dimension). Thus, such creatures can only hide in medium or better cover but gain \textlf{cleave} 2 on all close-combat attacks. A \textlf{large creature} has an innate bonus of +1 \textlf{power}. Such a creature has at least 4 \textlf{endurance} points.
 
 \subsubsection{Huge creature}
-Such vast beasts barely notice the damage inflicted by even the largest weapons a man can wield. In consequence they have at least 6 \textlf{endurance} points. Their colossal might means that these creatures also have \textlf{cleave} 3 on all close-combat attacks. \textlf{Huge creatures} have an innate bonus of +2 \textlf{power} and the size threshold to be declared huge is a requirement of least 5 m in the main dimension (height, length, or width depending on monster geometry). 
+Such vast beasts barely notice the damage inflicted by even the largest weapons a man can wield. In consequence they have at least 6 \textlf{endurance} points. Their colossal might means that these creatures also have \textlf{cleave} 3 on all close-combat attacks. \textlf{Huge creatures} have an innate bonus of +2 \textlf{power}. The size threshold to be declared huge is typified by an elephant, 3 m in at least two dimensions or 5 m in the main dimension (height, length, or width depending on monster geometry). 
 
 These creatures are large enough for body areas to take damage independently. Typical division would be 1 region per limb, head, and torso. Such a beast dies if at least 3 body areas are \textlf{Mortally wounded} or if the heart/head/vital-region is destroyed (suffers damage beyond \textlf{Mortally wounded}). 
 
 \subsubsection{Titanic creature}
-These behemoths are all but inured to the attacks of normal weaponry. In consequence they have at least 8 \textlf{endurance} points. \textlf{Titanic creatures} have \textlf{cleave} 4 on all close-combat attacks and \textlf{edge+} on \textlf{damage checks} against smaller targets. \textlf{Titanic creatures} have an innate bonus of +3 \textlf{power} and the size threshold to be declared titanic is a requirement of least 10 m in the main dimension (height, length, or width depending on monster geometry). Such beasts have range 1 on their close-combat attacks. 
+These behemoths are all but inured to the attacks of normal weaponry. In consequence they have at least 8 \textlf{endurance} points. \textlf{Titanic creatures} have \textlf{cleave} 4 on all close-combat attacks and \textlf{edge+} on \textlf{damage checks} against smaller targets. \textlf{Titanic creatures} have an innate bonus of +3 \textlf{power} and the size threshold to be declared titanic is a requirement of least 10 m in the main dimension or 7 m in at least two dimensions (height, length, or width depending on monster geometry). Such beasts have range 1 on their close-combat attacks. 
 
 These creatures are large enough for body areas to take damage independently. Typical division would be 1 region per limb, head, and torso. Such a beast dies if at least 4 body areas are \textlf{Mortally wounded} or if the heart/head/vital-region is destroyed (suffers damage beyond \textlf{Mortally wounded}).
 
-\subsubsection{Small creature}
-Diminutive creatures are easily missed, even by the most vigilant of larger things. Consequently they get + 1 \textlf{deflect}.
 
 \subsubsection{Mindless}
 \textlfirst{Mindless} creatures have no thoughts, emotions, fear or creativity. Because of this, \textlf{mindless} creatures are immune to many occult powers, as well as the \textlf{fear}, \textlf{terror}, and \textlf{panic} effects. These creatures cannot use any advanced combat rules apart from \textlf{grapple} and \textlf{shove}.
@@ -1456,8 +1448,8 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 \textlf{Active perk}. This costs two action points and allows the character to make a ranged attack with a single \textlf{damage check} only. This benefits from \textlf{edge+} on \textlf{Aim} and the \textlf{damage check}.
 
 
-\subsection{Berserker [4]}
-\textlf{Active perk}. You mad, bro? The character can quickly be overtaken by the pulse of battle, they can spend a reaction point to \textlf{enrage} if they take or deal any damage.
+\subsection{Berserker [3]}
+\textlf{Active perk}. You mad, bro? The character can quickly be overtaken by the pulse of battle, they can spend a reaction point to \textlf{enrage} if they take or deal any \textlf{wound effects}.
 
 \subsubsection{Upgrade: Berserkergang [3]}
 (Requires \textlf{berserker}). The character unleashes their inner fury in a remorseless hail of attacks. When \textlf{enraged}, the character can spend a reaction point to grant \textlf{burst} + 1 to an attack that hits.  
@@ -1470,7 +1462,7 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 
 
 \subsection{Butcher's blow [3]}
-\textlf{Active perk}. The character aims their strikes to inflict maximum trauma. This is an attack action that costs 2 action points. Should the attack cause damage, the target is subject to the \textlf{stunned} and \textlf{staggered} effects. This effect applies only to creatures a maximum of 1 size category larger than the character.
+\textlf{Active perk}. The character aims their strikes to inflict maximum trauma. This is an attack action that costs 2 action points. Should the attack cause damage, the target is subject to the \textlf{stunned} and \textlf{staggered} effects in the next round. This effect applies only to creatures a maximum of 1 size category larger than the character.
 
 
 \subsection{Executioner [3]}
@@ -1515,7 +1507,7 @@ This adds an additional \textlf{cleave} + 1 when using \textlf{Sweeping strike}.
 \subsection{The ol' one-two [3]}
 \textlf{Active perk}. A close quarters manoeuvre where a quick blow with a fist is used to make room for firing a ranged weapon. This special attack costs 2 action points. Make an unarmed attack, if it hits you may perform \textlf{damage checks} for both the unarmed hit and for a shooting-type, ranged weapon you are wielding. 
 
-\subsubsection{Upgrade: A new one-two [2]}
+\subsubsection{Upgrade: A new one too [2]}
 (Requires \textlf{The ol' one-two}). You can make any close-combat attack in place of the required unarmed one. Note that this requires you can still wield the ranged weapon at the same time.
 
 
@@ -1590,7 +1582,7 @@ These \textlf{perks} are oriented towards unarmed combat. They must occupy an eq
 
 
 \subsection{Take-down [3]}
-\textlf{Passive perk}. If you make a \textlf{shove} action against a target you have \textlf{grappled} they are slammed to the ground. This causes a successful \textlf{shove} to deal damage with \textlf{lethality} 1 in addition to its usual effects. 
+\textlf{Passive perk}. If you make a \textlf{shove} action against a target you have \textlf{grappled} they are slammed to the ground. This causes the \textlf{shove} to deal damage with \textlf{lethality} 1 in addition to its usual effects. 
 
 
 \subsection{Third eye [5]}
@@ -1621,14 +1613,14 @@ These \textlf{perks} are oriented towards utility and skill in combat. They must
 (Requires \textlf{Bull-headed}). The character may make a \textlf{damage check} against one victim of their successful \textlf{bull-headed shove} actions. 
 
 \subsubsection{Upgrade: Pain train [3]}
-(Requires \textlf{Bull-Headed}). Choo! Choo! The character may choose for their \textlf{bull-headed shove} to knock the target(s) flying (distance 1) as well as knocking them down. If a victim hits an obstacle (entering \textlf{rough terrain} or \textlf{cover}) they suffer a \textlf{damage check}, with \textlf{power} equal to the character's \textlf{might} and \textlf{lethality} 1.
+(Requires \textlf{Bull-Headed}). Choo! Choo! The character may choose for their \textlf{bull-headed shove} to knock the target(s) flying (distance 1) as well as knocking them down. If a victim hits an obstacle (entering \textlf{rough terrain} or \textlf{cover}) they suffer a \textlf{damage check} with \textlf{power} equal to the character's \textlf{might} and \textlf{lethality} 1.
 
 
-\subsection{Combat improvisation [2]}
-\textlf{Active perk}. When the character hits with a close-combat attack they may spend a reaction point to change the attack into a \textlf{trip} or \textlf{disarm} action.
+\subsection{Combat improvisation [5]}
+\textlf{Active perk}. When the character hits with a close-combat attack they may spend a reaction point to add a \textlf{trip} or \textlf{disarm} roll (do not sacrifice any \textlf{damage checks}).
 
 \subsubsection{Upgrade: Flourish [2]}
-(Requires \textlf{Combat improvisation}). When using \textlf{combat improvisation}, the character's weapon(s) gains the benefit of both \textlf{trip} and \textlf{disarm} rules.
+(Requires \textlf{Combat improvisation}). When using \textlf{combat improvisation}, the character's weapon(s) gains the benefit of both \textlf{tripping} and \textlf{disarming} rules.
 
 
 \subsection{Counter attack [5]}
@@ -1662,7 +1654,7 @@ These \textlf{perks} are oriented towards utility and skill in combat. They must
 
 
 \subsection{Sudden feint [2]}
-\textlf{passive perk}. The character can spend a reaction point to use the \textlf{feint} action (instead of 1 action point).
+\textlf{passive perk}. The character can spend a reaction point to use the \textlf{feint} action (instead of 1 action point) and does not need to declare this during \textlf{action declaration}.
 
 
 \subsection{Suppressing fire! [4]}
@@ -1696,18 +1688,18 @@ These \textlf{perks} don't fit into the other categories. They must occupy an eq
 
 
 \subsection{Pack animal [3]}
-\textlf{Passive perk} (Requires Wanderer background). This \textlf{perk} can only be chosen at character creation. The character brings their hunting companion wherever they go. This grants them  a sympathetic animal companion that understands simple verbal commands and hand signals. The creature must be, at maximum, roughly equivalent to a dog in size and mass. \textlf{survival} checks can be made to get the animal to perform more complicated actions, like stealing a particular object, or distracting someone's attention. The creatures attributes are species specific. If you are \textlf{proficient} in \textlf{survival}, add 1 to all the combat statistics of your companion. A companion can be replaced, once dead, only at a cost of 5 experience. 
+\textlf{Passive perk} (Requires appropriate background). This \textlf{perk} can only be chosen at character creation. The character brings their hunting companion wherever they go. This grants them  a sympathetic animal companion that understands simple verbal commands and hand signals. The creature must be, at maximum, roughly equivalent to a large dog in size and mass. \textlf{survival} checks can be made to get the animal to perform more complicated actions, like stealing a particular object, or distracting someone's attention. The creature's attributes are species specific. If you are \textlf{proficient} in \textlf{survival}, add 1 to all the combat statistics of your companion. A companion can be replaced, once dead, only at a cost of 5 experience.  The companion has two \textlf{skill proficiencies} chosen from: \textlf{survival}, \textlf{stealth}, \textlf{awareness}, \textlf{Intimidate}, and \textlf{athletics}. 
 
 \begin{table}[ht!]
 	\centering
-	\begin{tabular}{|l|l|l|l|l|l|}
+	\begin{tabular}{|l|l|l|l|l|}
 		\hline
-		Creature & Might & Cunning & Wit & Resolve & Proficiencies \\
+		Creature & Might & Cunning & Wit & Resolve \\
 		\hline
-		Canine & 0 & 0 & 0 & 1 & Survival \\
-		Big cat & 0 & 1 & 0 & 0 & Stealth \\
-		Bird & 0 & 0 & 1 & 0 & Awareness  \\
-		Reptile & 1 & 0 & 0 & 0 & Intimidate \\ 
+		Canine & 0 & 0 & 0 & 1 \\
+		Big cat & 0 & 1 & 0 & 0 \\
+		Bird & 0 & 0 & 1 & 0 \\
+		Reptile & 1 & 0 & 0 & 0 \\ 
 		\hline
 	\end{tabular}
 \end{table}
@@ -1748,8 +1740,8 @@ These \textlf{perks} are oriented towards movement. They must occupy an equipmen
 These \textlf{perks} are oriented towards enhancing your skills. They must occupy an equipment slot for active/passive \textlf{perks} to be usable.
 \label{sec:perks-skills}
 
-\subsection{Last-minute save [4]}
-\textlf{Passive perk}. You can spend a reaction point to re-roll a skill check if you \textlf{critically fail}. This can only be used once in a \textlf{multi-stage check}.
+\subsection{Last-minute save [3]}
+\textlf{Passive perk}. Once per day you can re-roll a skill check if you \textlf{critically fail}.
 
 
 \subsection{Dramatic arts [2]}
@@ -1780,7 +1772,7 @@ These \textlf{perks} are oriented towards sneaky tricks in combat. They must occ
 \subsection{Arrow to the knee [2]}
 \textlf{Passive perk}. A careful shot to the leg can topple the most stable foes. The character can make \textlf{trip} actions with ranged weapons.
 \subsubsection{Upgrade: Knee-capped [2]}
-The character counts ranged weapons as having the \textlf{trip} rule.
+The character counts ranged weapons as having the \textlf{tripping} rule.
 
 
 \subsection{Blind side [3]}
@@ -1808,7 +1800,7 @@ The character counts ranged weapons as having the \textlf{trip} rule.
 
 
 \subsection{Low blow [5]}
-\textlf{Passive perk}. Uncool, man. The character may also make \textlf{sneak attacks} against enemies who have half, or less, of their \textlf{endurance} remaining, even if they don't meet any other pre-requisites for \textlf{sneak attacks} (see Section~\ref{sec:sneak-attk}).
+\textlf{Passive perk}. Uncool, man. The character may also make \textlf{sneak attacks} against enemies who have half or less of their \textlf{endurance} remaining, even if they don't meet any other pre-requisites for \textlf{sneak attacks} (see Section~\ref{sec:sneak-attk}).
 
 
 \subsection{Lightning fast [4]}
@@ -1819,7 +1811,7 @@ The character counts ranged weapons as having the \textlf{trip} rule.
 
 
 \subsection{Made you look [4]}
-\textlf{Passive perk}. If the character succeeds on a \textlf{feint} action, then the next attack-action against the same target is a \textlf{sneak attack}.
+\textlf{Passive perk}. If the character succeeds on a \textlf{feint} action, then their next attack-action against the same target is a \textlf{sneak attack} rather than the normal effects of \textlf{feint}.
 
 
 \subsection{Now you see me, now you don't [5]} 
@@ -1859,7 +1851,7 @@ The character counts ranged weapons as having the \textlf{trip} rule.
 \textlf{Passive perk}. A precisely placed shot causes the target to drop their weapon. The character can make \textlf{disarm} actions with ranged weapons.
 
 \subsubsection{Upgrade: Underhanded [2]}
-The character counts ranged weapons as having the \textlf{disarm} rule.
+The character counts ranged weapons as having the \textlf{disarming} rule.
 
 
 
