@@ -40,7 +40,7 @@ This is the characters capacity for heroic actions and is tracked in terms of av
 \section{Perks}
 These represent talents gained while adventuring and can be purchased at the cost of experience.
 
-\textlf{Perks} are divided into two categories: active and passive. Active \textlf{perks} alter the kind of actions your character can take. Passive \textlf{perks} provide their bonuses all the time. A single character can only have 3 active and 3 passive \textlf{perks} equipped at a time. They can still have \textlf{perks} purchased but these effects do not apply unless equipped. Changing equipped \textlf{perks} requires 1 hour of rest. There are slots on the character sheet for you to note your currently equipped \textlf{perks} in.
+\textlf{Perks} are divided into two categories: active and passive. \textlf{Active perks} alter the kind of actions your character can take. \textlf{Passive perks} provide their bonuses all the time. A single character can only have 3 active and 3 passive \textlf{perks} equipped at a time. They can still have \textlf{perks} purchased but these effects do not apply unless equipped. Changing equipped \textlf{perks} requires 1 hour of rest. There are slots on the character sheet for you to note your currently equipped \textlf{perks} in.
 
 \section{Edge}
 When rolling 3d6 with an \textlf{edge} bonus (\textlf{edge+}), a character rolls 4d6 and chooses the highest 3. In contrast, an \textlf{edge} penalty (\textlf{edge-}) makes the character roll 4d6 dice and choose the lowest 3.  The general pattern is: when rolling $n$d6 and having $m$ \textlf{edge} bonuses/penalties, you instead roll $(n+m)$d6 and choose the highest/lowest $n$ dice. 
@@ -78,6 +78,9 @@ A round of combat can be summarised simply as
 \subsection{Combat actions}
 A list of possible actions in combat is given below, the action point cost is given in brackets.
 
+\subsection{Anticipate}
+This costs 1 action point but grants the character a bonus reaction point that lasts until the next round ends.
+
 \subsubsection{Move (1)}
 The character can transfer between adjacent combat areas (10 m of movement) and thus has range 1. Leaving a combat area that contains enemies provokes a \textlf{moment of weakness}. 
 
@@ -100,25 +103,28 @@ Opposed \textlf{might} check with target. If you win, they are \textlf{knocked d
 Opposed \textlf{cunning} check with target. If you win, gain \textlf{edge+} on \textlf{aim}, otherwise you suffer a \textlf{moment of weakness} on \textlf{critical failure}.
 
 \subsubsection{Grapple (1)}
-Opposed \textlf{might} check with target. If you win, they cannot move, otherwise you suffer a \textlf{moment of weakness} on \textlf{critical failure}. The victim must make an opposed \textlf{Might} check (and spend 1 action point) to escape. It costs 1 action point each round after the first to maintain a grapple.
+Opposed \textlf{might} check with target. If you win, they cannot move, otherwise you suffer a \textlf{moment of weakness} on \textlf{critical failure}. The victim must make an opposed \textlf{Might} check (and spend 1 action point) to escape. It costs 1 action point each round after the first to maintain a grapple. Anyone attacking participants has \textlf{edge-} on \textlf{aim}.
 
 \subsubsection{Trip (1/2)}
-Modified attack action where you sacrifice a \textlf{damage check}, instead make an opposed \textlf{cunning} check. If you win, the victim is \textlf{knocked down}. Weapons with the \textlf{Trip} rule cause damage on a \textlf{critical success}. If an attack benefits from two copies of this rule then it deals damage as normal when tripping.
+Attempt to entangle your foe's legs with your weapon's haft, or pointy bit built for tripping. This modifies a close-combat attack: replace a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{cunning}. Should you win, the target is \textlf{knocked down}. 
 
 \subsubsection{Taunt [1]}
 Make an opposed check with your \textlf{resolve} and the target's \textlf{wit}. If you win, the target now attempts to attack you instead other targets. 
 
 \subsubsection{Disarm (1/2)}
-Modified attack action where you sacrifice a \textlf{damage check}, instead make an opposed \textlf{wit} check. If you win, the victim cannot use their equipped weapon without spending 1 action point or suffering a \textlf{moment of weakness} to retrieve it. Weapons with the \textlf{disarm} rule cause damage on a \textlf{critical success}. If an attack benefits from two copies of this rule then it deals damage as normal when disarming.
+This is a modified, close-combat attack, replacing a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{wit}. Should you win, the target cannot use their current weapon without either spending 1 action point or suffering a \textlf{moment of weakness} to retrieve it.
 
 \subsubsection{Defensive stance (1)}
 The character gains \textlf{edge+} on \textlf{deflect} for the next attack they suffer.
+
+\subsubsection{Change weapon (1)}
+A character can swap weapons for 1 action point per weapon being swapped.
 
 \subsubsection{Combat Attributes}
 \begin{tabular}{lll}
 \textlf{Aim} & = & \textlf{wit} \\ 
 \textlf{Deflect} & = & \textlf{Cunning}\\
-\textlf{Power} & = & Weapon Bonus +\textlf{might}\\
+\textlf{Power} & = & Weapon Bonus + \textlf{might}\\
 \textlf{Toughness} & = & 8 + armour value\\
 \textlf{endurance} & = & 2 + \textlf{resolve} \\
 \end{tabular}
@@ -126,18 +132,21 @@ The character gains \textlf{edge+} on \textlf{deflect} for the next attack they 
 \subsection{Additional attacks rules} 
 Note that only 1 attack-type action can be made per turn.
 
+\subsubsection{Multiple weapons}
+Attacking with two weapons costs an extra action point.
+
 \subsubsection{Penetrating hits}
-These are scored if a fighter fails a \textlf{Deflect} attempt by $\dicecritlvl$ or more. A \textlf{Penetrating Hit} grants \textlf{edge+} on the subsequent damage rolls.
+These are scored if a fighter fails a \textlf{Deflect} attempt by $\dicecritlvl$ or more. A \textlf{Penetrating Hit} grants \textlf{edge+} on the subsequent \textlf{damage checks}.
 
 \subsection{Damage checks}
 Are a difficulty check using the \textlf{Power} of the attack against a \textlf{difficulty} given by the target's \textlf{Toughness} (you have \textlf{edge-} if not proficient with your weapon). A successful \textlf{damage check} results in the target losing 1 \textlf{endurance} per point of \textlf{lethality} on the attack (default 1). If they run out of \textlf{endurance} then increment their \textlf{wound level} instead.
 
 \subsubsection{Critical hits}
-For every $\dicecritlvl$ the \textlf{damage check} exceeds the target's \textlf{toughness} by, the attack gains a + 1 \textlf{Lethality}.
+For every $\dicecritlvl$ the \textlf{damage check} exceeds the target's \textlf{toughness} by, the attack gains + 1 \textlf{Lethality}.
 
 
 \subsection{Wound levels}
-
+There are 4 \textlf{wound levels}: \textlf{wounded} (1), \textlf{badly wounded} (2), \textlf{mortally wounded} (3), and \textlf{dead} (4).
 \begin{itemize}
 	\item
 	\textlf{Wounded} inflicts \textlf{stunned} effect on the victim (attack actions cost 1 extra action point). 
@@ -150,6 +159,7 @@ For every $\dicecritlvl$ the \textlf{damage check} exceeds the target's \textlf{
 \end{itemize}
 
 \subsection{Recovery and Healing}
+\textlf{wound levels} and \textlf{endurance} are completely independent of each other. Thus, restoring \textlf{endurance} has no effect on a character's current \textlf{wound level} (and vice-versa). 
 \begin{itemize}
 	\item 
 	1 \textlf{endurance} is restored by 1 hour rest or a hot meal.
