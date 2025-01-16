@@ -1,15 +1,23 @@
-%Copyright (C) 2021-2023 Geoff Beck. This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license visit: \url{https://creativecommons.org/licenses/by-sa/4.0/legalcode
+%Copyright (C) 2021-2024 Geoff Beck. This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license visit: \url{https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
 \documentclass[a4paper,oneside,11pt]{article}
-\usepackage{hyperref}
-\usepackage{fullpage,caption,titlecaps,url}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{import}
+\usepackage{tocbibind}
+\usepackage[bookmarks=true,plainpages=false]{hyperref}
+\usepackage{titletoc,titlecaps}
+\usepackage{caption}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{fancyhdr}
 \usepackage{titling}
 \title{\textbf{Heroes3D6\\Quick-Play Reference}}
 \author{Geoff Beck}
 \predate{\centering}
 \date{}
-\postdate{\vfill{\copyright 2021-2023 Geoff Beck. This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license visit: \url{https://creativecommons.org/licenses/by-sa/4.0/legalcode}}\hfill}
+\postdate{\vfill{\copyright 2021-2024 Geoff Beck. This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license visit: \url{https://creativecommons.org/licenses/by-sa/4.0/legalcode}}\hfill}
 \usepackage{lipsum}
 \pagestyle{plain}
 
@@ -28,10 +36,10 @@
 \section{Natural Attributes}
 These reflect various aspects of the character's personality and consist of: \textlf{Might}, \textlf{Cunning}, \textlf{Wit}, and \textlf{Resolve}.
 
-\textlf{Might} is the character's aggression, \textlf{Cunning} is a measure of their craftiness, \textlf{Wit} is their alertness and attention to detail,  and \textlf{Resolve} their force of will and personal magnetism.
+\textlf{Might} is the character's aggression or assertiveness, \textlf{Cunning} is a measure of their craftiness, \textlf{Wit} is their alertness and attention to detail,  and \textlf{Resolve} their force of will and personal magnetism.
 
 \subsection{Attribute Scores}
-These vary between 0 and 3, with higher being better.
+These vary between 0 and 2, with higher being better.
 
 \section{Heroic Attributes}
 \subsection{Heroism}
@@ -52,17 +60,19 @@ A \textlf{difficulty check} is made using a given \textlf{Attribute} or \textlf{
 Each of the creatures contesting the roll adds the given score to the result of 3d6. The winner is the one with the highest total. Re-roll if it is a tie.
 
 
-\section{Skills and Professions}
+\section{Skills}
 
 How to use a skill:
 \begin{itemize}
 \item
-Roll 3d6, adding synergy attribute (this has \textlf{edge-} if not proficient)
+Roll 3d6, adding synergy attribute and level bonus/penalty (see below).
 \item
 If the roll equals or exceeds the \textlf{Difficulty}, the \textlf{skill} use is successful, and if it exceeds the \textlf{Difficulty} by $\dicecritlvl$ or more it is a \textlf{critical success}. Failing by $\dicecritlvl$ or more produces a \textlf{critical failure}. 
 \item
 These results have direct effect upon how well the desired task is achieved (see the skill rules for detailed consequences).
 \end{itemize}
+
+Skill levels: untrained (\textlf{edge-}), proficient (none), adept ($+1$), expert ($+2$), master ($+2$ and \textlf{edge+}).
 
 
 \section{Combat}
@@ -70,7 +80,7 @@ These results have direct effect upon how well the desired task is achieved (see
 \subsection{A round of combat}
 A round of combat can be summarised simply as
 \begin{enumerate}
-	\item All combat participants declare intended actions (2 action points each)
+	\item All combat participants declare intended actions (3 action points each)
 	\item Each side in combat rolls 1d6
 	\item Resolve actions for each side in order of the 1d6 roll
 \end{enumerate}
@@ -78,68 +88,84 @@ A round of combat can be summarised simply as
 \subsection{Combat actions}
 A list of possible actions in combat is given below, the action point cost is given in brackets.
 
-\subsection{Anticipate}
+\subsubsection{Assist ally}
+This costs 1 \textbf{AP} to prepare and allows you to spend 1 \textbf{RP} during this round to grant \textlf{edge+} to a single check made by an ally. You must be in the correct range to assist with the chosen check.
+
+\subsubsection{Anticipate}
 This costs 1 action point but grants the character a bonus reaction point that lasts until the next round ends.
 
-\subsubsection{Move (1)}
-The character can transfer between adjacent combat areas (10 m of movement) and thus has range 1. Leaving a combat area that contains enemies provokes a \textlf{moment of weakness}. 
+\subsubsection{Walk (1)}
+The character can transfer between adjacent combat areas (10 m of movement) and thus has range 1. This cannot trigger the \textlf{exploit weakness} reaction. 
 
-\subsubsection{Run (2)}
-The character can \textlf{move} with + 1 range (+10 m) and gains \textlf{edge+} on \textlf{deflect}.  
-
-\subsubsection{Retreat (2)}
-The character can leave a combat area that contains an enemy without suffering a \textlf{moment of weakness}. 
+\subsubsection{Run (1}
+The character can move at range 2 but leaving an enemy's close-combat range trigger the \textlf{exploit weakness} reaction.  
 
 \subsubsection{Attack (1)}
-Make an opposed roll with \textlf{aim} versus the target's \textlf{deflect} (you have \textlf{edge-} if not proficient with your weapon). If you win, make a \textlf{damage check} for each of your weapons by rolling with your \textlf{power} versus target's \textlf{toughness}. Many \textlf{perks} can enhance or alter attacks. This costs 2 action points if using two weapons.
+Make an opposed roll with \textlf{aim} versus the target's \textlf{defence} (you have \textlf{edge-} if not proficient with your weapon). If you win, make a \textlf{damage check} by rolling with your \textlf{power} versus target's \textlf{toughness}. Many \textlf{perks} can enhance or alter attacks. This costs 2 action points if using two weapons and each makes its roll separately.
 
-\subsubsection{All-out attack (2)}  
-Same procedure as an attack but make 1 extra damage roll. This costs 3 action points if using two weapons.
+\subsubsection{All-out attack (1)}  
+Add $+1$ \textlf{aim} and \textlf{power} to your attacks this round. You can stack this bonus.
 
 \subsubsection{Shove (1)}
-Opposed \textlf{might} check with target. If you win, they are \textlf{knocked down} or moved into an adjacent combat area (at the shover's discretion), otherwise you suffer a \textlf{moment of weakness} on \textlf{critical failure}.
+Opposed \textlf{athletics} check with target within range 1 (who can use \textlf{coordination} instead). If you win they are moved a distance of 1, otherwise you trigger \textlf{exploit weakness} on \textlf{critical failure}. \textlf{critical success} results in the victim being \textlf{knocked down}. If multiple creatures \textlf{shove} the same target then they make a single roll with the highest \textlf{athletics} score from among them as well as \textlf{edge+} per creature beyond the first.
 
 \subsubsection{Feint (1)}
-Opposed \textlf{cunning} check with target. If you win, gain \textlf{edge+} on \textlf{aim}, otherwise you suffer a \textlf{moment of weakness} on \textlf{critical failure}.
+Opposed attacker's \textlf{deceive} with defender's \textlf{awareness} (range 1). If the attacker succeeds they gain \textlf{edge+} on \textlf{aim}, otherwise they trigger \textlf{exploit weakness} on \textlf{critical failure}.
 
 \subsubsection{Grapple (1)}
-Opposed \textlf{might} check with target. If you win, they cannot move, otherwise you suffer a \textlf{moment of weakness} on \textlf{critical failure}. The victim must make an opposed \textlf{Might} check (and spend 1 action point) to escape. It costs 1 action point each round after the first to maintain a grapple. Anyone attacking participants has \textlf{edge-} on \textlf{aim}.
+Opposed \textlf{athletics} check with target within range 1 (who can use \textlf{coordination} instead). If you win, they are \textlf{immobilised}, otherwise you trigger \textlf{exploit weakness} on \textlf{critical failure}. The victim can try to escape each turn with an opposed \textlf{athletics} check (costs 1 action point). It costs 1 action point each round after the first to maintain a grapple. 
 
-\subsubsection{Trip (1/2)}
-Attempt to entangle your foe's legs with your weapon's haft, or pointy bit built for tripping. This modifies a close-combat attack: replace a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{cunning}. Should you win, the target is \textlf{knocked down}. 
+\subsubsection{Trip (1)}
+Trip attempts involve an \textlf{opposed roll} between the attacker and target using \textlf{coordination}. Should the attacker win, the target is \textlf{knocked down}. If this is \textlf{critical success} by X thresholds, the victim suffers \textlf{staggered} X. If the attacker \textlf{critically fails} a \textlf{trip}, then they trigger \textlf{exploit weakness}.
 
-\subsubsection{Taunt [1]}
-Make an opposed check with your \textlf{resolve} and the target's \textlf{wit}. If you win, the target now attempts to attack you instead other targets. 
+\subsubsection{Take cover}
+If a creature is in a combat area that contains \textlf{cover}, they can shelter behind it for 1 \textbf{AP}. This grants a bonus to \textlf{defence}, as detailed on Table~\ref{tab:cover}, which is only lost if the creature leaves the combat area. In this state, a creature can also use the \textlf{Hide} action. 
 
-\subsubsection{Disarm (1/2)}
-This is a modified, close-combat attack, replacing a \textlf{damage check} with an \textlf{opposed roll} between yourself and the target using \textlf{wit}. Should you win, the target cannot use their current weapon without either spending 1 action point or suffering a \textlf{moment of weakness} to retrieve it.
+\subsubsection{Taunt}
+With cutting words, or obscene gestures, you shame and belittle the target. This costs 1 \textbf{AP}, has range 3, and the target must be able to understand the provocation in some way. Make an opposed check with your \textlf{perform skill} and the target's \textlf{resolve}. If you win, the target is \textlf{staggered} 1. \textlf{critical success} increases the level of the \textlf{stagger}. \textlf{critical failure} means you are \textlf{staggered} by your own ineptitude.
+
+\subsubsection{Triage}
+A creature can attempt to help its ally with some rapid medical attention. This is a \textlf{healing} check that costs 1 \textbf{AP} and can be used when in range 0 of the target. If successful, this reduces the severity of \textlf{wound} penalties for 10 minutes (it does not remove the \textlf{wounds}, just allows the target to ignore the penalty). The \textlf{difficulty} is 10 + \textlf{wound level}. This requires some medical supplies that are consumed during use (their cost and nature will vary by setting). 
+
+\subsubsection{Dirty trick}
+Sand in the eyes, sliced boot straps, smoke bombs, or any other underhanded trick to impair your foe's ability to fight. Provided you can perform a suitable bit of dirty fighting, spend 1 \textbf{AP} and make an \textlf{opposed roll} of your \textlf{slight of hand} against the \textlf{resolve} of a target within range 1. Success inflicts \textlf{staggered} 1, this increases by 1 for each \textlf{critical success} threshold. If the attacker \textlf{critically fails} a \textlf{dirty trick}, then the intended victim may use the \textlf{exploit weakness} reaction.
+
+\subsubsection{Discard item}
+For 0 \textbf{AP} a creature can discard an item it is currently holding. The item now sits in the combat area the discarder currently occupies and can be retrieved for 1 \textbf{AP} within range 0, this allows any enemies within range 0 to use the \textlf{exploit weakness} reaction.
+
+\subsubsection{Diversion}
+A character can create a diversion to distract other creatures. Make a \textlf{deception} check against the best hostile \textlf{awareness} within range 1, on a success the user gains \textlf{edge+} to \textlf{stealth} checks against these adversaries. In addition, diverted creatures cannot use the \textlf{exploit weakness reaction}. This can be used while \textlf{hidden} but ends the condition on a \textlf{critical failure}.
+
+\subsubsection{Disarm (1)}
+A disarm attempt consists of an \textlf{opposed roll}, made by the attacker and target within range 1, using \textlf{aim}. If the attacker wins, their target drops their weapon. \textlf{critical success} by X thresholds adds \textlf{staggered} X. The weapon lands somewhere in the same combat area as the victim and they can retrieve their weapon for 1 \textbf{AP} during their own turn but trigger \textlf{exploit weakness} for enemies within range 0. If the attacker \textlf{critically fails} a \textlf{disarm}, then they trigger \textlf{exploit weakness}.
 
 \subsubsection{Defensive stance (1)}
-The character gains \textlf{edge+} on \textlf{deflect} for the next attack they suffer.
+The character gains \textlf{edge+} on \textlf{defence} for the next attack they suffer.
 
 \subsubsection{Change weapon (1)}
-A character can swap weapons for 1 action point per weapon being swapped.
+A character can swap weapons (or other held items) for 1 action point per weapon being swapped. Consumables can be swapped to and used for just 1 action point.
 
-\subsubsection{Combat Attributes}
+\subsubsection{Hide}
+A creature that has used \textlf{Take cover} can attempt to hide in it with a \textlf{stealth} check that costs 1 \textbf{AP}. The difficulty is set by the type of cover (see Table~\ref{tab:cover}), and if the character succeeds they are \textlf{hidden} (see Table~\ref{tab:conditions}). Enemies will still be aware the creature is hiding in a given combat area, \textlf{critical success} means this is no longer true (they know the creature is within a radius of 1) and allows the hider to move into an area within range 1 that also has some \textlf{cover}. 
+
+\subsubsection{Intimidate}
+A creature can try and scare their foe with a display of intimidating words, weapons, muscles, fangs, etc. This costs 1 \textbf{AP} and is an \textlf{intimidate} check opposed to the target's \textlf{resolve} (range 3). Success means the victim suffers from \textlf{Fear} (see Section~\ref{sec:special}). \textlf{critical success} increments the \textlf{edge-} level of the \textlf{fear}. On each subsequent round the victim may re-attempt the check to end the effect (no consequences for \textlf{critical success/Failure}). \textlf{critical failure} inflicts the penalty on the user for 1 round instead, demoralised by how laughable their threats are.
+
+\subsection{Combat Attributes}
 \begin{tabular}{lll}
 \textlf{Aim} & = & \textlf{wit} \\ 
-\textlf{Deflect} & = & \textlf{Cunning}\\
+\textlf{defence} & = & \textlf{Cunning}\\
 \textlf{Power} & = & Weapon Bonus + \textlf{might}\\
-\textlf{Toughness} & = & 8 + armour value\\
+\textlf{Toughness} & = & armour value (or 8)\\
 \textlf{endurance} & = & 2 + \textlf{resolve} \\
 \end{tabular}
 
-\subsection{Additional attacks rules} 
-Note that only 1 attack-type action can be made per turn.
-
-\subsubsection{Multiple weapons}
-Attacking with two weapons costs an extra action point.
-
-\subsubsection{Penetrating hits}
-These are scored if a fighter fails a \textlf{Deflect} attempt by $\dicecritlvl$ or more. A \textlf{Penetrating Hit} grants \textlf{edge+} on the subsequent \textlf{damage checks}.
 
 \subsection{Damage checks}
 Are a difficulty check using the \textlf{Power} of the attack against a \textlf{difficulty} given by the target's \textlf{Toughness} (you have \textlf{edge-} if not proficient with your weapon). A successful \textlf{damage check} results in the target losing 1 \textlf{endurance} per point of \textlf{lethality} on the attack (default 1). If they run out of \textlf{endurance} then increment their \textlf{wound level} instead.
+
+\subsubsection{Penetrating hits}
+These are scored if a fighter fails a \textlf{defence} attempt by $\dicecritlvl$ or more. A \textlf{Penetrating Hit} grants \textlf{edge+} on the subsequent \textlf{damage checks}.
 
 \subsubsection{Critical hits}
 For every $\dicecritlvl$ the \textlf{damage check} exceeds the target's \textlf{toughness} by, the attack gains + 1 \textlf{Lethality}.
@@ -149,9 +175,9 @@ For every $\dicecritlvl$ the \textlf{damage check} exceeds the target's \textlf{
 There are 4 \textlf{wound levels}: \textlf{wounded} (1), \textlf{badly wounded} (2), \textlf{mortally wounded} (3), and \textlf{dead} (4).
 \begin{itemize}
 	\item
-	\textlf{Wounded} inflicts \textlf{stunned} effect on the victim (attack actions cost 1 extra action point). 
+	\textlf{Wounded} characters have $-1$ to all rolls. 
 	\item
-	A \textlf{Badly Wounded} causes \textlf{edge-} on all actions in addition to \textlf{wounded} effects.
+	A \textlf{Badly Wounded} causes \textlf{edge-} on all rolls.
 	\item 
 	A \textlf{Mortally Wounded} effect means the character cannot make actions and will die within 3 days without treatment.
 	\item 
@@ -185,7 +211,16 @@ There are 4 \textlf{wound levels}: \textlf{wounded} (1), \textlf{badly wounded} 
 This costs 1 reaction point and can be used when the character fails a check in combat (not including \textlf{skill} checks). This allows the character to re-roll the check, they must accept the result of this re-roll. This cannot be used if the character has any \textlf{edge} bonuses on the roll. 
 
 \subsubsection{Exploit weakness}
-This costs 1 reaction point and can be used when an enemy within range 0 experiences a \textlf{moment of weakness}. This allows the character to make a single close combat \textlf{damage check} (with their equipped weapon) against the enemy.
+This represents being able to take advantage of a vulnerable moment when a foe cannot defend themself. This costs 1 \textbf{RP} and allows the user to make a single close-combat \textlf{damage check} against the triggering enemy. Each character can use this only once per eligible target per turn.
+
+\subsection{All-out defence}
+The character can spend 1 reaction point in response to having to make a \textlf{Defence} check to get $+1$ on this roll.
+
+\subsection{Changing actions}
+Any character can spend a reaction point (before their actions are resolved) to change their actions from what they had previously declared. 
+
+\subsection{Keep 'em down}
+This costs 1 reaction point and can be used when an enemy within range 0 tries to rise from the \textlf{knocked down} state. Make an \textlf{opposed roll} against the \textlf{knocked down} enemy using \textlf{athletics}. If the reactor wins then the target remains \textlf{knocked down}. 
 
 
 
@@ -193,24 +228,25 @@ This costs 1 reaction point and can be used when an enemy within range 0 experie
 Moving through \textlf{Rough} or \textlf{Dangerous} terrain has the following consequences:
 \begin{itemize}
 \item
-\textlf{Rough} terrain: Moving in or out costs 1 action point more than normal.
+\textlf{Rough} terrain: \textlf{running} requires \textlf{coordination} check (\textlf{difficulty} range 10 to 14) or become \textlf{knocked down}.
 \item 
-\textlf{Dangerous} terrain: Causes hit with \textlf{crushing lethality} on a 3d6 roll $\dicediffbase+$ regardless of \textlf{toughness}. Moving in or out costs 1 action point more than normal.
+\textlf{Dangerous} terrain: Any character entering, occupying, or moving through this terrain must pass an \textlf{coordination} check of difficulty between 12 and 17 (depending on how dangerous the terrain is) or suffer damage with \textlf{lethality} 1 $+1$ per level of \textlf{critical failure}. All \textlf{move}-type actions cost 1 extra \textbf{AP} in this terrain.
 \end{itemize}
-When hiding behind/in cover the character receives a bonus to their \textlf{Deflect} checks.
+After using a \textlf{take cover} action the character receives a bonus to their \textlf{defence} checks.
 \begin{table}[ht]
-\centering
-\caption{Cover Table}
-\label{tab:cover}
-\begin{tabular}{|l|l|l|}
-	\hline
-	Cover Type & Deflect Bonus & Hide Bonus\\ [0.5ex]
-	\hline
-	Soft & - & \textlf{edge+}\\
-	Medium & \textlf{edge+} & \textlf{edge+}\\
-	Heavy & \textlf{edge++} & \textlf{edge+}\\
-	\hline
-\end{tabular}
+	\centering
+	\caption{Cover table}
+	\label{tab:cover}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		Cover type & Defence bonus & Hide difficulty\\ [0.5ex]
+		\hline
+		None & - & 16 \\
+		Soft & $+1$ & 13\\
+		Medium & \textlf{edge+} & 11\\
+		Heavy & \textlf{edge++} & 9\\
+		\hline
+	\end{tabular}
 \end{table}
 
 \section{Useful Tables}
@@ -218,18 +254,26 @@ When hiding behind/in cover the character receives a bonus to their \textlf{Defl
 \begin{table}
 \centering
 \caption{Condition Table}
+\label{tab:conditions}
 \begin{tabular}{|l|l|}
 \hline
 Condition & Effect \\
 \hline
-\textlf{Vulnerable} & Next attacker has \textlf{edge+} on damage rolls\\
-\textlf{Staggered} & Lose 1 reaction point\\
-\textlf{Blind} & \textlf{Deflect} and \textlf{Aim} have \textlf{edge--} \\
-\textlf{Bleeding} & Lose 1 \textlf{endurance} on failed \textlf{resolve} vs \textlf{might} check each round for 2 rounds \\
-\textlf{Knocked Down} & \textlf{edge-} on \textlf{deflect} until it can stand up \\
-\textlf{Immobilised} & No move actions and \textlf{edge-} on \textlf{deflect}\\
-\textlf{Stunned} & Attack action cost increased by 1 \\
+\textlf{Vulnerable} & Next \textlf{damage check} against victim has \textlf{edge+}\\
+\textlf{Staggered} X & \textlf{edge-} on next X rolls\\
+\textlf{Dazed} & Cannot spend \textbf{RP} \\
+\textlf{Hidden} & Cannot be seen, can be detected with \textlf{awareness} vs \textlf{stealth} \\
+\textlf{Fear} & \textlf{Edge-} on \textlf{Aim} and \textlf{skills} \\
+\textlf{Hardened} X & Next X instances of damage have \textlf{Lethality} 1 \\
+\textlf{Blind} & \textlf{defence} and \textlf{Aim} have \textlf{edge--} \\
+\textlf{Bleeding} & \textlf{lethality} 1 damage each round. 2 action points to end effect. \\
+\textlf{Burning} & \textlf{lethality} 1 damage each round. 2 action points to end effect. \\
+\textlf{Knocked Down} & \textlf{edge-} on \textlf{defence} until it can stand up \\
+\textlf{slowed} & The victim's movement actions cost 1 extra \textbf{AP}. \\
+\textlf{Immobilised} & No move actions and \textlf{edge-} on \textlf{defence}\\
+\textlf{Stunned} & Victim has 1 fewer \textbf{AP} \\
 \textlf{Cursed} & \textlf{Critical success} on any roll is reduced by 1 level \\
+\textlf{Terror} & Can only cower in fear \\
 \hline
 \end{tabular}
 \end{table}
@@ -243,11 +287,12 @@ Condition & Effect \\
 		\hline
 		Athletics (M)  &  Deceive (C)  &  Animals (W) \\
 		Awareness (W)  &  Disguise (C)  &  Arcana (W) \\
-		Healing (R)   &  Insight (R)  &  History (W) \\
-		Mechanical (W)   &  Intimidation (M)  &  Plants (W) \\
-		Pilot (C)  &  Leadership (R)  &  Religion (W) \\
-		Slight of Hand (C)  &  Perform (R)  &  \\
-		Stealth (C)  &  Persuade (R)  &  \\
+		Coordination (C) &  Insight (R)  &  History (W) \\
+		Healing (R)   &  Intimidation (M)  &  Plants (W) \\
+		Mechanical (W) &  Leadership (R)  &  Religion (W) \\
+		Pilot (W) &  Perform (R)  &  \\
+		Slight of Hand (C)  &  Persuade (R)  &  \\
+		Stealth (C) & & \\
 		Survival (C)  &  &  \\
 		\hline
 	\end{tabular}
