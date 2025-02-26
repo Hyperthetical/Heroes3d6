@@ -31,6 +31,7 @@
 
 \newcommand{\dicediffbase}{9}
 \newcommand{\dicecritlvl}{3}
+\newcommand{\penthresh}{12}
 
 \newcommand{\textlf}[1]{\textbf{\titlecap{#1}}}
 \newcommand{\textlfirst}[1]{\textbf{\textit{\titlecap{#1}}}}
@@ -528,7 +529,7 @@ This represents one's practice of hand-eye coordination, balance, and acrobatics
 	\end{itemize}
 	\item Catch an object (requires a free hand)
 	\begin{itemize}
-		\item \textlf{difficulty} 8 (tossed ball) to 17 (arrow)
+		\item \textlf{difficulty} 8 (tossed ball) to 18 (arrow)
 		\item Success means you catch the object
 		\item \textlf{critical success} means you can throw it as a free action
 		\item Failure means you do not catch it
@@ -614,7 +615,7 @@ Mechanical skill represents how mechanically minded a character is, allowing the
 \end{itemize}
 
 
-\subsection{Pilot: X (Cunning)} 
+\subsection{Pilot: X (Wit)} 
 This skill governs how well the character deals with mounts and/or vehicles of type X. The skill can be used to:
 \begin{itemize}
 	\item Stay mounted moving through rough or dangerous terrain (see Section~\ref{sec:terrain}) 
@@ -832,8 +833,8 @@ This is a skill that can used to lie convincingly. It depends upon persuading a 
 \begin{itemize}
 	\item Success means they are duped
 	\item \textlf{critical success} means their \textlf{attitude} increase by 1
-	\item Failure means they are dubious you can try again
-	\item \textlf{critical failure} means their \textlf{attitude} drops by 1 and you cannot try again
+	\item Failure means their \textlf{attitude} drops by 1, but you can try again
+	\item \textlf{critical failure} means their \textlf{attitude} drops by 2 and you cannot try again
 \end{itemize}
 
 In combat, this skill powers the \textlf{feint} and \textlf{diversion} actions.
@@ -1008,7 +1009,7 @@ For the side with the initiative, each fighter gets a chance to make their decla
 A round of combat is complete once all actions are resolved. 
 
 \subsubsection{Things that last 1 round}
-If an effect upon a character states that it lasts 1 round, then it lasts until all the sides of the combat have made actions with the effect in place. For example: consider a battle between 2 goblins and a knight. The goblins have initiative and inflict an \textlf{edge-} on the knight's \textlf{Defence} for 1 round. The knight takes his action and the round ends. However, the \textlf{edge-} will last until the goblins have completed their next actions, regardless of who has initiative next round.    
+If an effect upon a character states that it lasts 1 round, then it lasts until all the sides of the combat have made actions with the effect in place. For example: consider a battle between 2 goblins and a knight. The goblins have initiative and inflict an \textlf{edge-} on the knight's \textlf{Defence} for 1 round. The knight takes their action and the round ends. However, the \textlf{edge-} will last until the goblins have completed their next actions, regardless of who has initiative next round.    
 
 
 \section{Combat statistics}
@@ -1070,10 +1071,10 @@ A radius of 1 would cover a single area and ALL neighbouring areas. An effect th
 Most creatures may transfer between combat areas that share a boundary unless otherwise noted or modified by terrain.
 
 \subsubsection{Walk}
-This represents careful movement and thus has a range of 1 while costing 1 \textbf{AP}.
+This represents careful movement and thus has a range of 1 while costing 1 \textbf{AP}. This can \textbf{never} be used to move further than distance 1 per \textbf{AP} spent.
 
 \subsubsection{Run}
-This action costs 1 \textbf{AP} and has a range of 2. However, it is not careful, so leaving the close-combat range of an enemy, in this manner, allows them to use the \textlf{exploit weakness} reaction (they spend 1 \textbf{RP} and make a free hit against you, see section~\ref{sec:reactions}).
+This action costs 1 \textbf{AP} and has a range of 2. However, it is not careful, so leaving the close-combat range of an enemy allows them to use the \textlf{exploit weakness} reaction (they spend 1 \textbf{RP} and make a free hit against you, see section~\ref{sec:reactions}). The default threat-range for close-combat is 0.
 
 
 \subsection{Attacks}
@@ -1370,7 +1371,7 @@ Some attacks/powers have special effects. These should always be mitigated via \
 A target that does not know of your presence, aggressive intent, or is otherwise fully engaged in combat with someone else (the target must have been unaware of your combat participation, if not your presence) is vulnerable to \textlfirst{sneak attacks}.
 
 The victim of a \textlf{sneak attack} has \textlf{edge--} on \textlf{Defence}.
-Such attacks gain \textlf{edge+} to \textlf{damage checks} when made with \textlf{small} weapons, such as daggers, or with specialist tools, such as garrotte wire. Multiple \textlf{perks} can improve \textlf{sneak attacks}. \textlf{Small} weapon bonuses are lost on \textlf{Huge creatures} or larger targets.
+Such attacks gain \textlf{edge+} to \textlf{damage checks} when made with \textlf{small} weapons or specialist tools, such as garrotte wire. Multiple \textlf{perks} can improve \textlf{sneak attacks}. \textlf{Small} weapon bonuses are lost on \textlf{Huge creatures} or larger targets.
 
 
 
@@ -1477,7 +1478,7 @@ Poisoned is a state that results from harmful chemicals being introduced into th
 		\hline
 		Name & Effect & Critical effect \\
 		\hline
-		Lead limb & Victim cannot run and attacks cost 2 \textbf{AP} & \textlf{staggered} \\
+		Lead limb & Victim cannot run and attacks cost 1 extra \textbf{AP} & \textlf{staggered} \\
 		Jitter juice & The victim has \textlf{edge-} on all rolls & Increment \textlf{edge-}  \\
 		Mangle mind & Victim is \textlf{stunned} for duration &  \textlf{staggered} \\
 		Death dealer & Damage with \textlf{lethality} 1 & Increment \textlf{lethality}\\
@@ -1486,7 +1487,7 @@ Poisoned is a state that results from harmful chemicals being introduced into th
 \end{table}
 
 \subsubsection{Slowed}
-A slowed creature has had their movement impeded. The victim's movement-type actions cost 1 extra \textbf{AP}. This cannot stack.
+A slowed creature has had their movement impeded. The victim cannot make \textlf{run} actions. This cannot stack.
 
 \subsubsection{Staggered X}
 (X is an integer) The shock of injury is a difficult thing to ignore and can incapacitate even the most hardened fighters. A \textlf{staggered} creature has \textlf{edge-} on its next X rolls. This stacks by incrementing X. X decreases by 1 each time the victim makes a penalised roll.
@@ -1516,10 +1517,10 @@ A powerful blow can sometimes open up a fighter to being easily finished off. Th
 Weapons with this rule are either massively heavy or just awkward to manoeuvre. They cost an extra \textbf{AP} to make attacks with.
 
 \subsubsection{Penetration X}
-(X is an integer) A weapon with \textlfirst{penetration} is designed to deal with heavily armoured opponents, sliding into weak-points or just inflicting blunt trauma through armour. Attacks from this weapon count the target's \textlf{toughness} as reduced by X, but cannot reduce it below $11$ in this way.
+(X is an integer) A weapon with \textlfirst{penetration} is designed to deal with heavily armoured opponents, sliding into weak-points or just inflicting blunt trauma through armour. Attacks from this weapon count the target's \textlf{toughness} as reduced by X, but cannot reduce it below $\penthresh$ in this way.
 
 \subsubsection{Reach X}
-(X is an integer) \textlfirst{Reach} represents the ability of some close-combat weapons, like pikes, to attack from a longer distance. A character with a \textlf{reach} weapon can make close-combat attack, \textlf{trip}, and \textlf{disarm} actions at range X without paying any additional action cost. %These weapons suffer \textlf{edge-} on \textlf{aim} when targeting foes within range 0. %In addition, entering a combat area (\dist{} radius) containing foes with such weapons incurs a \textlf{Moment of weakness} unless an extra \textbf{AP} is spent when making the \textlf{move}.
+(X is an integer) \textlfirst{Reach} represents the ability of some close-combat weapons, like pikes, to attack from a longer distance. A character with a \textlf{reach} weapon can make close-combat attack actions at range X without paying any additional \textlf{AP} cost. %These weapons suffer \textlf{edge-} on \textlf{aim} when targeting foes within range 0. %In addition, entering a combat area (\dist{} radius) containing foes with such weapons incurs a \textlf{Moment of weakness} unless an extra \textbf{AP} is spent when making the \textlf{move}.
 
 \subsubsection{Rending X}
 (X is an integer) A well-placed blow from a \textlfirst{rending} weapon rips deep into the target. \textlf{Penetrating hits} from \textlf{rending} weapons have + X \textlf{Power}. 
@@ -1636,7 +1637,7 @@ These \textlf{perks} are oriented towards surviving damage in combat. They must 
 
 
 \subsection{Grin and bear it [3]}
-\textlf{Active perk}. When the character is reduced to 0 \textlf{endurance} they can spend an \textbf{RP} to regain 1 \textlf{endurance} and \textlf{hardened} 1.
+\textlf{Active perk}. When the character is reduced to 0 \textlf{endurance} they can spend an \textbf{RP}, after damage is resolved, to regain 1 \textlf{endurance} and \textlf{hardened} 1.
 
 
 \subsection{Hardy [5]}
@@ -1732,7 +1733,9 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 
 
 \subsection{Furious assault [4]}
-\textlf{Active perk}. A risky manoeuvre, the fighter replaces a considered attack with a hail of furious strikes. When declaring an attack the character may elect it to be a \textlf{furious assault}, granting \textlf{burst} $+1$. However, the character suffers \textlf{edge-} to \textlf{aim} on the attack and \textlf{edge-} on their next \textlf{Defence} check within 1 round. This cannot be used if the weapon requires \textlf{reload} actions.
+\textlf{Active perk}. A risky manoeuvre, the fighter replaces a considered attack with a hail of furious strikes. The character can negate the first \textlf{edge-} for making extra attacks in a turn. Doing so incurs \textlf{edge-} on defence for 1 round.
+
+%When declaring an attack the character may elect it to be a \textlf{furious assault}, granting \textlf{burst} $+1$. However, the character suffers \textlf{edge-} to \textlf{aim} on the attack and \textlf{edge-} on their next \textlf{Defence} check within 1 round. This cannot be used if the weapon requires \textlf{reload} actions.
 
 
 \subsection{Gouge [3]}
@@ -1743,11 +1746,11 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 
 
 \subsection{Guard breaker [3]}
-\textlf{Active perk}. This attack knocks the foe off balance. This is a normal \textlf{attack} action that costs 2 \textbf{AP}. If the attack hits, the target suffers \textlf{edge-} on \textlf{Defence} in the next round.
+\textlf{Active perk}. This attack knocks the foe off balance. This is a normal \textlf{attack} action that costs 2 \textbf{AP}. If the attack hits, the target suffers \textlf{edge-} on \textlf{Defence} for 1 round.
 
 
 \subsection{Hamstring [3]}
-\textlf{Active perk}. Striking at a foe's legs can all but cripple them. This is a normal \textlf{attack} action that costs 2 \textbf{AP}, victim's damaged by it are \textlf{slowed} for 1 round.
+\textlf{Active perk}. Striking at a foe's legs can all but cripple them. This is a normal \textlf{attack} action that costs 2 \textbf{AP}, victim's damaged by it are \textlf{slowed}. On each subsequent round they may \textlf{resist(R)} to end the effect. 
 
 
 %\subsection{Methodical []}
@@ -1759,11 +1762,11 @@ These \textlf{perks} are oriented towards dealing damage in combat. They must oc
 
 
 \subsection{Reckless attack [3]}
-\textlf{Active perk}. The character can declare a close-combat attack to be a ``reckless attack'' before making any associated rolls. This has \textlf{edge+} to \textlf{aim} but the character incurs \textlf{edge-} on \textlf{Defence} versus the next attack they suffer within 1 round.
+\textlf{Active perk}. The character can declare a close-combat attack to be a ``reckless attack'' before making any associated rolls. This has $+X$ to \textlf{aim} but the character incurs $-X$ on \textlf{toughness} for 1 round.
 
 
 \subsection{Schadenfreude [3]}
-\textlf{Passive perk}. The character gets $+1$ to \textlf{aim} per \textlf{condition} their target is suffering (see section~\ref{sec:special} for condition rules).
+\textlf{Passive perk}. The character gets $+1$ to \textlf{aim} per negative \textlf{condition} their target is suffering (see section~\ref{sec:special} for condition rules).
 
 
 \subsection{Sweeping strike [3]}
@@ -1950,7 +1953,7 @@ These \textlf{perks} are oriented towards utility and skill in combat. They must
 \textlf{Passive perk}. The character has great knowledge of insults and is a master of taunting jibes. Your successful \textlf{taunt} actions also \textlf{stun} the target for 1 round.
 
 \subsubsection{Upgrade: Humiliation [5]}
-True mastery achieved. Instead of its usual effects, success on a \textlf{taunt} action now \textlf{stuns} the target for 1 round and inflicts \textlf{edge-} on all rolls until the target successfully causes damage to you.
+(Requires \textlf{stunning epithet}). Instead of its usual effects, success on a \textlf{taunt} action now \textlf{stuns} the target for 1 round and inflicts \textlf{edge-} on all rolls until the target successfully causes damage to you.
 
 
 \subsection{Suppressing fire! [4]}
@@ -2016,7 +2019,7 @@ These \textlf{perks} are oriented towards movement. They must occupy an equipmen
 
 
 \subsection{Moving target [3]}
-\textlf{Passive perk}. When making\textlf{run} actions, the character has \textlf{edge+} to \textlf{Defence}.
+\textlf{Passive perk}. When making \textlf{run} actions, the character has \textlf{edge+} to \textlf{Defence}.
 
 
 \subsection{Nimble [3]}
@@ -2025,6 +2028,10 @@ These \textlf{perks} are oriented towards movement. They must occupy an equipmen
 
 \subsection{Quick off the mark [3]}
 \textlf{Passive perk}. The character can spend \textbf{RP}, in place of \textbf{AP}, to make \textlf{run} actions.
+
+
+\subsection{Steel-shoe shuffle [3]}
+\textlf{Passive perk}. If the character hits with a close-combat attack at \textlf{range} 1 (via lunge), they may move into that combat area for 1 \textbf{RP}.
 
 
 
